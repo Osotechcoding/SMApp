@@ -4,12 +4,12 @@
 <div class="col-lg-4 col-sm-6">
 <div class="footer-logo-area">
 <a href="./"><img src="assets/images/white-logo.png" alt="Image"></a>
-<p>Smapp School Portal was established by A.S Flourish in 2019 for the public benefit. Afterwards, it is recognized globally</p>
+<p><?php echo __SCHOOL_NAME__; ?> was established by <?php echo __AUTHOR_NAME__; ?> in 2019 for the public benefit. Afterwards, it is recognized globally</p>
 <div class="contact-list">
 <ul>
 <li><a href="tel:+08131374443">+234-80-3794-0665
 </a></li>
-<li><a href="mailto:info@julitschools.com"><span class="__cf_email__">info@julitschools.com</span></a></li>
+<li><a href="mailto:info@smapp.com"><span class="__cf_email__">info@smapp.com</span></a></li>
 </ul>
 </div>
 </div>
@@ -49,7 +49,7 @@
 <h3>Academics</h3>
 <div class="list">
 <ul>
-<li><a href="onlineresult">Online Result</a></li>
+<li><a href="./e-result/">Online Result</a></li>
 <li><a href="javascript:void(0);">Year Book</a></li>
 <li><a href="javascript:void(0);">School Tour</a></li>
 <li><a href="javascript:void(0);">Testimonials</a></li>

@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>SMApp - Online Student Result Checker</title>
+  <title><?php echo __SCHOOL_ABBREV; ?> - Online Student Result Checker</title>
 <?php include_once ("temp/HeaderScriptLink.php");?>
 
 <style>
@@ -49,7 +49,7 @@
 
   <div class="card mb-5">
     <div class="card-header">
-       <h2 class="text-center">Welcome Juli T Schools Result Portal </h2>
+       <h2 class="text-center">Welcome <br> <?php echo __SCHOOL_NAME__; ?><br> Result Portal </h2>
     </div>
     <div class="card-body">
       <div class="col-md-12 mb-4">
@@ -57,7 +57,7 @@
 <h2 class="text-danger blinking"><span class="blinking">Public Notice!</span> </h2>
 <h5 class="blinking"><span>2021/2022 Academic Promotion Report Sheet is Now Out.</span>
 </h5>
-<h4> You can now check your result. Scratch Cards are available for purchase. <a href="javascript:void(0);" title="Call Admin on 08131374443">the School Premises</a></h4>
+<h4> You can now check your result. Scratch Cards are available for purchase. <a href="javascript:void(0);" title="Call Admin on 08131374443"> at the School Premises</a></h4>
 <h2 class="text-center">How to Check your <a href="#" style="color:red;"> Result?</a></h2>
 <!-- You can now check your result online. -->
 <p>To check your result, Please, follow the instructions below:</p>

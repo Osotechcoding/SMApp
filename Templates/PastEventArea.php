@@ -10,8 +10,8 @@
 <div class="health-care-content">
 <div class="img">
 <img src="staffImg/man.jpg" alt="Image" style="border-radius:50%;border: 8px solid deepskyblue;">
-<h4 class="text-center">ALH. S.A. LAWAL</h4>
-<h5 class="text-center text-danger">CHAIRMAN </h5>
+<h4 class="text-center">ENGR. SAMSON IDOWU A.</h4>
+<h5 class="text-center text-danger">C.E.O </h5>
 </div>
 </div>
 </div>
@@ -20,8 +20,8 @@
 <div class="single-health-care-card">
 <div class="health-care-content">
 <div class="img">
-<img src="staffImg/proprietress.jpg" alt="Image" style="border-radius:50%;border: 8px solid deepskyblue;">
-<h4 class="text-center">MRS. B.A. LAWAL</h4>
+<img src="staffImg/man.jpg" alt="Image" style="border-radius:50%;border: 8px solid deepskyblue;">
+<h4 class="text-center">MRS. AGBERAYI BLESSING T.</h4>
 <h5 class="text-center text-danger">PROPRIETRESS </h5>
 </div>
 </div>
@@ -31,9 +31,9 @@
 <div class="single-health-care-card">
 <div class="health-care-content">
 <div class="img">
-<img src="staffImg/aminu.jpg" alt="Image" style="border-radius:50%;border: 8px solid deepskyblue;">
-<h4 class="text-center">MR AMINU DAYO</h4>
-<h5 class="text-center text-danger">VICE PRINCIPAL </h5>
+<img src="staffImg/man.jpg" alt="Image" style="border-radius:50%;border: 8px solid deepskyblue;">
+<h4 class="text-center">ENGR. IREMIDE AGBERAYI</h4>
+<h5 class="text-center text-danger"> PRINCIPAL </h5>
 </div>
 </div>
 </div>

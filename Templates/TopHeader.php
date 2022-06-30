@@ -3,7 +3,7 @@
 <div class="row align-items-center">
 <div class="col-lg-6 col-md-6">
 <div class="header-left-content">
-<p>You are Welcome to JULI T. SCHOOL</p>
+<p>You are Welcome to <?php echo __SCHOOL_ABBREV; ?> Portal</p>
 </div>
 </div>
 <div class="col-lg-6 col-md-6">

@@ -5,7 +5,7 @@
 <div class="campus-content pr-20">
 <div class="campus-title">
 <h2>Why you need to enroll your ward(s) Here? </h2>
-<p>JULI.T. INTERNATIONAL SCHOOLS is a school established to provide learning in conducive environment for the teaching of students under the direction of qualified teachers</p>
+<p><?php echo __SCHOOL_NAME__; ?> is a school established to provide learning in conducive environment for the teaching of students under the direction of qualified teachers</p>
 </div>
 <div class="list">
 <div class="row">

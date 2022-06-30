@@ -48,7 +48,7 @@
 </h2>
 <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
 <div class="accordion-body"> You can access your Online result, Simply
-Visit https://julitschools.com/e-result/ or <a href="https://julitschools.com/e-result" target="_blank"> Click Here</a>
+Visit https://smapp.com/e-result/ or <a href="http://localhost/smapp/e-result" target="_blank"> Click Here</a>
 </div>
 </div>
 </div>
