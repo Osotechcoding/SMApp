@@ -34,9 +34,9 @@ background-repeat: no-repeat;">
 <div class="container">
 <div class="loginbox">
 <div class="login-left">
-<img src="<?php echo $Configuration->get_schoolLogoImage();?>" width="350" class="img-fluid" alt="logo">
-<h3 class="text-center text-warning"><?php echo __SCHOOL_NAME__; ?><h3>
-<a href="../" style="text-decoration: none;color: whitesmoke;">Go to Homepage</a>
+<img src="<?php echo $Configuration->get_schoolLogoImage();?>" width="350" class="img-fluid" alt="logo" style="border: 2px solid deepskyblue;border-radius:10px;background: #ffffff;">
+<h4 class="text-center text-warning mt-2"><?php echo __SCHOOL_NAME__; ?><h4>
+<p class="text-center" style="font-size: 13px;"><a href="../" style="text-decoration: none;color: whitesmoke;"> Powered by: <span class="text-danger">Osotech Software Inc</span></a></p>
 </div>
 <div class="login-right">
 <div class="login-right-wrap">
@@ -46,7 +46,7 @@ background-repeat: no-repeat;">
     <input type="hidden" name="action" value="staff_login">
     <input type="hidden" name="txss_token" value="<?php echo $tses_token;?>">
 <div class="form-group">
- <input type="text" class="form-control" name="login_email" id="exampleInputEmail1"
+ <input type="text" autocomplete="off" class="form-control" name="login_email" id="exampleInputEmail1"
   placeholder="<?php echo $lang['email'];?>" value="<?php if(isset($_COOKIE['login_email'])){
     echo $_COOKIE['login_email'];
     }else{
@@ -54,7 +54,7 @@ background-repeat: no-repeat;">
     } ?>">
 </div>
 <div class="form-group">
- <input type="password" class="form-control" name="login_password" value="<?php if(isset($_COOKIE['login_pass'])){
+ <input type="password" autocomplete="off" class="form-control" name="login_password" value="<?php if(isset($_COOKIE['login_pass'])){
         echo $_COOKIE['login_pass'];
         }else{
         echo '';
@@ -79,7 +79,10 @@ background-repeat: no-repeat;">
 </div>
 </form>
 <div class="text-center dont-have">Not a Staff? <button type="button" class="btn btn-danger btn-sm navigate_to_student_login">Login here</button>
-<p><a href="../">School Website</a></p></div>
+<p><a href="../">School Website</a></p>
+<p class="text-center text-info" style="font-size: 13px;"><a href="../" style="text-decoration: none;color: darkblue;"> Powered by: <span class="text-danger">Osotech Software Inc</span></a></p>
+</div>
+
 </div>
 </div>
 </div>

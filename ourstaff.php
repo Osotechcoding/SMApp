@@ -42,7 +42,7 @@
 <div class="row align-items-center">
 <div class="col-lg-6 col-md-6">
 <div class="alumni-img">
-<img src="staffImg/ige.jpg" alt="Staff" style="border: 6px solid deepskyblue;border-radius: 50%;">
+<img src="staffImg/female.png" alt="Staff" style="border: 6px solid deepskyblue;border-radius: 50%;">
 </div>
 </div>
 <div class="col-lg-6 col-md-6">
@@ -59,7 +59,7 @@
 <div class="row align-items-center">
 <div class="col-lg-6 col-md-6">
 <div class="alumni-img">
-<img src="staffImg/omolewa.jpg" alt="Staff" style="border: 6px solid deepskyblue;border-radius: 50%;">
+<img src="staffImg/female.png" alt="Staff" style="border: 6px solid deepskyblue;border-radius: 50%;">
 </div>
 </div>
 <div class="col-lg-6 col-md-6">
@@ -76,7 +76,7 @@
 <div class="row align-items-center">
 <div class="col-lg-6 col-md-6">
 <div class="alumni-img">
-<img src="staffImg/gift.jpg" alt="Staff" style="border: 6px solid deepskyblue; border-radius: 50%;">
+<img src="staffImg/female.png" alt="Staff" style="border: 6px solid deepskyblue; border-radius: 50%;">
 </div>
 </div>
 <div class="col-lg-6 col-md-6">
@@ -94,7 +94,7 @@
 <div class="row align-items-center">
 <div class="col-lg-6 col-md-6">
 <div class="alumni-img">
-<img src="staffImg/alhaja.jpg" alt="Staff" style="border: 6px solid deepskyblue;border-radius: 50%;">
+<img src="staffImg/female.png" alt="Staff" style="border: 6px solid deepskyblue;border-radius: 50%;">
 
 </div>
 </div>
@@ -112,7 +112,7 @@
 <div class="row align-items-center">
 <div class="col-lg-6 col-md-6">
 <div class="alumni-img">
-<img src="staffImg/staff3.jpg" alt="Staff" style="border: 6px solid deepskyblue;border-radius: 50%;">
+<img src="staffImg/female.png" alt="Staff" style="border: 6px solid deepskyblue;border-radius: 50%;">
 </div>
 </div>
 <div class="col-lg-6 col-md-6">
@@ -130,7 +130,7 @@
 <div class="row align-items-center">
 <div class="col-lg-6 col-md-6">
 <div class="alumni-img">
-<img src="staffImg/olubunmi.jpg" alt="Staff" style="border: 6px solid deepskyblue; border-radius: 50%;">
+<img src="staffImg/female.png" alt="Staff" style="border: 6px solid deepskyblue; border-radius: 50%;">
 </div>
 </div>
 <div class="col-lg-6 col-md-6">
@@ -147,7 +147,7 @@
 <div class="row align-items-center">
 <div class="col-lg-6 col-md-6">
 <div class="alumni-img">
-<img src="staffImg/gift.jpg" alt="Staff" style="border: 6px solid deepskyblue; border-radius: 50%;">
+<img src="staffImg/female.png" alt="Staff" style="border: 6px solid deepskyblue; border-radius: 50%;">
 </div>
 </div>
 <div class="col-lg-6 col-md-6">
@@ -170,7 +170,7 @@
 <div class="row align-items-center">
 <div class="col-lg-6 col-md-6">
 <div class="alumni-img">
-<img src="staffImg/akogun.jpg" alt="Staff" style="border: 6px solid deepskyblue;border-radius: 50%;">
+<img src="staffImg/female.png" alt="Staff" style="border: 6px solid deepskyblue;border-radius: 50%;">
 
 </div>
 </div>
@@ -189,7 +189,7 @@
 <div class="row align-items-center">
 <div class="col-lg-6 col-md-6">
 <div class="alumni-img">
-<img src="staffImg/joke.jpg" alt="Staff" style="border: 6px solid deepskyblue;border-radius: 50%;">
+<img src="staffImg/female.png" alt="Staff" style="border: 6px solid deepskyblue;border-radius: 50%;">
 
 </div>
 </div>
@@ -208,7 +208,7 @@
 <div class="row align-items-center">
 <div class="col-lg-6 col-md-6">
 <div class="alumni-img">
-<img src="staffImg/joseph.jpg" alt="Staff" style="border: 6px solid deepskyblue; border-radius: 50%;">
+<img src="staffImg/female.png" alt="Staff" style="border: 6px solid deepskyblue; border-radius: 50%;">
 </div>
 </div>
 <div class="col-lg-6 col-md-6">
@@ -226,7 +226,7 @@
 <div class="row align-items-center">
 <div class="col-lg-6 col-md-6">
 <div class="alumni-img">
-<img src="staffImg/ojie.jpg" alt="Staff" style="border: 6px solid deepskyblue; border-radius: 50%;">
+<img src="staffImg/female.png" alt="Staff" style="border: 6px solid deepskyblue; border-radius: 50%;">
 </div>
 </div>
 <div class="col-lg-6 col-md-6">
@@ -244,7 +244,7 @@
 <div class="row align-items-center">
 <div class="col-lg-6 col-md-6">
 <div class="alumni-img">
-<img src="staffImg/dairo.jpg" alt="Staff" style="border: 6px solid deepskyblue; border-radius: 50%;">
+<img src="staffImg/female.png" alt="Staff" style="border: 6px solid deepskyblue; border-radius: 50%;">
 </div>
 </div>
 <div class="col-lg-6 col-md-6">
@@ -262,7 +262,7 @@
 <div class="row align-items-center">
 <div class="col-lg-6 col-md-6">
 <div class="alumni-img">
-<img src="staffImg/ayobami.jpg" alt="Staff" style="border: 6px solid deepskyblue; border-radius: 50%;">
+<img src="staffImg/female.png" alt="Staff" style="border: 6px solid deepskyblue; border-radius: 50%;">
 </div>
 </div>
 <div class="col-lg-6 col-md-6">
@@ -305,7 +305,7 @@
 <div class="row align-items-center">
 <div class="col-lg-6 col-md-6">
 <div class="alumni-img">
-<img src="staffImg/aminu.jpg" alt="Staff" style="border: 6px solid deepskyblue;border-radius: 50%;">
+<img src="staffImg/female.png" alt="Staff" style="border: 6px solid deepskyblue;border-radius: 50%;">
 
 </div>
 </div>
@@ -324,7 +324,7 @@
 <div class="row align-items-center">
 <div class="col-lg-6 col-md-6">
 <div class="alumni-img">
-<img src="staffImg/ba.jpg" alt="Staff" style="border: 6px solid deepskyblue;border-radius: 50%;">
+<img src="staffImg/female.png" alt="Staff" style="border: 6px solid deepskyblue;border-radius: 50%;">
 
 </div>
 </div>
@@ -343,7 +343,7 @@
 <div class="row align-items-center">
 <div class="col-lg-6 col-md-6">
 <div class="alumni-img">
-<img src="staffImg/tunji.jpg" alt="Staff" style="border: 6px solid deepskyblue;border-radius: 50%;">
+<img src="staffImg/female.png" alt="Staff" style="border: 6px solid deepskyblue;border-radius: 50%;">
 
 </div>
 </div>
@@ -362,7 +362,7 @@
 <div class="row align-items-center">
 <div class="col-lg-6 col-md-6">
 <div class="alumni-img">
-<img src="staffImg/ov.jpg" alt="Staff" style="border: 6px solid deepskyblue;border-radius: 50%;">
+<img src="staffImg/female.png" alt="Staff" style="border: 6px solid deepskyblue;border-radius: 50%;">
 
 </div>
 </div>
@@ -381,7 +381,7 @@
 <div class="row align-items-center">
 <div class="col-lg-6 col-md-6">
 <div class="alumni-img">
-<img src="staffImg/adeniyi.jpg" alt="Staff" style="border: 6px solid deepskyblue;border-radius: 50%;">
+<img src="staffImg/female.png" alt="Staff" style="border: 6px solid deepskyblue;border-radius: 50%;">
 
 </div>
 </div>
@@ -405,7 +405,7 @@
 <div class="row align-items-center">
 <div class="col-lg-6 col-md-6">
 <div class="alumni-img">
-<img src="staffImg/oe.jpg" alt="Staff" style="border: 6px solid deepskyblue;border-radius: 50%;">
+<img src="staffImg/female.png" alt="Staff" style="border: 6px solid deepskyblue;border-radius: 50%;">
 
 </div>
 </div>
@@ -425,7 +425,7 @@
 <div class="row align-items-center">
 <div class="col-lg-6 col-md-6">
 <div class="alumni-img">
-<img src="staffImg/dada.jpg" alt="Staff" style="border: 6px solid deepskyblue;border-radius: 50%;">
+<img src="staffImg/female.png" alt="Staff" style="border: 6px solid deepskyblue;border-radius: 50%;">
 
 </div>
 </div>
@@ -443,7 +443,7 @@
 <div class="row align-items-center">
 <div class="col-lg-6 col-md-6">
 <div class="alumni-img">
-<img src="staffImg/gboye.jpg" alt="Staff" style="border: 6px solid deepskyblue;border-radius: 50%;">
+<img src="staffImg/female.png" alt="Staff" style="border: 6px solid deepskyblue;border-radius: 50%;">
 
 </div>
 </div>
@@ -461,7 +461,7 @@
 <div class="row align-items-center">
 <div class="col-lg-6 col-md-6">
 <div class="alumni-img">
-<img src="staffImg/copper2.jpg" alt="Staff" style="border: 6px solid deepskyblue;border-radius: 50%;">
+<img src="staffImg/female.png" alt="Staff" style="border: 6px solid deepskyblue;border-radius: 50%;">
 
 </div>
 </div>
@@ -479,7 +479,7 @@
 <div class="row align-items-center">
 <div class="col-lg-6 col-md-6">
 <div class="alumni-img">
-<img src="staffImg/female.jpg" alt="Staff" style="border: 6px solid deepskyblue;border-radius: 50%;">
+<img src="staffImg/female.png" alt="Staff" style="border: 6px solid deepskyblue;border-radius: 50%;">
 
 </div>
 </div>

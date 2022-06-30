@@ -82,11 +82,11 @@ class Staff {
       			$urlLink = APP_ROOT."principal/";
       			break;
 
-      			case 'Vice Principal':
+      				case 'Registrar':
       			$urlLink = APP_ROOT."principal/";
       			break;
 
-      				case 'Registrar':
+      			case 'Vice Principal':
       			$urlLink = APP_ROOT."principal/";
       			break;
 
@@ -102,7 +102,7 @@ class Staff {
          window.location.href='".$urlLink."';
         },2000);</script>";
       	}else{
-      		$this->response = $this->alert->alert_toastr("error","Unknown Error Occured Try again...",__OSO_APP_NAME__."Says");
+      		$this->response = $this->alert->alert_toastr("error","Unknown Error Occured Try again...",__OSO_APP_NAME__." Says");
       	}
       }else{
          $this->response = $this->alert->alert_toastr("error",$lang['login_error4'],__OSO_APP_NAME__." Says");//Invalid Account Password
@@ -174,7 +174,7 @@ class Staff {
       	}
        $this->response = $this->alert->alert_toastr("success",$lang['login_success'],$lang['alert-title-success'])."<script>setTimeout(()=>{
          window.location.href='".$urlLink."';
-        },2000);</script>";
+        },500);</script>";
       		}else{
       	$this->response = $this->alert->alert_toastr("error","Something went wrong!",__OSO_APP_NAME__." Says");//Something went wrong
       		}
@@ -229,7 +229,7 @@ $this->response = $this->alert->alert_toastr("error",$lang['login_error5'],__OSO
 					$this->dbh->commit();
 			$this->response = $this->alert->alert_msg("Password updated Successfully! Please wait...","success")."<script>setTimeout(()=>{
 			window.location.href='logout?action=logout';
-			},2500);</script>";
+			},500);</script>";
 				}else{
 			$this->response = $this->alert->alert_msg("Internal Error Occured!, Please try again","danger");
 				}
@@ -359,7 +359,7 @@ $this->response = $this->alert->alert_toastr("error",$lang['login_error5'],__OSO
 		 $this->dbh->commit();
 				$this->response = $this->alert->alert_toastr("success","Updated Successfully",__OSO_APP_NAME__." Says")."<script>setTimeout(()=>{
 							window.location.href='./staffs';
-						},2500);</script>";
+						},500);</script>";
 			 	}else{
 				$this->response = $this->alert->alert_toastr("error","Something went wrong, Please try again ...",__OSO_APP_NAME__." Says");
 			 	}
@@ -421,7 +421,7 @@ $this->response = $this->alert->alert_toastr("error",$lang['login_error5'],__OSO
 					 $this->dbh->commit();
 						$this->response = $this->alert->alert_msg(" Bank info Uploaded Successfully","success")."<script>setTimeout(()=>{
 							window.location.reload();
-						},1500);</script>";
+						},500);</script>";
 				}else{
 						$this->response = $this->alert->alert_msg("Something went wrong, Please try again ...","danger");
 				}
@@ -493,18 +493,18 @@ $this->response = $this->alert->alert_toastr("error",$lang['login_error5'],__OSO
 			 $confirmation_code = substr(md5(uniqid(mt_rand(),true)),0,15);
 			 $reg_date = date("Y-m-d");
 			 $div_email = explode("@", $email);
-			 $portal_email = $div_email[0]."@gssota.portal";
+			 $portal_email = $div_email[0]."@"__OSO_APP_NAME__.".portal";
 			 $fullName = $firstName." ".$middleName;
 			 try {
 			 	 $this->dbh->beginTransaction();
 			 	$this->stmt = $this->dbh->prepare("INSERT INTO $this->table (staffRegNo,firstName,lastName,staffEmail,staffPass,staffUser,staffEducation,staffPhone,confirmation_code,staffGender,portalEmail,jobStatus,staffType,appliedDate) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?);");
 			 	if ($this->stmt->execute(array($staffRegNo,$fullName,$surName,$email,$hashed_password,$musername,$education,$mphone,$confirmation_code,$staff_gender,$portal_email,$staff_status,$jobType,$reg_date))) {
 		 				$this->dbh->commit();
-						$this->response = $this->alert->alert_toastr("success","$fullName Registered Successfully",__OSO_APP_NAME__."Says")."<script>setTimeout(()=>{
+						$this->response = $this->alert->alert_toastr("success","$fullName Registered Successfully",__OSO_APP_NAME__." Says")."<script>setTimeout(()=>{
 							window.location.reload();
-						},2500);</script>";
+						},500);</script>";
 			 	}else{
-				$this->response = $this->alert->alert_toastr("error","Something went wrong, Please try again ...",__OSO_APP_NAME__."Says");
+				$this->response = $this->alert->alert_toastr("error","Something went wrong, Please try again ...",__OSO_APP_NAME__." Says");
 			 	}
 			 	
 			 } catch (PDOException $e) {
@@ -523,20 +523,20 @@ $this->response = $this->alert->alert_toastr("error",$lang['login_error5'],__OSO
 	//generate staff admission no
 	public function generate_staff_registration_number(){
 	 $this->response ="";
-	 $prefix="JTE";
+	 $prefix="SMP";
 	$this->stmt = $this->dbh->prepare("SELECT staffRegNo FROM $this->table ORDER BY staffRegNo DESC LIMIT 1");
 	$this->stmt->execute();
 	if ($this->stmt->rowCount() > 0) {
     if ($row = $this->stmt->fetch()) {
       $value2 = $row->staffRegNo;
-      $value2 = substr($value2, 7,10);//separating numeric part
+      $value2 = substr($value2, 5,8);//separating numeric part
       $value2 =$value2 + 1;//incrementing numeric value
-      $value2 = $prefix.date('Y').sprintf('%03s',$value2);//concatenating incremented value
+      $value2 = $prefix.date('y').sprintf('%03s',$value2);//concatenating incremented value
       $this->response = $value2;
     }
 	}else{
-	// "GSSOTA/00001"
-    $value2 =$prefix.date('Y')."001";
+	// "SMP22001"
+    $value2 =$prefix.date('y')."001";
     $this->response =$value2;
 	}
 	return $this->response;
@@ -549,13 +549,13 @@ public function assign_staff_office($data){
 	$auth_pass = $this->config->Clean($data['auth_pass']);
 	//check for empty val
 	if ($this->config->isEmptyStr($staffId)) {
-	$this->response = $this->alert->alert_toastr("error","Select the staff name you want to assign to Office",__OSO_APP_NAME__."Says");
+	$this->response = $this->alert->alert_toastr("error","Select the staff name you want to assign to Office",__OSO_APP_NAME__." Says");
 	}elseif ($this->config->isEmptyStr($office_role)) {
-	$this->response = $this->alert->alert_toastr("error","Select the Office you want to assign",__OSO_APP_NAME__."Says");
+	$this->response = $this->alert->alert_toastr("error","Select the Office you want to assign",__OSO_APP_NAME__." Says");
 	}elseif ($this->config->isEmptyStr($auth_pass)) {
-	$this->response = $this->alert->alert_toastr("error","Enter an Authentication Password",__OSO_APP_NAME__."Says");
+	$this->response = $this->alert->alert_toastr("error","Enter an Authentication Password",__OSO_APP_NAME__." Says");
 	}elseif ($auth_pass !== __OSO__CONTROL__KEY__) {
-		$this->response = $this->alert->alert_toastr("error","Invalid Authentication Password Entered",__OSO_APP_NAME__."Says");
+		$this->response = $this->alert->alert_toastr("error","Invalid Authentication Password Entered",__OSO_APP_NAME__." Says");
 	}else{
 		$staff_data = self::get_staff_ById($staffId);
 		$full_name = $staff_data->full_name;
@@ -564,7 +564,7 @@ public function assign_staff_office($data){
 		$this->stmt = $this->dbh->prepare("SELECT * FROM `visap_staff_post_tbl` WHERE staff_id=? LIMIT 1");
 		$this->stmt->execute(array($staffId));
 		if ($this->stmt->rowCount() ==1) {
-			$this->response = $this->alert->alert_toastr("error","The Selected staff is already assigned to an Office",__OSO_APP_NAME__."Says");
+			$this->response = $this->alert->alert_toastr("error","The Selected staff is already assigned to an Office",__OSO_APP_NAME__." Says");
 		}else{
 			 try {
 			 	 $this->dbh->beginTransaction();
@@ -574,14 +574,14 @@ public function assign_staff_office($data){
 			 			$this->stmt = $this->dbh->prepare("UPDATE $this->table SET staffRole=? WHERE staffId=? LIMIT 1");
 			 			if ($this->stmt->execute(array($office_role,$staffId))) {
 			 		$this->dbh->commit();
-				$this->response = $this->alert->alert_toastr("success","$office_role assigned to $full_name Successfully",__OSO_APP_NAME__."Says")."<script>setTimeout(()=>{
+				$this->response = $this->alert->alert_toastr("success","$office_role assigned to $full_name Successfully",__OSO_APP_NAME__." Says")."<script>setTimeout(()=>{
 							window.location.reload();
 						},2500);</script>";
 			 			}else{
-			 			$this->response = $this->alert->alert_toastr("error","Something went wrong, Please try again ...",__OSO_APP_NAME__."Says");
+			 			$this->response = $this->alert->alert_toastr("error","Something went wrong, Please try again ...",__OSO_APP_NAME__." Says");
 			 			}
 			 	}else{
-				$this->response = $this->alert->alert_toastr("error","Something went wrong, Please try again ...",__OSO_APP_NAME__."Says");
+				$this->response = $this->alert->alert_toastr("error","Something went wrong, Please try again ...",__OSO_APP_NAME__." Says");
 			 	}
 			 } catch (PDOException $e) {
 			$this->dbh->rollback();
@@ -741,7 +741,7 @@ public function count_all_online_staff(){
     			$this->dbh->commit();
     $this->response = $this->alert->alert_toastr("success","Passport Uploaded Successfully",__OSO_APP_NAME__." Says")."<script>setTimeout(()=>{
 							window.location.href='./staffs';
-						},2500);</script>";
+						},500);</script>";
     		}
     	}
     	

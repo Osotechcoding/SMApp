@@ -83,7 +83,7 @@ public function check_two_passwords_hash($password,$db_password){
 	}
 	//fetch config 
 	public function getConfigData(){
-		$this->query ="SELECT * FROM tbl_settings WHERE config_id=1";
+		$this->query ="SELECT * FROM `visap_school_profile` WHERE id=1";
 		$this->stmt =$this->dbh->prepare($this->query);
 	$this->response =$this->stmt->execute();
 	if ($this->stmt->rowCount()>0) {
@@ -264,7 +264,7 @@ public function check_user_activity_allowed($module){
   public function get_schoolLogoImage(){
     $schoolDatas = self::getConfigData();
     //school real logo 
-    $schoolLogo = $schoolDatas->web_logo;
+    $schoolLogo = $schoolDatas->school_logo;
     if ($schoolLogo == NULL || $schoolLogo =="") {
       $ourLogo = APP_ROOT."schlogo.png";
     }else{

@@ -38,7 +38,7 @@
 <div class="col-lg-4 col-md-6">
 <div class="single-events-card style-4">
 <div class="events-image">
-<a href="events-details.php"><img src="assets/images/events/events-1.jpg" alt="Image"></a>
+<a href="events-details.php"><img src="assets/images/events/event-1.jpg" alt="Image"></a>
 <div class="date">
 <span>28</span>
 <p>Mar</p>
@@ -55,7 +55,7 @@
 <div class="col-lg-4 col-md-6">
 <div class="single-events-card style-4">
 <div class="events-image">
-<a href="events-details.php"><img src="assets/images/events/events-2.jpg" alt="Image"></a>
+<a href="events-details.php"><img src="assets/images/events/event-1.jpg" alt="Image"></a>
 <div class="date">
 <span>29</span>
 <p>Mar</p>
@@ -73,7 +73,7 @@
 <div class="col-lg-4 col-md-6">
 <div class="single-events-card style-4">
 <div class="events-image">
-<a href="events-details.php"><img src="assets/images/events/events-3.jpg" alt="Image"></a>
+<a href="events-details.php"><img src="assets/images/events/event-1.jpg" alt="Image"></a>
 <div class="date">
 <span>30</span>
 <p>Mar</p>
@@ -81,9 +81,9 @@
 </div>
 <div class="events-content">
 <div class="admin">
-<p><a href="events-details.php"><i class="flaticon-student-with-graduation-cap"></i>Admin</a></p>
+<p><a href="events-details"><i class="flaticon-student-with-graduation-cap"></i>Admin</a></p>
 </div>
-<a href="events-details.php"><h3>Monday Night Concert In Lake View,Mountain City</h3></a>
+<a href="events-details"><h3>Monday Night Concert In Lake View,Mountain City</h3></a>
 </div>
 </div>
 </div>

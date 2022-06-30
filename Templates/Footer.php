@@ -3,13 +3,13 @@
 <div class="row">
 <div class="col-lg-4 col-sm-6">
 <div class="footer-logo-area">
-<a href="./"><img src="assets/images/white-logo.png" alt="Image"></a>
-<p><?php echo __SCHOOL_NAME__; ?> was established by <?php echo __AUTHOR_NAME__; ?> in 2019 for the public benefit. Afterwards, it is recognized globally</p>
+<a href="./"><img src="<?php echo $Osotech->get_schoolLogoImage();?>" style="border: 2px solid deepskyblue;border-radius:10px;background: #ffffff;" width="150" alt="Image"></a>
+<p><?php echo strtoupper($Osotech->getConfigData()->school_name);?> was established by <?php echo __AUTHOR_NAME__; ?> in 2019 for the public benefit. Afterwards, it is recognized globally</p>
 <div class="contact-list">
 <ul>
-<li><a href="tel:+08131374443">+234-80-3794-0665
+<li><a href="tel:<?php echo ($Osotech->getConfigData()->school_phone);?>"><?php echo ($Osotech->getConfigData()->school_phone);?>
 </a></li>
-<li><a href="mailto:info@smapp.com"><span class="__cf_email__">info@smapp.com</span></a></li>
+<li><a href="mailto:<?php echo ($Osotech->getConfigData()->school_email);?>"><span class="__cf_email__"><?php echo ($Osotech->getConfigData()->school_email);?></span></a></li>
 </ul>
 </div>
 </div>

@@ -62,7 +62,7 @@ try {
     			$this->dbh->commit();
     $this->response = $this->alert->alert_toastr("success","Blog Posted Successfully",__OSO_APP_NAME__." Says")."<script>setTimeout(()=>{
 							window.location.reload();
-						},1000);</script>";
+						},500);</script>";
     		}
     	}else{
     		$this->response = $this->alert->alert_toastr("error","Unknown Error Occured, Please try again!",__OSO_APP_NAME__." Says");

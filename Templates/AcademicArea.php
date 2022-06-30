@@ -1,7 +1,7 @@
 <div class="academic-area pt-100 pb-70">
 <div class="container">
 <div class="section-title">
-<h2>Welcome to Juli.T.</h2>
+<h3>Welcome to <br> <?php echo $Osotech->getConfigData()->school_name;?></h3>
 <!-- <p>at Juli.T. Schools God is Our Strength</p> -->
 </div>
 <div class="row justify-content-center">
@@ -27,7 +27,7 @@
 <div class="single-academics-card">
 <div class="academic-top-content">
 <i class="flaticon-writing-tool"></i>
-<a href="academics-details"><h3>Seasoned Teachers</h3></a>
+<a href="academics-details"><h3>Qualified Teachers</h3></a>
 </div>
 <p>Our teachers are not only qualified academically but also of high moral values</p>
 </div>

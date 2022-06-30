@@ -227,7 +227,7 @@ $this->stmt = $this->dbh->prepare("SELECT * FROM `visap_termly_result_tbl` WHERE
 		}
 		$this->response = '<script>setTimeout(()=>{
 			window.open("'.$student_result_page.'","_blank", "top=100, left=100, width=800, height=700");$("#checkResultForm")[0].reset();
-		},2000)</script>';
+		},1000)</script>';
 			}elseif ($result_opened =='3') {
 	$this->response = self::alert_msg("This Result is Held, Please contact your Admin!","danger");
 			}
@@ -288,7 +288,7 @@ $this->stmt = $this->dbh->prepare("SELECT * FROM `visap_termly_result_tbl` WHERE
 		}
 		$this->response = '<script>setTimeout(()=>{
 			window.open("'.$student_result_page.'","_blank", "top=100, left=100, width=800, height=700");$("#checkResultForm")[0].reset();
-		},2000)</script>';
+		},1000)</script>';
 			}elseif ($result_opened =='3') {
 	$this->response = self::alert_msg("This Result is Held, Please contact your Admin!","danger");
 			}
@@ -523,8 +523,8 @@ if ($this->stmt->rowCount()==1) {
 				}else{
 					//let begin with the registration
 					//student Login Credentials
-					 $portal_username = $username."@julit.portal";//login email
-					 $portal_password ="julit@portal";//loginpassword
+					 $portal_username = $username."@".__OSO_APP_NAME__.".portal";//login email
+					 $portal_password =__OSO_APP_NAME__."@portal";//loginpassword
 					 $hashed_password = self::encrypt_user_password($portal_password);
 				try {
 		$this->dbh->beginTransaction();
@@ -535,7 +535,7 @@ if ($this->stmt->rowCount()==1) {
 		$this->stmt =$this->dbh->prepare("INSERT INTO `visap_student_tbl`(stdRegNo,stdEmail,stdUserName,stdPassword,studentClass,stdPhone,stdApplyDate,stdConfToken) VALUES(?,?,?,?,?,?,?,?);");
 	if ($this->stmt->execute(array($admission_no,$stu_email,$username,$hashed_password,$stu_class,$stu_phone,$date,$confirmation_code))) {
 				// grab the LastInsertId...
-			$_SESSION['AUTH_CODE_APPLICANT_ID'] = $this->dbh->lastInsertId();
+			$_SESSION['AUTH_SMAPP_APPLICANT_ID'] = $this->dbh->lastInsertId();
 			$_SESSION['AUTH_CODE_ADMISSION_NO'] = $admission_no;
 			//let change the Pin Used status
 			$change_status =1;
@@ -548,7 +548,7 @@ if ($this->stmt->rowCount()==1) {
 			$this->dbh->commit();
 			$this->response = self::alert_msg("You have successfully completed step one of your online registration!","success")."<script>setTimeout(()=>{
 			window.location.href='".ADMISSION_ROOT."step2?applicant=".$admission_no."&page=2';
-			},2500);</script>";
+			},500);</script>";
 		}
 			}
 		}
@@ -600,11 +600,11 @@ if ($this->stmt->rowCount()==1) {
 					// create the student info table
 					$this->stmt = $this->dbh->prepare("INSERT INTO `visap_student_info_tbl` (studentId,stdBirthCert,stdCountry,stdSOR,stdLGA,stdHomeTown,stdReligion,stdDisability,stdPermaAdd) VALUES (?,?,?,?,?,?,?,?,?);");
 					if ($this->stmt->execute(array($applicant_id,$birth_cert,$nationality,$state_origin,$localgvt,$hometown,$religion,$challenges,$home_address))) {
-						$_SESSION['AUTH_CODE_APPLICANT_ID'] = $applicant_id;
+						$_SESSION['AUTH_SMAPP_APPLICANT_ID'] = $applicant_id;
 					$this->dbh->commit();
 			$this->response = self::alert_msg("Step Two completed successfully, Pls wait...","success")."<script>setTimeout(()=>{
 			window.location.href='".ADMISSION_ROOT."step3?applicant=".$admission_no."&page=3';
-			},2500);</script>";
+			},500);</script>";
 					}
 				}
 				
@@ -654,11 +654,11 @@ if ($this->stmt->rowCount()==1) {
 				//update the student info on student tbl
 				$this->stmt = $this->dbh->prepare("UPDATE `visap_student_info_tbl` SET stdMGTitle=?,stdMGName=?,stdMGRelationship=?,stdMGPhone=?,stdMGEmail=?,stdMGOccupation=?,stdMGAddress=?, stdFGTitle=?, stdFGName=?,stdFGRelationship=?,stdFGPhone=?,stdFGEmail=?,stdFGOccupation=?,stdFGAddress=? WHERE studentId=? LIMIT 1");
 				if ($this->stmt->execute(array($mg_title,$mg_name,$mg_relation,$mg_phone,$mg_email,$mg_occu,$mg_address,$fg_title,$fg_name,$fg_relation,$fg_phone,$fg_email,$fg_occu,$fg_address,$applicant_id))) {
-				$_SESSION['AUTH_CODE_APPLICANT_ID'] = $applicant_id;
+				$_SESSION['AUTH_SMAPP_APPLICANT_ID'] = $applicant_id;
 					$this->dbh->commit();
 			$this->response = self::alert_msg("Step Three completed successfully, Pls wait...","success")."<script>setTimeout(()=>{
 			window.location.href='".ADMISSION_ROOT."step4?applicant=".$admission_no."&page=4';
-			},1500);</script>";
+			},500);</script>";
 				}
 				
 			} catch (PDOException $e) {
@@ -716,12 +716,12 @@ if ($this->stmt->rowCount()==1) {
 				//update the student info on student tbl
 				$this->stmt = $this->dbh->prepare("INSERT INTO `visap_stdpreschlinfo` (student_id,stdSchoolName,stdDirectorName,stdSchoolPhone,stdSchLocation,stdSchlCat,stdSchlEduLevel,stdPresentClass,stdReasonInPreClass,stdLastReportSheet) VALUES (?,?,?,?,?,?,?,?,?,?);");
 				if ($this->stmt->execute(array($applicant_id,$schoolname,$proprietress,$schl_phone,$prev_schl_loca,$category,$edu_offered,$present_class,$reason_to,$reportsheet_realName))) {
-				$_SESSION['AUTH_CODE_APPLICANT_ID'] = $applicant_id;
+				$_SESSION['AUTH_SMAPP_APPLICANT_ID'] = $applicant_id;
 				if (move_uploaded_file($reportsheet_temp, $destination)) {
 					$this->dbh->commit();
 			$this->response = self::alert_msg("Step Four completed successfully, Pls wait...","success")."<script>setTimeout(()=>{
 			window.location.href='".ADMISSION_ROOT."step5?applicant=".$admission_no."&page=5';
-			},1500);</script>";
+			},500);</script>";
 				}
 					
 				}
@@ -766,11 +766,11 @@ if ($this->stmt->rowCount()==1) {
 				//update the student info on student tbl
 				$this->stmt = $this->dbh->prepare("INSERT INTO `visap_stdmedical_tbl` (studId,stdHospitalName,stdHospitalOwner,stdHospitalPhone,stdRegDate,stdHospitalAddress,stdBlood,stdGenotype,stdSickness,stdFamilySickness,stdIsHospitalized,stdSurgical) VALUES (?,?,?,?,?,?,?,?,?,?,?,?);");
 				if ($this->stmt->execute(array($applicant_id,$hospital_name,$doctor_name,$phone,$member_since,$address,$blood_group,$genotype,$illness,$family_illness,$hospitalized,$surgical_operation))) {
-				$_SESSION['AUTH_CODE_APPLICANT_ID'] = $applicant_id;
+				$_SESSION['AUTH_SMAPP_APPLICANT_ID'] = $applicant_id;
 				$this->dbh->commit();
 			$this->response = self::alert_msg("Step Five completed successfully, Pls wait...","success")."<script>setTimeout(()=>{
 			window.location.href='".ADMISSION_ROOT."submitapplication?applicant=".$admission_no."&page=6';
-			},2500);</script>";
+			},500);</script>";
 				}
 			} catch (PDOException $e) {
 			$this->dbh->rollback();
@@ -823,7 +823,7 @@ if ($this->stmt->rowCount()==1) {
 				//update the student info on student tbl
 				$this->stmt = $this->dbh->prepare("UPDATE `visap_student_tbl` SET stdPassport=? WHERE stdId=? AND stdRegNo=? LIMIT 1");
 				if ($this->stmt->execute(array($passport_realName,$applicant_id,$admission_no))) {
-				$_SESSION['AUTH_CODE_APPLICANT_ID'] = $applicant_id;
+				$_SESSION['AUTH_SMAPP_APPLICANT_ID'] = $applicant_id;
 				if (move_uploaded_file($passport_temp, $destination)) {
 					//send registrationmessage to the new student
 					$Osotech_mailing = new Osotech_mailing();
@@ -1068,30 +1068,29 @@ if ($this->stmt->rowCount()>0) {
 }
 }
 
-/*
-public function generate_admission_number(){
-	 $this->response ="";
-	 $prefix="GSS";
-	$this->stmt = $this->dbh->prepare("SELECT stdRegNo FROM $this->table_name ORDER BY stdRegNo DESC LIMIT 1");
-	$this->stmt->execute();
-	if ($this->stmt->rowCount() > 0) {
-    if ($row = $this->stmt->fetch()) {
-      $value2 = $row->stdRegNo;
-      $value2 = substr($value2, 8,12);//separating numeric part
-      $value2 =$value2 + 1;//incrementing numeric value
-      $value2 = $prefix.date('Y')."-".sprintf('%04s',$value2);//concatenating incremented value
-      $this->response = $value2;
-    }
-	}else{
-	// "GSSOTA/00001"
-    $value2 =$prefix.date('Y')."-"."0001";
-    $this->response =$value2;
+public function getConfigData(){
+		$this->query ="SELECT * FROM `visap_school_profile` WHERE id=1";
+		$this->stmt =$this->dbh->prepare($this->query);
+	$this->response =$this->stmt->execute();
+	if ($this->stmt->rowCount()>0) {
+		// code...
+		$this->response = $this->stmt->fetch();
+		return $this->response;
 	}
-	return $this->response;
-	unset($this->dbh);
-}
+	}
 
-*/
+public function get_schoolLogoImage(){
+    $schoolDatas = self::getConfigData();
+    //school real logo 
+    $schoolLogo = $schoolDatas->school_logo;
+    if ($schoolLogo == NULL || $schoolLogo =="") {
+      $ourLogo = APP_ROOT."eportal/schlogo.png";
+    }else{
+       $ourLogo = APP_ROOT."eportal/schoolImages/Logo/".$schoolLogo;
+    }
+    $this->response = $ourLogo;
+    return $this->response;
+  }
   
 }
 

@@ -58,7 +58,7 @@ class Pins{
  		$this->_table_ = "tbl_reg_pins";
  		$this->_Pins_code = 15;
  		$this->_Pins_serial = 8;
- 		$this->_Pins_prefix ="JTSA";
+ 		$this->_Pins_prefix ="SMAA";
  		$this->_pin_desc_ ="Registration Pins";
  			break;
  			case 'rcp':
@@ -66,7 +66,7 @@ class Pins{
  		$this->_table_ = "tbl_result_pins";
  		$this->_Pins_code = 14;
  		$this->_Pins_serial = 9;
- 		$this->_Pins_prefix ="JTSR";
+ 		$this->_Pins_prefix ="SMAR";
  		$this->_pin_desc_ ="Result Checker Pins";
  			break;
  			case 'ep':
@@ -169,6 +169,7 @@ class Pins{
  }
 		}
 return $this->response;
+unset($this->dbh);
 	}
 
 public function get_pins($table){
@@ -195,6 +196,7 @@ public function get_pins($table){
 			}
 		}
 		return $this->response;
+		unset($this->dbh);
 	}
 
 	//count scratch Card by table name
@@ -207,6 +209,7 @@ public function get_pins($table){
 				$data_count =$this->stmt->fetch();
 				$this->response = $data_count->cnt;
 				return $this->response;
+				unset($this->dbh);
 			}
 		}
 	}
@@ -221,6 +224,7 @@ public function get_pins($table){
 				$data_count =$this->stmt->fetch();
 				$this->response = $data_count->cnt;
 				return $this->response;
+				unset($this->dbh);
 			}
 		}
 	}

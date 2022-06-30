@@ -7,12 +7,12 @@ class Session {
 
 	 public static function web_root(){
 	 	return APP_ROOT;
-		//https://eportal.julitschools.com/
+		//https://eportal.smapp.com/
 	}
 	public static function redirect_root($flink) {
 		header("Location: ".self::web_root().$flink);
     exit();
-    //https://eportal.julitschools.com/index
+    //https://eportal.smapp.com/index
 	}
 	
 	public static function set($k,$v){

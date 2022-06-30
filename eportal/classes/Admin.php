@@ -26,10 +26,10 @@ class Admin{
 		$xss_token = $data['txss_token'];
 		if ($this->config->isEmptyStr($email) || $this->config->isEmptyStr($password) || $this->config->isEmptyStr($login_as)) {
 			// code...
-			$this->response =$this->alert->alert_toastr("warning",$lang['login_error1'],$lang['alert-title-warning']);
+			$this->response =$this->alert->alert_toastr("error",$lang['login_error1'],__OSO_APP_NAME__." Says");
 		}elseif (! $this->config->is_Valid_Email($email)) {
 			// code...
-			$this->response =$this->alert->alert_toastr("warning",$lang['login_error2'],$lang['alert-title-warning']);
+			$this->response =$this->alert->alert_toastr("warning",$lang['login_error2'],__OSO_APP_NAME__." Says");
 		}else{
 			 $this->query = "SELECT * FROM {$this->table} WHERE adminEmail=? AND adminType=? LIMIT 1";
     $this->stmt = $this->dbh->prepare($this->query);
@@ -59,14 +59,14 @@ class Admin{
       	$_SESSION['ADMIN_USERNAME'] =$result->adminUser;
       	$_SESSION['ADMIN_EMAIL'] =$result->adminEmail;
       	$admin_home_link = APP_ROOT."admin/";
-       $this->response = $this->alert->alert_toastr("success",$lang['login_success'],$lang['alert-title-success'])."<script>setTimeout(()=>{
+       $this->response = $this->alert->alert_toastr("success",$lang['login_success'],__OSO_APP_NAME__." Says")."<script>setTimeout(()=>{
          window.location.href='".$admin_home_link."';
-        },2000);</script>";
+        },1000);</script>";
       }else{
          $this->response = $this->alert->alert_toastr("error",$lang['login_error4'],$lang['alert-title-error']);//Invalid Account Password
       }
     }else{
-      $this->response = $this->alert->alert_toastr("error",$lang['login_error5'],$lang['alert-title-error']);// Email Address Not Found or User Details not found
+      $this->response = $this->alert->alert_toastr("error",$lang['login_error5'],__OSO_APP_NAME__." Says");// Email Address Not Found or User Details not found
     }
 		}
 		
@@ -105,7 +105,7 @@ class Admin{
 		$password = $this->config->Clean($data['cpass']);
 		if (empty($password)) {
 			// code...
-			$this->response =$this->alert->alert_toastr("warning","Please Enter Password to Unlock your Session",$lang['alert-title-warning']);
+			$this->response =$this->alert->alert_toastr("error","Please Enter Password to Unlock your Session",__OSO_APP_NAME__." Says");
 		}else{
 			$this->query = "SELECT * FROM {$this->table} WHERE adminEmail=? LIMIT 1";
     $this->stmt = $this->dbh->prepare($this->query);
@@ -123,9 +123,9 @@ class Admin{
       		$admin_home_link = APP_ROOT."admin/";
        $this->response = $this->alert->alert_toastr("success",$lang['login_success'],$lang['alert-title-success'])."<script>setTimeout(()=>{
          window.location.href='".$admin_home_link."';
-        },2000);</script>";
+        },1000);</script>";
       }else{
-         $this->response = $this->alert->alert_toastr("error",$lang['login_error4'],$lang['alert-title-error']);//Invalid Account Password
+         $this->response = $this->alert->alert_toastr("error",$lang['login_error4'],__OSO_APP_NAME__." Says");//Invalid Account Password
       }
       }else{
 $this->response = $this->alert->alert_toastr("error",$lang['login_error5'],$lang['alert-title-error']);// Email Address Not Found or User Details not found
@@ -209,9 +209,9 @@ public function reset_admin_password($data){
 			$auth_pass = $this->config->Clean($data['auth_pass']);
 			//check for empty values
 			if ($this->config->isEmptyStr($admin_id) || $this->config->isEmptyStr($UserName) || $this->config->isEmptyStr($fullName) || $this->config->isEmptyStr($userType) || $this->config->isEmptyStr($auth_pass)) {
-			$this->response = $this->alert->alert_toastr("warning","Invalid form submission!, Please try again","GSSOTA SAYS");
+			$this->response = $this->alert->alert_toastr("warning","Invalid form submission!, Please try again",__OSO_APP_NAME__." Says");
 			}elseif ($auth_pass!== __OSO__CONTROL__KEY__) {
-	$this->response = $this->alert->alert_toastr("error","Please enter a Valid authentication code to Continue!","GSSOTA SAYS");
+	$this->response = $this->alert->alert_toastr("error","Please enter a Valid authentication code to Continue!",__OSO_APP_NAME__." Says");
 			}else{
 				try {
 				$this->dbh->beginTransaction();
@@ -219,16 +219,16 @@ public function reset_admin_password($data){
 				if ($this->stmt->execute(array($UserName,$fullName,$admin_id,$userType))) {
 					// code...
 					$this->dbh->commit();
-		$this->response = $this->alert->alert_toastr("success"," Details updated Successfully","GSSOTA SAYS")."<script>setTimeout(()=>{
+		$this->response = $this->alert->alert_toastr("success"," Details updated Successfully",__OSO_APP_NAME__." Says")."<script>setTimeout(()=>{
 			window.location.reload();
 			},1500);</script>";
 				}else{
-			$this->response = $this->alert->alert_toastr("error","Internal Error Occured!, Please try again","GSSOTA SAYS");
+			$this->response = $this->alert->alert_toastr("error","Internal Error Occured!, Please try again",__OSO_APP_NAME__." Says");
 				}
 
 						} catch (PDOException $e) {
 	$this->dbh->rollback();
-    $this->response  =$this->alert->alert_toastr("error","Failed: Error Occurred: ".$e->getMessage(),"GSSOTA SAYS");
+    $this->response  =$this->alert->alert_toastr("error","Failed: Error Occurred: ".$e->getMessage(),__OSO_APP_NAME__." Says");
 						}
 			}
 			return $this->response;

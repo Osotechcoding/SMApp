@@ -34,9 +34,9 @@ background-repeat: no-repeat;">
 <div class="container">
 <div class="loginbox">
 <div class="login-left">
-<img src="<?php echo $Configuration->get_schoolLogoImage();?>" width="350" class="img-fluid" alt="logo">
+<img src="<?php echo $Configuration->get_schoolLogoImage();?>" width="350" class="img-fluid" alt="logo" style="border: 2px solid deepskyblue;border-radius:10px;background: #ffffff;">
 <h3 class="text-center text-warning"><?php echo __SCHOOL_NAME__; ?></h3>
-<a href="../" target="_blank" style="text-decoration: none;color: whitesmoke;">Go to Homepage</a>
+<p class="text-center" style="font-size: 13px;"><a href="../" style="text-decoration: none;color: whitesmoke;"> Powered by: <span class="text-danger">Osotech Software Inc</span></a></p>
 </div>
 <div class="login-right">
 <div class="login-right-wrap">
@@ -47,7 +47,7 @@ background-repeat: no-repeat;">
     <input type="hidden" name="action" value="stud_login">
 <div class="form-group">
     <label for="">Portal E-mail</label>
-<input type="text" class="form-control" name="student_email" id="exampleInputEmail1"
+<input type="text" autocomplete="off" class="form-control" name="student_email" id="exampleInputEmail1"
  placeholder="<?php echo $lang['email'];?>" value="<?php if(isset($_COOKIE['login_student_email'])){echo $_COOKIE['login_student_email'];
      }else{
      echo '';
@@ -55,7 +55,7 @@ background-repeat: no-repeat;">
 </div>
 <div class="form-group">
     <label for="">Password</label>
-<input type="password" class="form-control" name="student_password" value="<?php if(isset($_COOKIE['login_student_pass'])){
+<input type="password" autocomplete="off" class="form-control" name="student_password" value="<?php if(isset($_COOKIE['login_student_pass'])){
   echo $_COOKIE['login_student_pass'];
      }else{
     echo '';
@@ -73,7 +73,9 @@ background-repeat: no-repeat;">
 </div>
 </form>
 <div class="text-center dont-have">Are you a Staff? <button type="button" class="btn btn-primary btn-sm navigate_to_staff_login"> Login here</button>
-<p><a href="../">School Website</a></p></div>
+<p><a href="../">School Website</a></p> 
+<p class="text-center text-info" style="font-size: 13px;"><a href="../" style="text-decoration: none;color: darkblue;"> Powered by: <span class="text-danger">Osotech Software Inc</span></a></p>
+</div>
 </div>
 </div>
 </div>

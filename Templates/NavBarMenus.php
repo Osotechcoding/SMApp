@@ -4,8 +4,8 @@
 <div class="mobile-responsive-menu">
 <div class="logo">
 <a href="./">
-<img src="assets/images/logo.png" class="main-logo" lt="logo">
-<img src="assets/images/white-logo.png" class="white-logo" alt="logo">
+<!-- <img src="assets/images/logo.png" class="main-logo" lt="logo"> -->
+<!-- <img src="assets/images/white-logo.png" class="white-logo" alt="logo"> -->
 </a>
 </div>
 </div>
@@ -15,7 +15,7 @@
 <div class="container">
 <nav class="navbar navbar-expand-md navbar-light">
 <a class="navbar-brand" href="./">
-<img src="assets/images/white-logo.png" alt="logo">
+<img src="<?php echo $Osotech->get_schoolLogoImage();?>" width="100" alt="logo" style="border-radius:10px; border: 2px solid deepskyblue;background: #ffffff;">
 </a>
 <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
 <ul class="navbar-nav ms-auto">
@@ -115,7 +115,7 @@ NEWS
 </nav>
 </div>
 </div>
-<div class="others-option-for-responsive">
+<!-- <div class="others-option-for-responsive">
 <div class="container">
 <div class="dot-menu">
 <div class="inner">
@@ -125,5 +125,5 @@ NEWS
 </div>
 </div>
 </div>
-</div>
+</div> -->
 </div>

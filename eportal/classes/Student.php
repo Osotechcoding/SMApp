@@ -69,7 +69,7 @@ class Student{
       	$urlLink = APP_ROOT."students/";
        $this->response = $this->alert->alert_toastr("success","Login Successful ",__OSO_APP_NAME__." Says")."<script>setTimeout(()=>{
          window.location.href='".$urlLink."';
-        },1000);</script>";
+        },500);</script>";
       	}
       }else{
    $this->response = $this->alert->alert_toastr("error","Login Failed: Invalid account Password!",__OSO_APP_NAME__." Says");//Invalid Account Password
@@ -264,8 +264,8 @@ public function get_all_students_by_status(string $status){
 		$this->stmt =$this->dbh->prepare("INSERT INTO $this->table_name(stdRegNo,stdEmail,stdUserName,stdPassword,studentClass,stdPhone,stdApplyDate,stdConfToken) VALUES(?,?,?,?,?,?,?,?);");
 	if ($this->stmt->execute(array($admission_no,$stu_email,$username,$hashed_password,$stu_class,$stu_phone,$date,$confirmation_code))) {
 				// grab the LastInsertId...
-			$_SESSION['AUTH_GSSOTA_APPLICANT_ID'] =$this->dbh->lastInsertId();
-			$_SESSION['AUTH_GSSOTA_ADMISSION_NO'] = $admission_no;
+			$_SESSION['AUTH_SMAPP_APPLICANT_ID'] =$this->dbh->lastInsertId();
+			$_SESSION['AUTH_SMAPP_ADMISSION_NO'] = $admission_no;
 			//let change the Pin Used status
 			$change_status =1;
 	$this->stmt =$this->dbh->prepare("UPDATE `tbl_reg_pins` SET pin_status=? WHERE pin_id=? LIMIT 1");
@@ -1002,7 +1002,7 @@ if ($this->stmt->rowCount()>0) {
     			$this->dbh->commit();
     $this->response = $this->alert->alert_toastr("success","Assignment Uploaded Successfully",__OSO_APP_NAME__." Says")."<script>setTimeout(()=>{
 							window.location.reload();
-						},1000);</script>";
+						},500);</script>";
     		}
     	}else{
     		$this->response = $this->alert->alert_toastr("error","Unknown Error Occured, Please try again!",__OSO_APP_NAME__." Says");
@@ -1089,7 +1089,7 @@ if ($this->stmt->rowCount()>0) {
     		$this->dbh->commit();
     $this->response = $this->alert->alert_toastr("success","Password Changed  Successfully, logging out...",__OSO_APP_NAME__." Says")."<script>setTimeout(()=>{
 							window.location.href='logout?action=logout';
-						},3000);</script>";
+						},500);</script>";
     		
     	}else{
     		$this->response = $this->alert->alert_toastr("error","Unknown Error Occured, Please try again!",__OSO_APP_NAME__." Says");
@@ -1162,7 +1162,7 @@ if ($this->stmt->rowCount()>0) {
     			$this->dbh->commit();
     $this->response = $this->alert->alert_toastr("success","Assignment Uploaded Successfully",__OSO_APP_NAME__." Says")."<script>setTimeout(()=>{
 							window.location.reload();
-						},1000);</script>";
+						},500);</script>";
     		}
     	}else{
     		$this->response = $this->alert->alert_toastr("error","Unknown Error Occured, Please try again!",__OSO_APP_NAME__." Says");
@@ -1296,7 +1296,7 @@ if ($this->stmt->rowCount()>0) {
     		$this->dbh->commit();
     $this->response = $this->alert->alert_toastr("success","Promoted Successfully...",__OSO_APP_NAME__." Says")."<script>setTimeout(()=>{
 							window.location.reload();
-						},1000);</script>";
+						},500);</script>";
     	}else{
     		$this->response = $this->alert->alert_toastr("error","Unknown Error Occured, Please try again!",__OSO_APP_NAME__." Says");
     	}

@@ -110,7 +110,7 @@ if ($all_blogs_posted) {
 <h3>Category List</h3>
 <ul>
 <li>
-<a href="academics.html">Student<i class="ri-arrow-drop-right-fill"></i></a>
+<a href="academics">Student<i class="ri-arrow-drop-right-fill"></i></a>
 </li>
 
 </ul>
@@ -119,14 +119,14 @@ if ($all_blogs_posted) {
 <h3>Related Post</h3>
 <div class="related-post-box">
 <div class="related-post-content">
-<a href="blogs"><img src="assets/images/news/news-2.jpg" alt="Image"></a>
+<a href="blogs"><img src="assets/images/news/news-1.jpg" alt="Image"></a>
 <h4><a href="blogs">Professor Tom comments on the volunteer B. Snack brand</a></h4>
 <p><i class="flaticon-tag"></i> Social Sciences</p>
 </div>
 </div>
 <div class="related-post-box">
 <div class="related-post-content">
-<a href="blogs"><img src="assets/images/news/news-3.jpg" alt="Image"></a>
+<a href="blogs"><img src="assets/images/news/news-1.jpg" alt="Image"></a>
 <h4><a href="blogs">Making a meaningful difference in patients’ lives.</a></h4>
 <p><i class="flaticon-tag"></i> Social Sciences</p>
 </div>

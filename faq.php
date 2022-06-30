@@ -37,7 +37,7 @@
 
 <div class="col-lg-6">
 <div class="faq-image pr-20">
-<img src="assets/images/faq-img.jpg" alt="Image">
+<img src="assets/images/faq-img.png" alt="Image">
 </div>
 </div>
 <div class="col-lg-6">

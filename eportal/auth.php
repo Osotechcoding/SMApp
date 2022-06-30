@@ -36,19 +36,19 @@ background-repeat: no-repeat;">
 <div class="container">
 <div class="loginbox">
 <div class="login-left">
-<img src="<?php echo $Configuration->get_schoolLogoImage();?>" width="350" class="img-fluid" alt="logo">
+<img src="<?php echo $Configuration->get_schoolLogoImage();?>" width="350" class="img-fluid" alt="logo" style="border: 2px solid deepskyblue;border-radius:10px;background: #ffffff;">
 <h3 class="text-center text-warning"><?php echo __SCHOOL_NAME__; ?> <h3>
-<a href="../" style="text-decoration: none;color: whitesmoke;">Go to Homepage</a>
+<p class="text-center" style="font-size: 13px;"><a href="../" style="text-decoration: none;color: whitesmoke;"> Powered by: <span class="text-danger">Osotech Software Inc</span></a></p>
 </div>
 <div class="login-right">
 <div class="login-right-wrap">
-<div class="text-center"><img src="<?php echo $Configuration->get_schoolLogoImage();?>" width="150" class="img-fluid" alt="logo"></div>
+<div class="text-center"><img src="<?php echo $Configuration->get_schoolLogoImage();?>" width="150" class="img-fluid" alt="logo" ></div>
 <h1 class="mb-3">ADMIN PORTAL</h1>
 <form id="adminLoginForm">
 <input type="hidden" name="action" value="logAdminIn">
 <input type="hidden" name="txss_token" value="<?php echo $tses_token;?>">
 <div class="form-group">
-<input type="text" class="form-control" name="ad_email" id="exampleInputEmail1"
+<input type="text" autocomplete="off" class="form-control" name="ad_email" id="exampleInputEmail1"
 placeholder="<?php echo $lang['email'];?>" value="<?php if(isset($_COOKIE['login_email'])){
     echo $_COOKIE['login_email'];
 }else{
@@ -56,7 +56,7 @@ placeholder="<?php echo $lang['email'];?>" value="<?php if(isset($_COOKIE['login
 } ?>">
 </div>
 <div class="form-group">
-<input type="password" class="form-control" name="ad_pass" value="<?php if(isset($_COOKIE['login_pass'])){
+<input type="password" autocomplete="off" class="form-control" name="ad_pass" value="<?php if(isset($_COOKIE['login_pass'])){
 echo $_COOKIE['login_pass'];
 }else{
 echo '';
@@ -80,7 +80,9 @@ placeholder="<?php echo $lang['password'];?>">
 <button class="btn btn-dark btn-block __loadingBtn__" type="submit">Login</button>
 </div>
 </form>
-<p class="text-center"><a href="../">School Website</a></p></div>
+<p class="text-center"><a href="../">School Website</a></p> 
+<p class="text-center text-info" style="font-size: 13px;"><a href="../" style="text-decoration: none;color: darkblue;"> Powered by: <span class="text-danger">Osotech Software Inc</span></a></p>
+</div>
 </div>
 </div>
 </div>

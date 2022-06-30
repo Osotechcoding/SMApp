@@ -1,4 +1,5 @@
-<?php  
+<?php 
+@session_start(); 
 /*Result Class
 *@author -- Osotech Software
 *Desc -- this class will contain all tasks regarding Visitors
@@ -27,8 +28,8 @@ class Visitors {
 	}
 	//create new visitor info method
 	public function submit_vistors_details($data){
-		$cterm ="First Term";
-		$cses ="2021/2022";
+		$cterm = $this->config->Clean($data['term']);
+		$cses = $this->config->Clean($data['school_session']);
 		$name = $this->config->Clean($data['name']);
 		$phone = $this->config->Clean($data['phone']);
 		$address = $this->config->Clean($data['address']);
@@ -40,7 +41,7 @@ class Visitors {
 	//check for null values
 	if ($this->config->isEmptyStr($name)|| $this->config->isEmptyStr($phone) || $this->config->isEmptyStr($address) || $this->config->isEmptyStr($nin_number)|| $this->config->isEmptyStr($to_see) || $this->config->isEmptyStr($purpose)) {
 		// code...
-		$this->response =$this->alert->alert_toastr("warning","Please Enter Visitor Details","ERROR");
+		$this->response =$this->alert->alert_toastr("warning","Please Enter Visitor Details",__OSO_APP_NAME__." Says");
 	}else{
 		//check if this visitor has visited today
 		$this->query ="SELECT * FROM visitor_book WHERE visitor_name=? AND visitor_phone=? AND NIN_number=? AND cterm=? AND cses=? AND DATE(created_at)=DATE(CURRENT_DATE()) LIMIT 1";
@@ -48,16 +49,16 @@ class Visitors {
 		$this->stmt->execute(array($name,$phone,$nin_number,$cterm,$cses));
 		if ($this->stmt->rowCount()==1) {
 			// show that details created earlier...
-			$this->response =$this->alert->alert_toastr("warning","The information provided already entered today!","ERROR");
+			$this->response =$this->alert->alert_toastr("warning","The information provided already entered today!",__OSO_APP_NAME__." Says");
 		}else{
 			//continue with the registration
 			$this->query="INSERT INTO visitor_book(visitor_name,visitor_phone,visitor_address,whom_to_see,purpose_of_visit,checkIn_time,NIN_number,created_at,cterm,cses) VALUES (?,?,?,?,?,?,?,?,?,?);";
 			$this->stmt = $this->dbh->prepare($this->query);
 			if ($this->stmt->execute(array($name,$phone,$address,$to_see,$purpose,$time_in,$nin_number,$created_at,$cterm,$cses))) {
 				// code...
-				$this->response =$this->alert->alert_toastr("success","Visitor's Details Saved Successfully!","SUCCESS")."<script>setTimeout(()=>{
+				$this->response =$this->alert->alert_toastr("success","Visitor's Details Saved Successfully!",__OSO_APP_NAME__." Says")."<script>setTimeout(()=>{
           window.location.reload();
-        },2500)</script>";
+        },500)</script>";
 			}else{
 			$this->response =$this->alert->alert_toastr("warning","Server Error Occured!","SERVER ERROR");	
 			}
@@ -88,9 +89,9 @@ class Visitors {
 		$this->query ="UPDATE visitor_book SET status=1, checkOut_time=NOW() WHERE visitor_id=? LIMIT 1";
 		$this->stmt = $this->dbh->prepare($this->query);
 		if ($this->stmt->execute([$vId])) {
-			$this->response = $this->response =$this->alert->alert_toastr("success","Visitor's Successfully Signed Out at $now","SUCCESS")."<script>setTimeout(()=>{
+			$this->response = $this->response =$this->alert->alert_toastr("success","Visitor's Successfully Signed Out at $now",__OSO_APP_NAME__." Says")."<script>setTimeout(()=>{
           window.location.reload();
-        },2500)</script>";
+        },500)</script>";
 		}else{
 			$this->response = false;
 		}

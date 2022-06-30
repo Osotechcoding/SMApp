@@ -10,11 +10,12 @@ if (!defined("__AUTHOR_NAME__")) {
 	define("__OSO_DBNAME__",'smapp_portal');*/
 	define("__SCHOOL_NAME__", strtoupper("School Management Application"));
 	define("__SCHOOL_ABBREV", strtoupper("SMAPP"));
+	define("__OSO_APP_NAME__", strtoupper("smapp"));
 	define("APP_ROOT","http://localhost/smapp/");
 	define("ADMISSION_ROOT","http://localhost/smapp/admission/");
 	define("RESULT_ROOT","http://localhost/smapp/e-result/");
 	define("__OSO_DB_DRIVER__",'mysql');
 	define("__OSO_CHARSET__",'utf8mb4');
-	//define("APP_ROOT","https://smapp.com/",true);
+	//define("APP_ROOT","https://smapp.com/");
 	//define("ADMISSION_ROOT","https://admission.smapp.com/",true);
 }

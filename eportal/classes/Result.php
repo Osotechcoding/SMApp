@@ -66,7 +66,7 @@ class Result {
 			 $this->dbh->commit();
 			$this->response = $this->alert->alert_toastr("success","Comment uploaded Successfully",__OSO_APP_NAME__." Says")."<script>setTimeout(()=>{
 			window.location.assign('./');
-			},2500);</script>";
+			},500);</script>";
 		}
 						
 					} catch (PDOException $e) {
@@ -152,7 +152,7 @@ $this->stmt = $this->dbh->prepare("SELECT * FROM `visap_termly_result_tbl` WHERE
 		}
 		$this->response = $this->alert->alert_toastr("success","Gathering Result... Pls wait...",__OSO_APP_NAME__." Says").'<script>setTimeout(()=>{
 			window.open("'.$student_result_page.'","_blank", "top=100, left=100, width=800, height=700");$("#SingleStudentResult_form")[0].reset();
-		},3000)</script>';
+		},1000)</script>';
 			}elseif ($result_opened =='3') {
 	$this->response = $this->alert->alert_toastr("error","This Result is Held, Please contact your Admin!",__OSO_APP_NAME__." Says");
 			}
@@ -191,7 +191,7 @@ $this->response = $this->alert->alert_toastr("error","Sorry No result found!",__
 			 $this->dbh->commit();
 			$this->response = $this->alert->alert_msg("Grading System Updated Successfully","success")."<script>setTimeout(()=>{
 			window.location.reload();
-			},1500);</script>";
+			},500);</script>";
 				}else{
 			$this->response = $this->alert->alert_msg("Unknown Error Occured, Please Try again!","danger");
 				}
@@ -279,7 +279,7 @@ public function get_exam_subjectsByClassName($grade_desc,$subject){
 			 $this->dbh->commit();
 			$this->response = $this->alert->alert_msg(" $arr_subject uploaded Successfully","success")."<script>setTimeout(()=>{
 			window.location.reload();
-			},2500);</script>";
+			}, 500);</script>";
 		}
 				
 			} catch (PDOException $e) {

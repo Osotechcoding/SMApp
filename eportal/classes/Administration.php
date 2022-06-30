@@ -437,7 +437,7 @@ if ($this->stmt->rowCount()>0) {
 		$this->dbh->commit();
 	$this->response = $this->alert->alert_msg("$component Fee Added Successfully!","success")."<script>setTimeout(()=>{
 			window.location.reload();
-			},1500);</script>";
+			},500);</script>";
 				}
 
 				} catch (PDOException $e) {
@@ -467,7 +467,7 @@ if ($this->stmt->rowCount()>0) {
 					 $this->dbh->commit();
 			$this->response = $this->alert->alert_msg($component_desc." Updated Successfully","success")."<script>setTimeout(()=>{
 			window.location.reload();
-			},2500);</script>";
+			},500);</script>";
 				}
 
 				} catch (PDOException $e) {
@@ -531,7 +531,7 @@ if ($this->stmt->rowCount()>0) {
 			 $this->dbh->commit();
 			$this->response = $this->alert->alert_msg("Deleted Successfully","success")."<script>setTimeout(()=>{
 			window.location.reload();
-			},1500);</script>";
+			},500);</script>";
 		}
 			} catch (PDOException $e) {
 		$this->dbh->rollback();
@@ -574,7 +574,7 @@ if ($this->stmt->rowCount()>0) {
 		$this->dbh->commit();
 	$this->response = $this->alert->alert_msg("&#8358; $amount Allocated for $grade_desc Successfully!","success")."<script>setTimeout(()=>{
 			window.location.reload();
-			},2000);</script>";
+			},500);</script>";
 				}
 
 				} catch (PDOException $e) {
@@ -604,7 +604,7 @@ if ($this->stmt->rowCount()>0) {
 					 $this->dbh->commit();
 			$this->response = $this->alert->alert_msg(" Fee Updated Successfully","success")."<script>setTimeout(()=>{
 			window.location.reload();
-			},1500);</script>";
+			},500);</script>";
 				}
 				} catch (PDOException $e) {
 			$this->dbh->rollback();
@@ -729,7 +729,7 @@ if ($this->stmt->rowCount()>0) {
 		 $this->dbh->commit();
 			$this->response = $this->alert->alert_msg("Payment Submitted and Updated Successfully","success")."<script>setTimeout(()=>{
 			window.location.reload();
-			},1500);</script>";
+			},500);</script>";
 			}
 		}
 		} catch (PDOException $e) {
@@ -785,7 +785,7 @@ if ($this->stmt->rowCount()>0) {
 			$this->dbh->commit();
 			$this->response = $this->alert->alert_msg("Payment Submitted Successfully","success")."<script>setTimeout(()=>{
 			window.location.reload();
-			},1000);</script>";
+			},500);</script>";
 
 			}else{
 	$this->response = $this->alert->alert_msg("Server Error Occured Please try again!","warning");
@@ -1018,7 +1018,7 @@ if ($this->stmt->rowCount()>0) {
 	$this->dbh->commit();
 	$this->response = $this->alert->alert_msg("Virtual Lesson submitted Successfully","success")."<script>setTimeout(()=>{
 			window.location.reload();
-			},1500);</script>";
+			},500);</script>";
 	 	}else{
 $this->response = $this->alert->alert_msg("Your file could not be moved to folder!","warning");
 	 	}
@@ -1076,7 +1076,7 @@ $this->response = $this->alert->alert_msg("Your file could not be moved to folde
 			 $this->dbh->commit();
 			$this->response = $this->alert->alert_msg("Deleted Successfully","success")."<script>setTimeout(()=>{
 			window.location.reload();
-			},1500);</script>";
+			},500);</script>";
 		}
 			} catch (PDOException $e) {
 		$this->dbh->rollback();
@@ -1181,7 +1181,7 @@ return $this->response;
 	 $this->dbh->commit();
 	$this->response = $this->alert->alert_msg("Duty assigned Successfully ","success")."<script>setTimeout(()=>{
 			window.location.reload();
-			},2500);</script>";
+			},500);</script>";
 	 	}
 
 	 	} catch (PDOException $e) {
@@ -1219,7 +1219,7 @@ return $this->response;
 			 $this->dbh->commit();
 			$this->response = $this->alert->alert_msg("Deleted Successfully","success")."<script>setTimeout(()=>{
 			window.location.reload();
-			},1500);</script>";
+			},500);</script>";
 		}
 			} catch (PDOException $e) {
 		$this->dbh->rollback();
@@ -1276,7 +1276,7 @@ return $this->response;
 	 $this->dbh->commit();
 	$this->response = $this->alert->alert_msg("Loan of &#8358; ".number_format($total_payment,2)." Recorded for ".$staff_name."Successfully ","success")."<script>setTimeout(()=>{
 			window.location.reload();
-			},2500);</script>";
+			},500);</script>";
 	 	}
 
 	 	} catch (PDOException $e) {
@@ -1402,7 +1402,7 @@ $date =$this->config->Clean(date("Y-m-d",strtotime($data['expense_date'])));
 	$this->dbh->commit();
 	$this->response = $this->alert->alert_msg("Expense Submitted Successfully ","success")."<script>setTimeout(()=>{
 			window.location.reload();
-			},2500);</script>";
+			},500);</script>";
 			}
 
 		} catch (PDOException $e) {
@@ -1487,7 +1487,7 @@ $date =$this->config->Clean(date("Y-m-d",strtotime($data['expense_date'])));
 	$this->dbh->commit();
 	$this->response = $this->alert->alert_msg("$new_ses is Now the Current Academic Session and $term is Active ","success")."<script>setTimeout(()=>{
 			window.location.reload();
-			},1500);</script>";
+			},500);</script>";
 			}
 		}
 			} catch (PDOException $e) {
@@ -1536,7 +1536,7 @@ $date =$this->config->Clean(date("Y-m-d",strtotime($data['expense_date'])));
 			$this->dbh->commit();
 			$this->response = $this->alert->alert_msg("$active_session is Now the Current Academic Session","success")."<script>setTimeout(()=>{
 			window.location.reload();
-			},2500);</script>";
+			},500);</script>";
 				}
 
 			}
@@ -1561,7 +1561,7 @@ $date =$this->config->Clean(date("Y-m-d",strtotime($data['expense_date'])));
 					$this->dbh->commit();
 			$this->response = $this->alert->alert_msg("$active_session is Now the Current Academic Session","success")."<script>setTimeout(()=>{
 			window.location.reload();
-			},2500);</script>";
+			},500);</script>";
 				}
 			}
 		}
@@ -1659,7 +1659,7 @@ $date =$this->config->Clean(date("Y-m-d",strtotime($data['expense_date'])));
 			 $this->dbh->commit();
 			$this->response = $this->alert->alert_msg("VISAP is Now in Simulation Mode &raquo; $simulateTo ","success")."<script>setTimeout(()=>{
 			window.location.reload();
-			},2500);</script>";
+			},500);</script>";
 		}
 	}
 	} catch (PDOException $e) {
@@ -1704,7 +1704,7 @@ $date =$this->config->Clean(date("Y-m-d",strtotime($data['expense_date'])));
 				$this->dbh->commit();
 				$this->response = $this->alert->alert_msg("Payroll Saved successfully, Please wait... ","success")."<script>setTimeout(()=>{
 				window.location.reload();
-			},1500);</script>";
+			},500);</script>";
 				}
 			} catch (PDOException $e) {
 				$this->dbh->rollback();
@@ -1808,7 +1808,7 @@ $date =$this->config->Clean(date("Y-m-d",strtotime($data['expense_date'])));
 					$this->dbh->commit();
 				$this->response = $this->alert->alert_msg("Submitted Successfully, Please wait... ","success")."<script>setTimeout(()=>{
 				window.location.replace('student_attendance');
-			},1500);</script>";
+			},500);</script>";
 					}
 						
 					} catch (PDOException $e) {
@@ -1900,7 +1900,7 @@ return $diff->format('%y');
 					$this->dbh->commit();
 					$this->response = $this->alert->alert_msg("Selected subject removed successfully","success")."<script>setTimeout(()=>{
 							window.location.reload();
-						},1000);</script>";
+						},500);</script>";
 				}
 			} catch (PDOException $e) {
 				 $this->dbh->rollback();
@@ -1945,7 +1945,7 @@ return $diff->format('%y');
 					 $this->dbh->commit();
 						$this->response = $this->alert->alert_msg($subject." Registered Successfully","success")."<script>setTimeout(()=>{
 							window.location.reload();
-						},2500);</script>";
+						},500);</script>";
 				}else{
 						$this->response = $this->alert->alert_msg("Something went wrong, Please try again ...","danger");
 				}
@@ -2005,7 +2005,7 @@ public function send_resend_confirmation_code($data){
    $this->dbh->commit();
    $this->response = $this->alert->alert_toastr("success","Module Updated Successfully","SUCCESS")."<script>setTimeout(()=>{
               window.location.reload();
-            },1500);</script>";
+            },500);</script>";
       }
     
     } catch (PDOException $e) {
@@ -2024,7 +2024,7 @@ public function send_resend_confirmation_code($data){
    $this->dbh->commit();
    $this->response = $this->alert->alert_toastr("success","Module Updated Successfully","SUCCESS")."<script>setTimeout(()=>{
               window.location.reload();
-            },1500);</script>";
+            },500);</script>";
       }
     
     } catch (PDOException $e) {
@@ -2103,7 +2103,7 @@ public function send_resend_confirmation_code($data){
 					 $this->dbh->commit();
 			$this->response = $this->alert->alert_toastr("success",$office." Office Added Successfully",__OSO_APP_NAME__." Says")."<script>setTimeout(()=>{
 			window.location.reload();
-			},2500);</script>";
+			},500);</script>";
 				}
 
 				} catch (PDOException $e) {
@@ -2178,7 +2178,7 @@ public function send_resend_confirmation_code($data){
 					 $this->dbh->commit();
 			$this->response = $this->alert->alert_toastr("success","Details updated Successfully",__OSO_APP_NAME__." Says")."<script>setTimeout(()=>{
 			window.location.reload();
-			},1500);</script>";
+			},500);</script>";
 				}
 
 				} catch (PDOException $e) {
@@ -2217,7 +2217,7 @@ public function send_resend_confirmation_code($data){
 					 $this->dbh->commit();
 			$this->response = $this->alert->alert_toastr("success"," Details updated Successfully",__OSO_APP_NAME__." Says")."<script>setTimeout(()=>{
 			window.location.reload();
-			},1500);</script>";
+			},500);</script>";
 				}
 
 				} catch (PDOException $e) {
@@ -2258,7 +2258,7 @@ public function send_resend_confirmation_code($data){
 					 $this->dbh->commit();
 			$this->response = $this->alert->alert_toastr("success"," Details updated Successfully",__OSO_APP_NAME__." Says")."<script>setTimeout(()=>{
 			window.location.reload();
-			},1500);</script>";
+			},500);</script>";
 				}
 
 				} catch (PDOException $e) {
@@ -2308,7 +2308,7 @@ for ($i=0; $i < (int)$total_count; $i++) {
 					$this->dbh->commit();
 				$this->response = $this->alert->alert_toastr("success","Affective Domain Uploaded Successfully, Please wait... ",__OSO_APP_NAME__." Says")."<script>setTimeout(()=>{
 				window.location.replace('uploading_behavior');
-			},1500);</script>";
+			},500);</script>";
 					}
 						
 					} catch (PDOException $e) {
@@ -2366,7 +2366,7 @@ try {
 					$this->dbh->commit();
 				$this->response = $this->alert->alert_toastr("success","$office_name Added Successfully, Please wait... ",__OSO_APP_NAME__." Says")."<script>setTimeout(()=>{
 				window.location.reload();
-			},1500);</script>";
+			},500);</script>";
 					}
 						
 					} catch (PDOException $e) {
@@ -2433,7 +2433,7 @@ public function update_prefect_office_title($data){
 					 $this->dbh->commit();
 			$this->response = $this->alert->alert_toastr("success"," Office Title updated Successfully",__OSO_APP_NAME__." Says")."<script>setTimeout(()=>{
 			window.location.reload();
-			},1500);</script>";
+			},500);</script>";
 				}
 
 				} catch (PDOException $e) {
@@ -2482,7 +2482,7 @@ public function update_staff_office_title($data){
 					 $this->dbh->commit();
 			$this->response = $this->alert->alert_toastr("success"," Office Title updated Successfully",__OSO_APP_NAME__." Says")."<script>setTimeout(()=>{
 			window.location.reload();
-			},1500);</script>";
+			},500);</script>";
 				}
 
 				} catch (PDOException $e) {
@@ -2569,8 +2569,8 @@ public function upload_school_logoImage($data, $file){
     }
     elseif (!in_array($image_ext, $allowed)) {
     $this->response = $this->alert->alert_toastr("error","Your logo format is not supported, Only PNG,JPG,JPEG",__OSO_APP_NAME__." Says");
-    }elseif ($logo_size > 20) {
-   $this->response = $this->alert->alert_toastr("error","Your Logo Size should not exceed 20KB, Your file Size is :".number_format($logo_size,2)."KB",__OSO_APP_NAME__." Says");
+    }elseif ($logo_size > 100) {
+   $this->response = $this->alert->alert_toastr("error","Your Logo Size should not exceed 100KB, Your file Size is :".number_format($logo_size,2)."KB",__OSO_APP_NAME__." Says");
     }elseif ($logo_error!=0) {
    $this->response = $this->alert->alert_toastr("error","There was an error Uploading your image",__OSO_APP_NAME__." Says");
     }
@@ -2581,7 +2581,7 @@ public function upload_school_logoImage($data, $file){
     try {
     	$this->dbh->beginTransaction();
     	$id =1;
-    	$this->stmt = $this->dbh->prepare("UPDATE `tbl_settings` SET web_logo=? WHERE config_id=? LIMIT 1");
+    	$this->stmt = $this->dbh->prepare("UPDATE `visap_school_profile` SET school_logo=? WHERE id=? LIMIT 1");
     	if ($this->stmt->execute(array($logo_realName,$id))) {
     		if ($this->config->move_file_to_folder($logo_temp,$logo_destination)) {
     			$this->dbh->commit();

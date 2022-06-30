@@ -23,7 +23,7 @@
 </div>
 <div class="col-lg-6 col-md-8">
 <div class="copy">
-<p>© SMApp is Proudly Owned by <a href="https://osotechsoftware.com/" target="_blank">Osotech Software</a></p>
+<p>© <?php echo __SCHOOL_ABBREV;?> is Powered by: <a href="https://osotechsoftware.com.ng/" target="_blank"><?php echo __AUTHOR_NAME__;?></a></p>
 </div>
 </div>
 </div>
