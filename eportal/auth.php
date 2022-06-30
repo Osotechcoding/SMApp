@@ -26,7 +26,7 @@ $tses_token = Session::set_xss_token();
 <!-- schlbg -->
 <link rel="stylesheet" href="bapps/css/style.css">
 </head>
-<body id="top" style=" background:rgba(0, 0, 0, 0.8) url('schlloginbg.jpg');
+<body id="top" style=" background:rgba(0, 0, 0, 0.8) url('schoolbg.jpg');
 background-position:center;
 background-size: cover;
 background-repeat: no-repeat;">
@@ -38,7 +38,7 @@ background-repeat: no-repeat;">
 <div class="login-left">
 <img src="schlogo.png" width="350" class="img-fluid" alt="logo">
 <h3 class="text-center text-warning"><?php echo __SCHOOL_NAME__; ?> <h3>
-<a href="../">Go to Homepage</a>
+<a href="../" style="text-decoration: none;color: whitesmoke;">Go to Homepage</a>
 </div>
 <div class="login-right">
 <div class="login-right-wrap">

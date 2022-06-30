@@ -927,21 +927,20 @@ public function Clean($string) {
  }
 
  public function generate_admission_number(){
-	 $this->response ="";
-	 $prefix="JTS";
+	 $prefix="SMA";
 	$this->stmt = $this->dbh->prepare("SELECT stdRegNo FROM `visap_student_tbl` ORDER BY stdRegNo DESC LIMIT 1");
 	$this->stmt->execute();
 	if ($this->stmt->rowCount() > 0) {
     if ($row = $this->stmt->fetch()) {
       $value2 = $row->stdRegNo;
-      $value2 = substr($value2, 7,12);//separating numeric part
+      $value2 = substr($value2, 5,11);//separating numeric part
       $value2 =$value2 + 1;//incrementing numeric value
-      $value2 = $prefix.date('Y').sprintf('%05s',$value2);//concatenating incremented value
+      $value2 = $prefix.date('y').sprintf('%06s',$value2);//concatenating incremented value
       $this->response = $value2;
     }
 	}else{
 	// "GSSOTA/00001"
-    $value2 =$prefix.date('Y')."00001";
+    $value2 =$prefix.date('y')."000001";
     $this->response =$value2;
 	}
 	return $this->response;

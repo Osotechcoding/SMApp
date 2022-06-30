@@ -35,7 +35,7 @@ if (isset($_COOKIE['login_user']) && ! empty($_COOKIE['login_user']) && isset($_
 <link rel="stylesheet" href="bapps/css/style.css">
 </head>
 
-<body id="top" style=" background:rgba(0, 0, 0, 0.8) url('gssota-login-bg.jpg');
+<body id="top" style=" background:rgba(0, 0, 0, 0.8) url('schoolbg.jpg');
 background-position:center;
 background-size: cover;
 background-repeat: no-repeat;">
