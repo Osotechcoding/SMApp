@@ -61,9 +61,9 @@ class Admin{
       	$admin_home_link = APP_ROOT."admin/";
        $this->response = $this->alert->alert_toastr("success",$lang['login_success'],__OSO_APP_NAME__." Says")."<script>setTimeout(()=>{
          window.location.href='".$admin_home_link."';
-        },1000);</script>";
+        },500);</script>";
       }else{
-         $this->response = $this->alert->alert_toastr("error",$lang['login_error4'],$lang['alert-title-error']);//Invalid Account Password
+         $this->response = $this->alert->alert_toastr("error",$lang['login_error4'],__OSO_APP_NAME__." Says");//Invalid Account Password
       }
     }else{
       $this->response = $this->alert->alert_toastr("error",$lang['login_error5'],__OSO_APP_NAME__." Says");// Email Address Not Found or User Details not found
@@ -121,14 +121,14 @@ class Admin{
       	$_SESSION['ADMIN_USERNAME'] =$result->adminUser;
       	$_SESSION['ADMIN_EMAIL'] =$result->adminEmail;
       		$admin_home_link = APP_ROOT."admin/";
-       $this->response = $this->alert->alert_toastr("success",$lang['login_success'],$lang['alert-title-success'])."<script>setTimeout(()=>{
+       $this->response = $this->alert->alert_toastr("success",$lang['login_success'],__OSO_APP_NAME__." Says")."<script>setTimeout(()=>{
          window.location.href='".$admin_home_link."';
-        },1000);</script>";
+        },500);</script>";
       }else{
          $this->response = $this->alert->alert_toastr("error",$lang['login_error4'],__OSO_APP_NAME__." Says");//Invalid Account Password
       }
       }else{
-$this->response = $this->alert->alert_toastr("error",$lang['login_error5'],$lang['alert-title-error']);// Email Address Not Found or User Details not found
+$this->response = $this->alert->alert_toastr("error",$lang['login_error5'],__OSO_APP_NAME__." Says");// Email Address Not Found or User Details not found
       }
     }
     return $this->response;
@@ -179,7 +179,7 @@ public function reset_admin_password($data){
 					$this->dbh->commit();
 			$this->response = $this->alert->alert_msg("Password updated Successfully! Please wait...","success")."<script>setTimeout(()=>{
 			window.location.href='logout?action=logout';
-			},2500);</script>";
+			},500);</script>";
 				}else{
 			$this->response = $this->alert->alert_msg("Internal Error Occured!, Please try again","danger");
 				}

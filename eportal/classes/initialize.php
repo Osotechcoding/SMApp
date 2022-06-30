@@ -15,7 +15,7 @@ if (!defined("__OSOTECH__DEV_COMPANY__")) {
 	define("__OSO_APP_VERSION__","v1.1.1");
 	define("__OSO_APP_DEV_YEAR__","2022");
 	define("__OSO_APP_NAME__","SMApp");
-	define("__SCHOOL_NAME__","School Management Application");
+	define("__SCHOOL_NAME__","School Management Application E-Portal");
 	define("__SCHOOL_LOCATION_ADDRESS__","Plot 1, Block 2, SMApp Avenue, Lagos, Nigeria");
 	define("APP_ROOT","http://localhost/smapp/eportal/");
 	//define("APP_ROOT","https://eportal.smapp.com/");

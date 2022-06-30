@@ -493,7 +493,7 @@ $this->response = $this->alert->alert_toastr("error",$lang['login_error5'],__OSO
 			 $confirmation_code = substr(md5(uniqid(mt_rand(),true)),0,15);
 			 $reg_date = date("Y-m-d");
 			 $div_email = explode("@", $email);
-			 $portal_email = $div_email[0]."@"__OSO_APP_NAME__.".portal";
+			 $portal_email = $div_email[0]."@".__OSO_APP_NAME__.".portal";
 			 $fullName = $firstName." ".$middleName;
 			 try {
 			 	 $this->dbh->beginTransaction();

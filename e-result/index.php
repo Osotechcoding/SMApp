@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title><?php echo __SCHOOL_ABBREV; ?> - Online Student Result Checker</title>
+  <title><?php echo __SCHOOL_ABBREV; ?> - Student Online Result Checker</title>
 <?php include_once ("temp/HeaderScriptLink.php");?>
 
 <style>
@@ -49,7 +49,7 @@
 
   <div class="card mb-5">
     <div class="card-header">
-       <h2 class="text-center">Welcome <br> <?php echo __SCHOOL_NAME__; ?><br> Result Portal </h2>
+       <h2 class="text-center">Welcome to <br> <?php echo __SCHOOL_NAME__; ?><br> Result Portal </h2>
     </div>
     <div class="card-body">
       <div class="col-md-12 mb-4">

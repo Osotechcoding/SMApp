@@ -32,8 +32,13 @@ background-size: cover;
 background-repeat: no-repeat;">
 
 <div class="main-wrapper login-body">
+   
 <div class="login-wrapper">
+    
 <div class="container">
+     <div class="col-md-12 text-center">
+        <h1 class="text-center" style="font-size:40px;color: darkgreen;font-weight:bold;text-shadow: 2px 2px #ff0000;"><span> <?php echo __SCHOOL_NAME__;?> </span></h1>
+    </div>
 <div class="loginbox">
 <div class="login-left">
 <img src="<?php echo $Configuration->get_schoolLogoImage();?>" width="350" class="img-fluid" alt="logo" style="border: 2px solid deepskyblue;border-radius:10px;background: #ffffff;">
@@ -67,7 +72,7 @@ placeholder="<?php echo $lang['password'];?>">
    <select name="login_as" id="login_as" class="select2 form-control">
        <option value="" selected>Choose...</option>
        <option value="admin">Admin</option>
-       <option value="director">Chairman</option>
+       <option value="director">School Owner</option>
    </select>
 </div>
 <div class="checkbox form-group form-box clearfix">
