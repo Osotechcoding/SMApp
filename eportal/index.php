@@ -34,13 +34,13 @@ background-repeat: no-repeat;">
 <div class="container">
 <div class="loginbox">
 <div class="login-left">
-<img src="schlogo.png" width="350" class="img-fluid" alt="logo">
+<img src="<?php echo $Configuration->get_schoolLogoImage();?>" width="350" class="img-fluid" alt="logo">
 <h3 class="text-center text-warning"><?php echo __SCHOOL_NAME__; ?></h3>
 <a href="../" target="_blank" style="text-decoration: none;color: whitesmoke;">Go to Homepage</a>
 </div>
 <div class="login-right">
 <div class="login-right-wrap">
-<div class="text-center"><img src="schlogo.png" width="150" class="img-fluid" alt="logo"></div>
+<div class="text-center"><img src="<?php echo $Configuration->get_schoolLogoImage();?>" width="150" class="img-fluid" alt="logo"></div>
 <h1>STUDENT PORTAL</h1>
 <form id="student-login-form">
     <input type="hidden" name="txss_token" value="<?php echo $tses_token;?>">

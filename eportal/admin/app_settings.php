@@ -54,8 +54,15 @@ require_once "helpers/helper.php";
       <!-- left menu section -->
       <div class="col-md-3 mb-2 mb-md-0 pills-stacked">
       <ul class="nav nav-pills flex-column">
+        <li class="nav-item">
+      <a class="nav-link d-flex align-items-center active" id="account-pill-social-two" data-toggle="pill"
+      href="#logo-form" aria-expanded="false">
+      <i class="fa fa-camera"></i>
+      <span>Upload School Logo</span>
+      </a>
+      </li>
       <li class="nav-item">
-      <a class="nav-link d-flex align-items-center active" id="account-pill-general" data-toggle="pill"
+      <a class="nav-link d-flex align-items-center" id="account-pill-general" data-toggle="pill"
       href="#account-vertical-general" aria-expanded="true">
       <i class="bx bx-cog"></i>
       <span>Administrator Info</span>
@@ -90,6 +97,7 @@ require_once "helpers/helper.php";
       <span>Register Student</span>
       </a>
       </li>
+
       </ul>
       </div>
       <!-- right content section -->
@@ -97,12 +105,12 @@ require_once "helpers/helper.php";
       <div class="card">
       <div class="card-body">
       <div class="tab-content">
-      <div role="tabpanel" class="tab-pane active" id="account-vertical-general"
+      <div role="tabpanel" class="tab-pane" id="account-vertical-general"
       aria-labelledby="account-pill-general" aria-expanded="true">
       <div class="media">
       <a href="javascript: void(0);">
-      <img src="../schlogo.png"
-      	class="rounded mr-75" alt="profile image" height="150" width="150">
+      <img src="<?php echo $Configuration->get_schoolLogoImage();?>"
+      	class="rounded mr-75" alt="profile image" height="250" width="250" style="border:2px solid darkblue;">
       </a>
 
       </div>
@@ -531,6 +539,39 @@ require_once "helpers/helper.php";
       </div>
       </form>
       </div>
+      <!-- Logo Form -->
+       <div class="tab-pane active" id="logo-form" role="tabpanel"
+      aria-labelledby="new-staff-account" aria-expanded="false">
+        <form class="validate-form" id="upload-school-logo-form">
+      <div class="row">
+         <div class="col-md-12">
+                     <div class="form-group">
+                  <label for="logoName">News Logo <span class="text-danger">(png,jpg or jpeg format Only)</span></label>
+                <input type="file" class="form-control form-control-lg" name="logoName" onchange="previewFile(this);">
+                    </div>
+                    <div class="col-md-6 offset-4" id="uploaded_logo">
+  <img id="previewImg" width="100" src="<?php echo $Configuration->get_schoolLogoImage();?>" alt="Placeholder" style="border: 2px solid darkblue;border-radius:10px;">
+  <p>Image Size: <span id="ImageSize"></span></p> 
+</div>
+                  </div>
+       <div class="col-12">
+        <div class="form-group">
+                        <div class="controls">
+                            <input type="hidden" name="action" value="uploadschLogo">
+                        <label>Authentication Code</label>
+                 <input autocomplete="off" type="text" class="form-control"
+                        placeholder="*********" name="m_auth">
+                        </div>
+        </div>
+      </div>
+      <div class="col-12 d-flex flex-sm-row flex-column justify-content-end">
+        <button type="submit" class="btn btn-dark glow mr-sm-1 mb-1 __loadingBtn10__">Upload</button>
+        
+      </div>
+      </div>
+  </form>
+  </div>
+      <!-- Logo Form -->
 
 
       <div class="tab-pane fade" id="new-student-account-vertical-form" role="tabpanel"
@@ -801,7 +842,49 @@ require_once "helpers/helper.php";
 						})
 				});
 
+    //update_school_social_link_form
+    $("#upload-school-logo-form").on("submit",function(event){
+  event.preventDefault();
+  $.ajax({
+    url:"../actions/update_actions",
+    type:"POST",
+    data: new FormData(this),
+    contentType:false,
+    cache:false,
+    processData:false,
+    beforeSend(){
+ $(".__loadingBtn10__").html('<img src="../assets/loaders/rolling_loader.svg" width="30"> Uploading...').attr("disabled",true);
+    },
+    success:function(data){
+      setTimeout(()=>{
+         $(".__loadingBtn10__").html('Upload').attr("disabled",false);
+        $("#upload-school-logo-form")[0].reset();
+        $("#server-response").html(data);
+        //alert(data);
+      },800);
+    }
+
+  });
+})
+
 				})
+</script>
+<script>
+    function previewFile(input){
+        var file = $("input[type=file]").get(0).files[0];
+ 
+        if(file){
+            var reader = new FileReader();
+ 
+            reader.onload = function(){
+                $("#previewImg").attr("src", reader.result);
+               // $("#imagename").html(file.name);
+                $("#ImageSize").html((file.size/1024).toFixed(2) +"KB");
+            }
+ 
+            reader.readAsDataURL(file);
+        }
+    }
 </script>
 				<!-- END: Page JS-->
 		</body>

@@ -545,6 +545,14 @@ if ($_POST['action'] ==="update_staff_office_title") {
             echo $result;
         }
     }
+    //uploadschLogo
+
+     if ($_POST['action'] ==="uploadschLogo") {
+        $result = $Administration->upload_school_logoImage($_POST, $_FILES);
+        if ($result) {
+            echo $result;
+        }
+    }
 
 	}
 }

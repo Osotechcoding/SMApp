@@ -261,5 +261,18 @@ public function check_user_activity_allowed($module){
    //$img_to_resize = resizeImage(‘path-to-jpg-image’, 210, 210);
   }
 
+  public function get_schoolLogoImage(){
+    $schoolDatas = self::getConfigData();
+    //school real logo 
+    $schoolLogo = $schoolDatas->web_logo;
+    if ($schoolLogo == NULL || $schoolLogo =="") {
+      $ourLogo = APP_ROOT."schlogo.png";
+    }else{
+       $ourLogo = APP_ROOT."schoolImages/Logo/".$schoolLogo;
+    }
+    $this->response = $ourLogo;
+    return $this->response;
+  }
+
 }
 $Configuration = new Configuration();

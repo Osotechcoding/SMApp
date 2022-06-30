@@ -2550,4 +2550,60 @@ if ($this->stmt->rowCount()==1) {
 	unset($this->dbh); 
 }
   }
+
+public function upload_school_logoImage($data, $file){
+	$auth_pass = $this->config->Clean($data['m_auth']);
+	$logoname = $file['logoName']['name'];
+   $logo_size = $file['logoName']['size']/1024;
+   $logo_temp = $file['logoName']['tmp_name'];
+   $logo_error = $file['logoName']['error'];
+   $allowed = array("jpg","jpeg","png");
+   $name_div = explode(".", $logoname);
+   $image_ext = strtolower(end($name_div));
+   if (!$this->config->isEmptyStr($logoname)) {
+    //$response = $Alert->alert_msg("You Selected $logo_name","success");
+    if ($this->config->isEmptyStr($auth_pass)) {
+    	$this->response = $this->alert->alert_toastr("error","Please provide the Authentication Code to proceed",__OSO_APP_NAME__." Says");
+    }elseif ($auth_pass!== __OSO__CONTROL__KEY__) {
+    $this->response = $this->alert->alert_toastr("error","Invalid Authentication Code!",__OSO_APP_NAME__." Says");
+    }
+    elseif (!in_array($image_ext, $allowed)) {
+    $this->response = $this->alert->alert_toastr("error","Your logo format is not supported, Only PNG,JPG,JPEG",__OSO_APP_NAME__." Says");
+    }elseif ($logo_size > 20) {
+   $this->response = $this->alert->alert_toastr("error","Your Logo Size should not exceed 20KB, Your file Size is :".number_format($logo_size,2)."KB",__OSO_APP_NAME__." Says");
+    }elseif ($logo_error!=0) {
+   $this->response = $this->alert->alert_toastr("error","There was an error Uploading your image",__OSO_APP_NAME__." Says");
+    }
+    else{
+    $logo_realName = "logo_".time().mt_rand(0,9999999).".".$image_ext;
+    //lets update the student logo in the db
+    $logo_destination = "../schoolImages/Logo/".$logo_realName; 
+    try {
+    	$this->dbh->beginTransaction();
+    	$id =1;
+    	$this->stmt = $this->dbh->prepare("UPDATE `tbl_settings` SET web_logo=? WHERE config_id=? LIMIT 1");
+    	if ($this->stmt->execute(array($logo_realName,$id))) {
+    		if ($this->config->move_file_to_folder($logo_temp,$logo_destination)) {
+    			$this->dbh->commit();
+    $this->response = $this->alert->alert_toastr("success","School Logo Updated  Successfully",__OSO_APP_NAME__." Says")."<script>setTimeout(()=>{
+							window.location.reload();
+						},500);</script>";
+    		}
+    	}
+    	
+    } catch (PDOException $e) {
+    	$this->dbh->rollback();
+    	if (file_exists($passport_destination)) {
+		 unlink($passport_destination);
+	}
+   $this->response = $this->alert->alert_toastr("error","Error Occurred: ".$e->getMessage(),__OSO_APP_NAME__." Says"); 	
+    }
+    }
+   }else{
+    $this->response = $this->alert->alert_toastr("error","Please Select a Logo to Upload",__OSO_APP_NAME__." Says");
+   }
+   return $this->response;
+   unset($this->dbh);
+  }
+
 }
