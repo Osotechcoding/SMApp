@@ -47,7 +47,7 @@ require_once "helpers/helper.php";
                   </li>
                   <li class="breadcrumb-item"><a href="javascript:void(0);"><?php echo strtoupper($_SESSION['ADMIN_SES_TYPE']) ?> </a>
                   </li>
-                  <li class="breadcrumb-item active">Online Lecture
+                  <li class="breadcrumb-item active">Online Lecture 
                   </li>
                 </ol>
               </div>
