@@ -9,7 +9,7 @@ require_once "helpers/helper.php";
 <head>
     <!-- metaTag -->
     <?php include ("../template/MetaTag.php"); ?>
-    <title><?php echo __SCHOOL_NAME__ ?> :: Mamage School Prefects</title>
+    <title><?php echo $SmappDetails->school_name ?> :: Mamage School Prefects</title>
      <?php include ("../template/dataTableHeaderLink.php"); ?>
     <!-- include dataTableHeaderLink.php -->
 

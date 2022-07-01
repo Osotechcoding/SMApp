@@ -18,7 +18,7 @@ if (isset($_GET['blogId']) && $_GET['blogId'] !=="" && isset($_GET['action']) &&
   <!-- BEGIN: Head-->
 <head>
     <?php include "../template/MetaTag.php";?>
-    <title><?php echo __SCHOOL_NAME__ ?> :: <?php echo ucwords($blog_details->blog_title); ?> </title>
+    <title><?php echo $SmappDetails->school_name ?> :: <?php echo ucwords($blog_details->blog_title); ?> </title>
    <!-- include template/HeaderLink.php -->
    <?php include "../template/HeaderLink.php";?>
   <!-- END: Head-->

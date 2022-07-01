@@ -27,7 +27,7 @@ if (isset($_POST['result_upload_btn'])) {
   <!-- BEGIN: Head-->
 <head>
     <?php include "../template/MetaTag.php";?>
-    <title><?php echo __SCHOOL_NAME__ ?> :: Upload Student Result</title>
+    <title><?php echo $SmappDetails->school_name ?> :: Upload Student Result</title>
    <!-- include template/HeaderLink.php -->
    <?php include "../template/HeaderLink.php";?>
   <!-- END: Head-->

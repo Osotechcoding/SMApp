@@ -1,5 +1,5 @@
 <?php
-
+@session_start();
 /*
 *@author -- Osotech Software
 *Desc -- this class will contain all administaror tasks

@@ -8,7 +8,7 @@ require_once "helpers/helper.php";
 <head>
     <!-- metaTag -->
     <?php include ("../template/MetaTag.php"); ?>
-    <title><?php echo __SCHOOL_NAME__ ?> :: Online Student Assignments</title>
+    <title><?php echo $SmappDetails->school_name; ?> :: Online Student Assignments</title>
      <?php include ("../template/dataTableHeaderLink.php"); ?>
 
   </head>

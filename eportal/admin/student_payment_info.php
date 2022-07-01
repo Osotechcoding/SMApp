@@ -33,7 +33,7 @@ if ($request_method ==="GET") {
 <head>
     <!-- metaTag -->
     <?php include ("../template/MetaTag.php"); ?>
-    <title><?php echo __SCHOOL_NAME__ ?> :: <?php echo strtoupper($fetch_details->full_name);?></title>
+    <title><?php echo $SmappDetails->school_name; ?> :: <?php echo strtoupper($fetch_details->full_name);?></title>
      <?php include ("../template/dataTableHeaderLink.php"); ?>
     <!-- include dataTableHeaderLink.php -->
   </head>
@@ -58,7 +58,7 @@ if ($request_method ==="GET") {
                 <ol class="breadcrumb p-0 mb-0 pl-1">
                   <li class="breadcrumb-item"><a href="./"><i class="bx bx-home-alt"></i></a>
                   </li>
-                  <li class="breadcrumb-item"><a href="./">Admin</a>
+                  <li class="breadcrumb-item"><a href="./"><?php echo strtoupper($_SESSION['ADMIN_SES_TYPE']) ?></a>
                   </li>
                   <li class="breadcrumb-item active"><?php echo strtoupper($fetch_details->full_name);?> PAYMENTS
                   </li>

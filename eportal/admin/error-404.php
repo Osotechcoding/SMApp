@@ -7,7 +7,7 @@ require_once "helpers/helper.php";
   <!-- BEGIN: Head-->
 <head>
     <?php include ("../template/MetaTag.php"); ?>
-    <title>Error 404 :: <?php echo __SCHOOL_NAME__ ?> </title>
+    <title>Error 404 :: <?php echo $SmappDetails->school_name ?> </title>
     <link rel="apple-touch-icon" href="../app-assets/images/ico/apple-icon-120.html">
     <link rel="shortcut icon" type="image/x-icon" href="https://www.pixinvent.com/demo/frest-clean-bootstrap-admin-dashboard-template/../app-assets/images/ico/favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,600%7CIBM+Plex+Sans:300,400,500,600,700" rel="stylesheet">

@@ -8,7 +8,7 @@ require_once "helpers/helper.php";
 <head>
     <!-- metaTag -->
     <?php include ("../template/MetaTag.php"); ?>
-    <title><?php echo __SCHOOL_NAME__ ?> :: Virtual Classroom</title>
+    <title><?php echo $SmappDetails->school_name; ?> :: Online Classroom</title>
      <?php include ("../template/dataTableHeaderLink.php"); ?>
     <!-- include dataTableHeaderLink.php -->
 <style>
@@ -40,14 +40,14 @@ iframe[seamless] {
         <div class="content-header row">
           <div class="content-header-left col-12 mb-2 mt-1">
             <div class="breadcrumbs-top">
-             <h5 class="content-header-title float-left pr-1 mb-0">VISAP PORTAL</h5>
+             <h5 class="content-header-title float-left pr-1 mb-0"><?php echo __OSO_APP_NAME__ ?> PORTAL</h5>
               <div class="breadcrumb-wrapper d-none d-sm-block">
                 <ol class="breadcrumb p-0 mb-0 pl-1">
                   <li class="breadcrumb-item"><a href="./"><i class="bx bx-home-alt"></i></a>
                   </li>
-                  <li class="breadcrumb-item"><a href="#">Admin</a>
+                  <li class="breadcrumb-item"><a href="javascript:void(0);"><?php echo strtoupper($_SESSION['ADMIN_SES_TYPE']) ?></a>
                   </li>
-                  <li class="breadcrumb-item active">Upload Lecture
+                  <li class="breadcrumb-item active">Upload Online Lecture
                   </li>
                 </ol>
               </div>
@@ -57,7 +57,7 @@ iframe[seamless] {
         <div class="content-body">
           <div class="row">
  <div class="col-12 mb-2">
-    <h3 class="bd-lead text-primary text-bold"><span class="fa fa-video-camera fa-2x"></span> VIRTUAL LECTURE MODULE</h3>
+    <h3 class="bd-lead text-primary text-bold"><span class="fa fa-file fa-1x"></span> ONLINE LECTURE MODULE</h3>
   </div>
 </div>
 
@@ -73,7 +73,7 @@ iframe[seamless] {
               <div class="card text-center bg-info">
                 <div class="card-body py-1">
                   <div class="badge-circle badge-circle-lg badge-circle-light-white mx-auto mb-50">
-                    <i class="fa fa-file fa-2x font-medium-10"></i>
+                    <i class="fa fa-file fa-1x font-medium-10"></i>
                   </div>
                   <div class="text-white line-ellipsis"><h3 class="text-white"> PDF</h3></div>
                   <h2 class="text-white mb-0"> <?php echo $Administration->count_all_available_lessons_by_type("application/pdf");?></h2>
@@ -209,7 +209,7 @@ iframe[seamless] {
             <div class="modal-dialog modal-lg modal-dialog-center">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h2 class="modal-title" id="exampleModalLongTitle" style="font-size: 30px;font-weight: 700;"><i class="fa fa-video-camera fa-2x"></i> Upload Virtual Lecture</h2>
+                  <h2 class="modal-title" id="exampleModalLongTitle" style="font-size: 30px;font-weight: 700;"><i class="fa fa-file fa-1x"></i> Upload Online Lecture</h2>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <i class="bx bx-x"></i>
                   </button>

@@ -5,7 +5,7 @@ require_once "helpers/helper.php";
 <html lang="en">
 <head>
    <?php include ("../template/MetaTag.php"); ?>
-  <title><?php echo __SCHOOL_NAME__ ?> :: Staff Payment Receipt</title>
+  <title><?php echo $SmappDetails->school_name ?> :: Staff Payment Receipt</title>
  <?php include "../template/HeaderLink.php";?>
 <body>
 <div class="wrapper">

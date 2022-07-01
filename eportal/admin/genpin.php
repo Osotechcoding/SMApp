@@ -13,7 +13,7 @@ if (!$Admin->isSuperAdmin($admin_data->adminId)) {
   <!-- BEGIN: Head-->
 <head>
     <?php include "../template/MetaTag.php";?>
-    <title><?php echo __SCHOOL_NAME__ ?> :: Scratch Card Generator</title>
+    <title><?php echo $SmappDetails->school_name ?> :: Scratch Card Generator</title>
    <!-- include template/HeaderLink.php -->
    <?php include "../template/HeaderLink.php";?>
   <!-- END: Head-->

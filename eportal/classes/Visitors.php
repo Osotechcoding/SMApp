@@ -30,16 +30,16 @@ class Visitors {
 	public function submit_vistors_details($data){
 		$cterm = $this->config->Clean($data['term']);
 		$cses = $this->config->Clean($data['school_session']);
-		$name = $this->config->Clean($data['name']);
-		$phone = $this->config->Clean($data['phone']);
-		$address = $this->config->Clean($data['address']);
-		$nin_number = $this->config->Clean($data['nin_number']);
-		$to_see = $this->config->Clean($data['to_see']);
-		$purpose = $this->config->Clean($data['purpose']);
-	$time_in =date("Y-m-d h:i:s A");
+		$name = $this->config->Clean($data['vname']);
+		$phone = $this->config->Clean($data['vphone']);
+		$address = $this->config->Clean($data['vaddress']);
+		$nin_number = $this->config->Clean($data['vnin_number']);
+		$to_see = $this->config->Clean($data['vto_see']);
+		$purpose = $this->config->Clean($data['vpurpose']);
+	$time_in =date("Y-m-d h:i:s");
 	$created_at = date("Y-m-d");
 	//check for null values
-	if ($this->config->isEmptyStr($name)|| $this->config->isEmptyStr($phone) || $this->config->isEmptyStr($address) || $this->config->isEmptyStr($nin_number)|| $this->config->isEmptyStr($to_see) || $this->config->isEmptyStr($purpose)) {
+	if ($this->config->isEmptyStr($name)|| $this->config->isEmptyStr($phone) || $this->config->isEmptyStr($address)|| $this->config->isEmptyStr($to_see) || $this->config->isEmptyStr($purpose)) {
 		// code...
 		$this->response =$this->alert->alert_toastr("warning","Please Enter Visitor Details",__OSO_APP_NAME__." Says");
 	}else{
@@ -52,7 +52,7 @@ class Visitors {
 			$this->response =$this->alert->alert_toastr("warning","The information provided already entered today!",__OSO_APP_NAME__." Says");
 		}else{
 			//continue with the registration
-			$this->query="INSERT INTO visitor_book(visitor_name,visitor_phone,visitor_address,whom_to_see,purpose_of_visit,checkIn_time,NIN_number,created_at,cterm,cses) VALUES (?,?,?,?,?,?,?,?,?,?);";
+			$this->query="INSERT INTO `visitor_book`(visitor_name,visitor_phone,visitor_address,whom_to_see,purpose_of_visit,checkIn_time,NIN_number,created_at,cterm,cses) VALUES (?,?,?,?,?,?,?,?,?,?);";
 			$this->stmt = $this->dbh->prepare($this->query);
 			if ($this->stmt->execute(array($name,$phone,$address,$to_see,$purpose,$time_in,$nin_number,$created_at,$cterm,$cses))) {
 				// code...
@@ -67,6 +67,7 @@ class Visitors {
 	}
 
 	return $this->response;
+	unset($this->dbh);
 	}
 
 	//View uploaded result method
@@ -84,7 +85,7 @@ class Visitors {
 
 	//uploading cognitive domain
 	public function auto_sign_out_visitor($data){
-		$now = date("Y-m-d : h:i:s A");
+		$now = date("Y-m-d, h:i:s");
 		$vId = $this->config->Clean($data['vic_id']);
 		$this->query ="UPDATE visitor_book SET status=1, checkOut_time=NOW() WHERE visitor_id=? LIMIT 1";
 		$this->stmt = $this->dbh->prepare($this->query);
@@ -149,9 +150,7 @@ class Visitors {
 	}
 
 	// WHERE payment_date >= (DATE(CURDATE())- INTERVAL 1 YEAR)
-	public function get_this_week_visitors(){
-		$cterm ="First Term";
-		$cses ="2021/2022";
+	public function get_this_week_visitors($cterm,$cses){
 	$this->query ="SELECT count(visitor_id) as cnt FROM visitor_book WHERE cterm=? AND cses=? AND DATE(created_at) >= DATE(CURRENT_DATE()- INTERVAL 1 WEEK)";
 		$this->stmt = $this->dbh->prepare($this->query);
 		$this->stmt->execute([$cterm,$cses]);
@@ -164,9 +163,7 @@ class Visitors {
 		return $this->response;
 	}
 
-	public function get_current_term_visitors(){
-		$cterm ="First Term";
-		$cses ="2021/2022";
+	public function get_current_term_visitors($cterm,$cses){
 	$this->query ="SELECT count(visitor_id) as cnt FROM visitor_book WHERE cterm=? AND cses=?";
 		$this->stmt = $this->dbh->prepare($this->query);
 		$this->stmt->execute([$cterm,$cses]);
@@ -179,9 +176,7 @@ class Visitors {
 		return $this->response;
 	}
 
-	public function get_current_session_visitors(){
-		//$cterm ="First Term";
-		$cses ="2021/2022";
+	public function get_current_session_visitors($cses){
 	$this->query ="SELECT count(visitor_id) as cnt FROM visitor_book WHERE cses=?";
 		$this->stmt = $this->dbh->prepare($this->query);
 		$this->stmt->execute([$cses]);

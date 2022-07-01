@@ -17,6 +17,11 @@ $Staff = new Staff();
 @$Configuration->osotech_session_kick();
 $Configuration->check_student_session_data();
 $ses_token = Session::set_xss_token();
+
+/* School Details*/
+$SmappDetails = $Configuration->getConfigData();
+/* School Details*/
+
 //Session Details
 $session_data = $Administration->get_session_details();
 $activeSess =$Administration->get_active_session_details();

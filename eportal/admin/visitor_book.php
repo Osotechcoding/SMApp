@@ -10,7 +10,7 @@ require_once "helpers/helper.php";
 <head>
     <!-- metaTag -->
     <?php include ("../template/MetaTag.php"); ?>
-    <title><?php echo __SCHOOL_NAME__ ?> :: VISTORS' MANAGEMENT</title>
+    <title><?php echo $SmappDetails->school_name; ?> :: Manage School Visitors</title>
      <?php include ("../template/dataTableHeaderLink.php"); ?>
     <!-- include dataTableHeaderLink.php -->
 
@@ -38,14 +38,14 @@ require_once "helpers/helper.php";
         <div class="content-header row">
           <div class="content-header-left col-12 mb-2 mt-1">
             <div class="breadcrumbs-top">
-             <h5 class="content-header-title float-left pr-1 mb-0">VISAP PORTAL</h5>
+             <h5 class="content-header-title float-left pr-1 mb-0"><?php echo __OSO_APP_NAME__; ?> PORTAL</h5>
               <div class="breadcrumb-wrapper d-none d-sm-block">
                 <ol class="breadcrumb p-0 mb-0 pl-1">
                   <li class="breadcrumb-item"><a href="./"><i class="bx bx-home-alt"></i></a>
                   </li>
-                  <li class="breadcrumb-item"><a href="#">Admin</a>
+                  <li class="breadcrumb-item"><a href="javascript:void(0);"><?php echo strtoupper($_SESSION['ADMIN_SES_TYPE']) ?></a>
                   </li>
-                  <li class="breadcrumb-item active">VISTOR'S MANAGEMENT
+                  <li class="breadcrumb-item active"> MANAGE VISITORS
                   </li>
                 </ol>
               </div>
@@ -55,7 +55,7 @@ require_once "helpers/helper.php";
         <div class="content-body">
           <div class="row">
   <div class="col-12">
-    <h3 class="bd-lead text-primary text-bold"><span class="fa fa-user-secret fa-2x"></span> VISTOR'S BOOK </h3>
+    <h3 class="bd-lead text-primary text-bold"><span class="fa fa-user-secret fa-2x"></span> GUEST BOOK </h3>
   </div>
 </div>
 
@@ -84,7 +84,7 @@ require_once "helpers/helper.php";
                     <i class="fa fa-user-secret fa-2x font-medium-10"></i>
                   </div>
                   <div class="text-white line-ellipsis"><h3 class="text-white">This Week</h3></div>
-                  <h2 class="text-white mb-0"> <?php echo $Visitor->get_this_week_visitors();?></h2>
+                  <h2 class="text-white mb-0"> <?php echo $Visitor->get_this_week_visitors($activeSess->term_desc,$activeSess->session_desc_name);?></h2>
                  
                 </div>
               </div>
@@ -97,7 +97,7 @@ require_once "helpers/helper.php";
                     <i class="fa fa-user-secret fa-2x font-medium-10"></i>
                   </div>
                   <div class="text-white line-ellipsis"><h3 class="text-white"> This Term</h3></div>
-                  <h2 class="text-white mb-0"><?php echo $Visitor->get_current_term_visitors(); ?></h2>
+                  <h2 class="text-white mb-0"><?php echo $Visitor->get_current_term_visitors($activeSess->term_desc,$activeSess->session_desc_name); ?></h2>
                   
                 </div>
               </div>
@@ -109,7 +109,7 @@ require_once "helpers/helper.php";
                     <i class="fa fa-user-secret fa-2x font-medium-10"></i>
                   </div>
                   <div class="text-white line-ellipsis"><h3 class="text-white">This Session</h3></div>
-                  <h2 class="text-white mb-0"><?php echo $Visitor->get_current_session_visitors(); ?></h2>
+                  <h2 class="text-white mb-0"><?php echo $Visitor->get_current_session_visitors($activeSess->session_desc_name); ?></h2>
                   
                 </div>
               </div>
@@ -251,44 +251,46 @@ require_once "helpers/helper.php";
                <div class="col-md-6">
                      <div class="form-group">
                   <label for="name">VISTOR'S NAME </label>
-                <input type="text" autocomplete="off" class="form-control form-control-lg" name="name" placeholder="Mr Adeojo Adeosun M">
+                <input type="text" autocomplete="off" class="form-control form-control-lg" name="vname" placeholder="Mr Adeojo Adeosun M">
                 </div>
               </div>
                 <div class="col-md-6">
                      <div class="form-group">
                   <label for="phone">VISTOR'S PHONE</label>
-                <input type="text" autocomplete="off" class="form-control form-control-lg" name="phone" placeholder="09012***907">
+                <input type="text" autocomplete="off" class="form-control form-control-lg" name="vphone" placeholder="09012***907">
                     </div>
                   </div>
                  
                    <div class="col-md-6">
                      <div class="form-group">
                   <label for="nin_number">VISTOR'S NIN NUMBER</label>
-                <input type="text" autocomplete="off" class="form-control form-control-lg" id="nin_number" name="nin_number" placeholder="0901209797">
+                <input type="text" autocomplete="off" class="form-control form-control-lg" id="vnin_number" name="nin_number" placeholder="0901209797">
                     </div>
                   </div>
             
                    <div class="col-md-6">
                      <div class="form-group">
                   <label for="address">VISITOR'S ADDRESS</label>
-                <textarea name="address" id="address" class="form-control" placeholder="Vistor's Address goes here..."></textarea>
+                <textarea name="vaddress" id="address" class="form-control" placeholder="Vistor's Address goes here..."></textarea>
                     </div>
                   </div>
                  
                    <div class="col-md-6">
                      <div class="form-group">
                   <label for="to_see">WHOM TO SEE </label>
-               <input type="text" autocomplete="off" class="form-control form-control-lg" name="to_see" placeholder="Principal">
+               <input type="text" autocomplete="off" class="form-control form-control-lg" name="vto_see" placeholder="Principal">
                 </div>
               </div>
 
                    <div class="col-md-6">
                    <div class="form-group">
                   <label for="purpose">PURPOSE OF VISIT?</label>
-                 <textarea name="purpose" id="purpose" class="form-control" placeholder="Write your purpose of visit here..."></textarea>
+                 <textarea name="vpurpose" id="purpose" class="form-control" placeholder="Write your purpose of visit here..."></textarea>
                     </div>
                   </div>
                   <input type="hidden" name="action" value="sign_in_visitor_now">
+                  <input type="hidden" name="term" value="<?php echo $activeSess->term_desc;?>">
+                  <input type="hidden" name="school_session" value="<?php echo $activeSess->session_desc_name?>">
                  </div>
                   </div>
                 </div>
@@ -338,7 +340,7 @@ require_once "helpers/helper.php";
            $(".__loadingBtn__").html('<span class="fa fa-paper-plane"></span> Submit').attr("disabled",false);
           $("#server-response").html(res);
          // $("#visitorModal")[0].reset();
-        },2500);
+        },500);
       })
    
      // window.location.replace("./");

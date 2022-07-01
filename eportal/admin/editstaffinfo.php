@@ -23,7 +23,7 @@ if (isset($_GET['staffdata']) && $_GET['staffdata']!="") {
   <!-- BEGIN: Head-->
 <head>
     <?php include "../template/MetaTag.php";?>
-    <title><?php echo __SCHOOL_NAME__ ?> :: Update <?php echo ucwords($staff_data->full_name);?> Information</title>
+    <title><?php echo $SmappDetails->school_name ?> :: Update <?php echo ucwords($staff_data->full_name);?> Information</title>
    <!-- include template/HeaderLink.php -->
    <?php include "../template/HeaderLink.php";?>
   <!-- END: Head-->

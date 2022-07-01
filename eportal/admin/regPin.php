@@ -10,7 +10,7 @@ $_Pins_ = new Pins();
 <head>
     <!-- metaTag -->
     <?php include ("../template/MetaTag.php"); ?>
-    <title><?php echo __SCHOOL_NAME__ ?> :: Student Registration Pins</title>
+    <title><?php echo $SmappDetails->school_name ?> :: Student Registration Pins</title>
      <?php include ("../template/dataTableHeaderLink.php"); ?>
     <!-- include dataTableHeaderLink.php -->
   </head>

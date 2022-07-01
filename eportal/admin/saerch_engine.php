@@ -16,8 +16,8 @@ if(isset($_POST['search']))
  $username="root";
  $password="";
  $databasename="sample";
- $connect=mysql_connect($host,$username,$password);
- $db=mysql_select_db($databasename);
+ $connect=mysqli_connect($host,$username,$password);
+ $db=mysqli_select_db($connect,$databasename);
 
  $search_val=$_POST['search_term'];
 	

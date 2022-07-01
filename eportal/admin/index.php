@@ -6,7 +6,7 @@ require_once "helpers/helper.php";
   <!-- BEGIN: Head-->
 <head>
     <?php include "../template/MetaTag.php";?>
-    <title><?php echo __SCHOOL_NAME__ ?> :: Admin Dashboard</title>
+    <title><?php echo $SmappDetails->school_name ?> :: <?php echo $_SESSION['ADMIN_SES_TYPE'] ?> Dashboard</title>
    <!-- include template/HeaderLink.php -->
    <?php include "../template/HeaderLink.php";?>
   <!-- END: Head-->
@@ -34,7 +34,7 @@ require_once "helpers/helper.php";
                   </li>
                   <li class="breadcrumb-item"><a href="#"><?php echo $lang['Dashboard'] ?></a>
                   </li>
-                  <li class="breadcrumb-item active"> <?php $Configuration->greet_user(); ?> <b class="text-muted"><?php echo $lang['welcome1'] ?></b>
+                  <li class="breadcrumb-item active"> <?php $Configuration->greet_user(); ?>  <b class="text-muted"> <?php echo $lang['welcome1'] ?></b>
                   </li>
                 </ol>
               </div>

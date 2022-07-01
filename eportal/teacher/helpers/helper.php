@@ -23,6 +23,10 @@ $Alert          = new Alert();
 $Configuration->check_session_data();
 $staffId = $_SESSION['STAFF_SES_ID'];
 
+/* School Details*/
+$SmappDetails = $Configuration->getConfigData();
+/* School Details*/
+
 /*STAFF SESS DETAILS*/
 $staff_data = $Staff->get_staff_ById($staffId);
 $name_arr = explode(" ",$staff_data->firstName);

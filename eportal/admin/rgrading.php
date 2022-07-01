@@ -6,7 +6,7 @@ require_once "helpers/helper.php";
   <!-- BEGIN: Head-->
 <head>
     <?php include "../template/MetaTag.php";?>
-    <title><?php echo __SCHOOL_NAME__ ?> :: Senior Classes Result Grading</title>
+    <title><?php echo $SmappDetails->school_name ?> :: Senior Classes Result Grading</title>
    <!-- include template/HeaderLink.php -->
    <?php //include "template/HeaderLink.php";?>
    <?php include ("../template/dataTableHeaderLink.php"); ?>

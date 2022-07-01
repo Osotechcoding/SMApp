@@ -24,7 +24,7 @@ if (isset($_GET['staffRegId']) && $_GET['staffRegId']!="" && isset($_GET['action
   <!-- BEGIN: Head-->
 <head>
     <?php include "../template/MetaTag.php";?>
-    <title><?php echo __SCHOOL_NAME__ ?> :: Upload Passport for <?php echo ucwords($staff_data->full_name);?></title>
+    <title><?php echo $SmappDetails->school_name; ?> :: Upload Passport for <?php echo ucwords($staff_data->full_name);?></title>
    <?php include "../template/HeaderLink.php";?>
   <!-- END: Head-->
   <!-- BEGIN: Body-->

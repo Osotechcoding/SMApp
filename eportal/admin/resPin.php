@@ -10,7 +10,7 @@ require_once "helpers/helper.php";
 <head>
     <!-- metaTag -->
     <?php include ("../template/MetaTag.php"); ?>
-    <title><?php echo __SCHOOL_NAME__ ?> ::  Student Result Checker Pins</title>
+    <title><?php echo $SmappDetails->school_name ?> ::  Student Result Checker Pins</title>
      <?php include ("../template/dataTableHeaderLink.php"); ?>
     <!-- include dataTableHeaderLink.php -->
   </head>

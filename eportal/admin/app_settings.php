@@ -7,7 +7,7 @@ require_once "helpers/helper.php";
 		<!-- BEGIN: Head-->
 <head>
 				<?php include "../template/MetaTag.php";?>
-				<title><?php echo __SCHOOL_NAME__ ?> :: School Profile Settings</title>
+				<title><?php echo $SmappDetails->school_name ?> :: School Profile Settings</title>
 			<!-- include template/HeaderLink.php -->
 			<?php include "../template/HeaderLink.php";?>
 		<!-- END: Head-->
@@ -30,7 +30,7 @@ require_once "helpers/helper.php";
 																<ol class="breadcrumb p-0 mb-0 pl-1">
 																		<li class="breadcrumb-item"><a href="./"><i class="bx bx-home-alt"></i></a>
 																		</li>
-																		<li class="breadcrumb-item"><a href="javascript:void(0);"><?php echo strtoupper($admin_data->adminType);?></a>
+																		<li class="breadcrumb-item"><a href="javascript:void(0);"><?php echo strtoupper($_SESSION['ADMIN_SES_TYPE']);?></a>
 																		</li>
 																		<li class="breadcrumb-item active">WebSite Settings
 																		</li>
@@ -333,7 +333,7 @@ require_once "helpers/helper.php";
       </div>
       <input type="hidden" name="action" value="update_school_profile_">
       <div class="col-12 d-flex flex-sm-row flex-column justify-content-end">
-      	<button type="submit" class="btn btn-primary glow mr-sm-1 mb-1 __loadingBtn33__">Save
+      	<button type="submit" class="btn btn-dark btn-lg glow mr-sm-1 mb-1 __loadingBtn33__">Save
       					changes</button>
 
       </div>
@@ -391,7 +391,7 @@ require_once "helpers/helper.php";
       </div>
 
       <div class="col-12 d-flex flex-sm-row flex-column justify-content-end">
-      	<button type="submit" class="btn btn-primary glow mr-sm-1 mb-1 __loadingBtn35__">Save changes</button>
+      	<button type="submit" class="btn btn-dark btn-lg glow mr-sm-1 mb-1 __loadingBtn35__">Save changes</button>
 
       </div>
       </div>
@@ -533,7 +533,7 @@ require_once "helpers/helper.php";
       	</div>
       </div>
       <div class="col-12 d-flex flex-sm-row flex-column justify-content-end">
-      	<button type="submit" class="btn btn-dark glow mr-sm-1 mb-1 __loadingBtn3__">Register Now</button>
+      	<button type="submit" class="btn btn-dark glow btn-lg mr-sm-1 mb-1 __loadingBtn3__">Register Now</button>
       	
       </div>
       </div>
@@ -549,8 +549,8 @@ require_once "helpers/helper.php";
                   <label for="logoName">News Logo <span class="text-danger">(png,jpg or jpeg format Only)</span></label>
                 <input type="file" class="form-control form-control-lg" name="logoName" onchange="previewFile(this);">
                     </div>
-                    <div class="col-md-6 offset-4" id="uploaded_logo">
-  <img id="previewImg" width="100" src="<?php echo $Configuration->get_schoolLogoImage();?>" alt="Placeholder" style="border: 2px solid darkblue;border-radius:10px;">
+                    <div class="col-md-6 offset-5" id="uploaded_logo">
+  <img id="previewImg" width="200" src="<?php echo $Configuration->get_schoolLogoImage();?>" alt="Placeholder" style="border: 2px solid darkblue;border-radius:10px;">
   <p>Image Size: <span id="ImageSize"></span></p> 
 </div>
                   </div>
@@ -723,12 +723,12 @@ require_once "helpers/helper.php";
       									<label>AUTH KEY</label>
       					<input autocomplete="off" type="password"
       					class="form-control"
-      	placeholder="Enter Pass Code to continue" value="julit123" name="auth_pass2">
+      	placeholder="Enter Pass Code to continue" name="auth_pass2">
       					</div>
       	</div>
       </div>
       <div class="col-12 d-flex flex-sm-row flex-column justify-content-end">
-      	<button type="submit" class="btn btn-dark glow mr-sm-1 mb-1 __loadingBtn4__">Submit</button>
+      	<button type="submit" class="btn btn-dark glow mr-sm-1 mb-1 __loadingBtn4__ btn-lg">Register</button>
       	
       </div>
       </div>
@@ -786,7 +786,7 @@ require_once "helpers/helper.php";
 						//send request 
 						$.post("../actions/actions",NEWSTUDENTFORM.serialize(),function(res_data){
 								setTimeout(()=>{
-										$(".__loadingBtn4__").html('Submit Student').attr("disabled",false);
+										$(".__loadingBtn4__").html('Register').attr("disabled",false);
 										// $("#myResponseText3").html(res_data);
 										$("#server-response").html(res_data);
 								},1000);

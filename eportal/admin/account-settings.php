@@ -7,7 +7,7 @@ require_once "helpers/helper.php";
   <!-- BEGIN: Head-->
 <head>
     <?php include "../template/MetaTag.php";?>
-    <title><?php echo __SCHOOL_NAME__ ?> ::  <?php echo ucwords($admin_data->adminType);?></title>
+    <title><?php echo ($SmappDetails->school_name);?> ::  <?php echo ucwords($admin_data->adminType);?></title>
    <!-- include template/HeaderLink.php -->
    <?php include "../template/HeaderLink.php";?>
   <!-- END: Head-->

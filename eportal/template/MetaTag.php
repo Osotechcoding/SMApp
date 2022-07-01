@@ -4,4 +4,4 @@
     <meta name="description" content="<?php echo __SCHOOL_NAME__;?>,Online School Portal,Education is Light, Affordable School Fee,Online Admission Process">
     <meta name="keywords" content="Elementary School, Basic Classes, Primary classes, College, Staff Portal,Student Portal,Admin Portal, Online Admission">
     <meta name="author" content="<?php echo ucwords(__OSOTECH__DEV_COMPANY__);?>">
-    <link rel="icon" type="image/icon" href="./favicon.png">
+    <link rel="icon" type="image/icon" href="../favicon.png">

@@ -18,11 +18,9 @@
                 </div>
                 <div class="modal-footer">
                    <button type="submit" class="btn btn-success ml-1">
-                    <span class="d-none d-sm-block">Submit Password</span>
+                   Submit Password</button>
                   <button type="button" class="btn btn-warning ml-1" data-dismiss="modal">
-                    <i class="bx bx-check d-block d-sm-none"></i>
-                    <span class="d-none d-sm-block">Back</span>
-                  </button>
+                   Back</button>
                 </div>
                  </form>
               </div>

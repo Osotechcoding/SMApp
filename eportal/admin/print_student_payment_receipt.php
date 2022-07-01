@@ -27,7 +27,7 @@ if ($request_method!=="GET") {
   <!-- BEGIN: Head-->
 <head>
     <?php include "../template/MetaTag.php";?>
-    <title><?php echo __SCHOOL_NAME__ ?> :: <?php echo  ucwords($student_data->full_name); ?> </title>
+    <title><?php echo $SmappDetails->school_name ?> :: <?php echo  ucwords($student_data->full_name); ?> </title>
    <!-- include template/HeaderLink.php -->
 
    <?php include "../template/HeaderLink.php";?>
@@ -86,10 +86,10 @@ if ($request_method!=="GET") {
             <div class="col-sm-6 col-12 mt-1">
               <h6 class="invoice-from">FROM</h6>
               <div class="mb-1">
-                <span>JULI T. INT'L SCHOOLS SANGO.</span>
+                <span><?php  echo strtoupper($SmappDetails->school_name) ?></span>
               </div>
               <div class="mb-1">
-                <span>38, Oluwalogbon Gasline Road Sango, Ijoko,<br /> Ogun State, Nigeria</span>
+                <span><?php  echo ucwords($SmappDetails->school_address) ?><br /> <?php  echo ucwords($SmappDetails->country) ?></span>
               </div>
               <div class="mb-1">
                 <span>info@julitschools.com</span>

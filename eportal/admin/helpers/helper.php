@@ -30,7 +30,7 @@ $adminId = $_SESSION['ADMIN_TOKEN_ID'];
 
 /*ADMIN SESS DETAILS*/
 $admin_data = $Admin->getAdminDetails();
-
+$SmappDetails = $Configuration->getConfigData();
 /*ADMIN SESS DETAILS*/
 $isSuperAdmin = $Admin->isSuperAdmin($admin_data->adminId);
 if ($isSuperAdmin) {
