@@ -11,7 +11,7 @@
 <div class="list">
 <ul>
 <li><a href="howtoapply" title="Student Admission Portal">E-ADMISSION</a></li>
-<li><a href="campus-life" title="Staff Application Portal">E-APPLY</a></li>
+<li><a href="javascript:void(0);" title="Staff Application Portal">E-APPLY</a></li>
 <li><a href="eportal/" title="The School Portal">E-PORTAL</a></li>
 <li><a href="e-result/" title="Student Result Portal">E-RESULT</a></li>
 <!-- <li><a href="alumni">Alumni</a></li> -->

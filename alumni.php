@@ -33,333 +33,114 @@
 
 <div class="alumni-area pt-100 pb-70">
 <div class="container">
-  <h1 class="text-center">2021/2022 Session</h1>
+  <h1 class="text-center">2021/2022 SET</h1>
 <div class="row">
- <div class="col-lg-6 col-md-6">
+ <div class="col-lg-6">
+<div class="alumni-left-content">
+
 <div class="single-alumni-events-card">
 <div class="row align-items-center">
 <div class="col-lg-6 col-md-6">
 <div class="alumni-img">
-<img src="prefectsImg/senior-boy.jpg" alt="Staff" style="border: 6px solid deepskyblue;border-radius: 50%;">
+<img src="prefectsImg/man.jpg" alt="Staff" style="border: 6px solid deepskyblue;border-radius: 50%;">
 </div>
 </div>
 <div class="col-lg-6 col-md-6">
 <div class="alumni-content">
-<h4> Hammed Ayomide Babatunde</h4>
+<h4> John Doe</h4>
 <div class="location">
-<p><i class="flaticon-briefcase"></i>Senior Boy</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="single-alumni-events-card">
-<div class="row align-items-center">
-<div class="col-lg-6 col-md-6">
-<div class="alumni-img">
-<img src="prefectsImg/senior-girl.jpg" alt="Prefect" style="border: 6px solid deepskyblue;border-radius: 50%;">
-</div>
-</div>
-<div class="col-lg-6 col-md-6">
-<div class="alumni-content">
-<h2>Emojevu Sonia Ogenerukvwe</h2>
-<div class="location">
-<p><i class="flaticon-briefcase"></i>Senior Girl</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="single-alumni-events-card">
-<div class="row align-items-center">
-<div class="col-lg-6 col-md-6">
-<div class="alumni-img">
-<img src="prefectsImg/ass-senior-boy.jpg" alt="Staff" style="border: 6px solid deepskyblue; border-radius: 50%;">
-</div>
-</div>
-<div class="col-lg-6 col-md-6">
-<div class="alumni-content">
-<h2>Adewale Samuel Ademola</h2>
-<div class="location">
-<p><i class="flaticon-briefcase"></i>Ass. Senior Boy</p>
+<p><i class="flaticon-briefcase"></i>Head Boy</p>
 </div>
 </div>
 </div>
 </div>
 </div>
 
+
+
+</div>
+</div>
+<div class="col-lg-6">
+<div class="alumni-right-content">
+
 <div class="single-alumni-events-card">
 <div class="row align-items-center">
 <div class="col-lg-6 col-md-6">
 <div class="alumni-img">
-<img src="prefectsImg/ass-senior-girl.jpg" alt="Staff" style="border: 6px solid deepskyblue;border-radius: 50%;">
+<img src="prefectsImg/female.png" alt="Staff" style="border: 6px solid deepskyblue;border-radius: 50%;">
 
 </div>
 </div>
 <div class="col-lg-6 col-md-6">
 <div class="alumni-content">
-<h2>Ukatta Emmanuella Uchechi</h2>
+<h2>Hannah Doe</h2>
 <div class="location">
-<p><i class="flaticon-briefcase"></i>Ass. Senior Girl</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="single-alumni-events-card">
-<div class="row align-items-center">
-<div class="col-lg-6 col-md-6">
-<div class="alumni-img">
-<img src="prefectsImg/labour-prefect-girl.jpg" alt="Staff" style="border: 6px solid deepskyblue;border-radius: 50%;">
-</div>
-</div>
-<div class="col-lg-6 col-md-6">
-<div class="alumni-content">
-<h2>Idoreyin Deborah Uwana</h2>
-<div class="location">
-<p><i class="flaticon-briefcase"></i>Labour Prefect</p>
+<p><i class="flaticon-briefcase"></i>Head Girl</p>
 </div>
 </div>
 </div>
 </div>
 </div>
 
-<div class="single-alumni-events-card">
-<div class="row align-items-center">
-<div class="col-lg-6 col-md-6">
-<div class="alumni-img">
-<img src="prefectsImg/ass-labour-prefect-girl.jpg" alt="Staff" style="border: 6px solid deepskyblue; border-radius: 50%;">
-</div>
-</div>
-<div class="col-lg-6 col-md-6">
-<div class="alumni-content">
-<h2>Omotoyinbo Mercy Adenike.</h2>
-<div class="location">
-<p><i class="flaticon-briefcase"></i>Ass. Labour Prefect</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="single-alumni-events-card">
-<div class="row align-items-center">
-<div class="col-lg-6 col-md-6">
-<div class="alumni-img">
-<img src="prefectsImg/health-prefect-girl.jpg" alt="Staff" style="border: 6px solid deepskyblue; border-radius: 50%;">
-</div>
-</div>
-<div class="col-lg-6 col-md-6">
-<div class="alumni-content">
-<h2>Bamidele Evelyn Omodunni.</h2>
-<div class="location">
-<p><i class="flaticon-briefcase"></i>Health Prefect</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-<div class="single-alumni-events-card">
-<div class="row align-items-center">
-<div class="col-lg-6 col-md-6">
-<div class="alumni-img">
-<img src="prefectsImg/time-keeper.jpg" alt="Staff" style="border: 6px solid deepskyblue; border-radius: 50%;">
-</div>
-</div>
-<div class="col-lg-6 col-md-6">
-<div class="alumni-content">
-<h2>Abolaji Desmond Oluwademilade</h2>
-<div class="location">
-<p><i class="flaticon-briefcase"></i>Time Keeper</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-<div class="single-alumni-events-card">
-<div class="row align-items-center">
-<div class="col-lg-6 col-md-6">
-<div class="alumni-img">
-<img src="prefectsImg/ass-time-keeper.jpg" alt="Staff" style="border: 6px solid deepskyblue; border-radius: 50%;">
-</div>
-</div>
-<div class="col-lg-6 col-md-6">
-<div class="alumni-content">
-<h2>Akinrinde Olorunjuwon Anuoluwapo.</h2>
-<div class="location">
-<p><i class="flaticon-briefcase"></i>Asst. Time Keeepr</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="col-lg-6 col-md-6">
-<div class="single-alumni-events-card">
-<div class="row align-items-center">
-<div class="col-lg-6 col-md-6">
-<div class="alumni-img">
-<img src="prefectsImg/ass-health-prefect-girl.jpg" alt="Staff" style="border: 6px solid deepskyblue;border-radius: 50%;">
 
 </div>
-</div>
-<div class="col-lg-6 col-md-6">
-<div class="alumni-content">
-<h2>Musbau Khadijat Olajumoke</h2>
-<div class="location">
-<p><i class="flaticon-briefcase"></i>Asst. Health Prefect</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-<div class="single-alumni-events-card">
-<div class="row align-items-center">
-<div class="col-lg-6 col-md-6">
-<div class="alumni-img">
-<img src="prefectsImg/social-prefect-girl.jpg" alt="Staff" style="border: 6px solid deepskyblue;border-radius: 50%;">
-</div>
-</div>
-<div class="col-lg-6 col-md-6">
-<div class="alumni-content">
-<h2>Balogun Adedoyin Hanna</h2>
-<div class="location">
-<p><i class="flaticon-briefcase"></i>Social Prefect</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-<div class="single-alumni-events-card">
-<div class="row align-items-center">
-<div class="col-lg-6 col-md-6">
-<div class="alumni-img">
-<img src="prefectsImg/ass-social-prefect-girl.jpg" alt="Staff" style="border: 6px solid deepskyblue; border-radius: 50%;">
-</div>
-</div>
-<div class="col-lg-6 col-md-6">
-<div class="alumni-content">
-<h2>Adebanjo Abolanle Abisola</h2>
-<div class="location">
-<p><i class="flaticon-briefcase"></i>Asst. Social Prefect</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="single-alumni-events-card">
-<div class="row align-items-center">
-<div class="col-lg-6 col-md-6">
-<div class="alumni-img">
-<img src="prefectsImg/ass-chapel-prefect-girl.jpg" alt="Staff" style="border: 6px solid deepskyblue; border-radius: 50%;">
-</div>
-</div>
-<div class="col-lg-6 col-md-6">
-<div class="alumni-content">
-<h2>Shogbamu Felicia.</h2>
-<div class="location">
-<p><i class="flaticon-briefcase"></i>Chapel Prefect</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-<div class="single-alumni-events-card">
-<div class="row align-items-center">
-<div class="col-lg-6 col-md-6">
-<div class="alumni-img">
-<img src="prefectsImg/ass-chapel-prefect-girl.jpg" alt="Staff" style="border: 6px solid deepskyblue; border-radius: 50%;">
-</div>
-</div>
-<div class="col-lg-6 col-md-6">
-<div class="alumni-content">
-<h2>Emojevu Elizabth Peculiar.</h2>
-<div class="location">
-<p><i class="flaticon-briefcase"></i>Asst. Chapel Prefect</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-<div class="single-alumni-events-card">
-<div class="row align-items-center">
-<div class="col-lg-6 col-md-6">
-<div class="alumni-img">
-<img src="prefectsImg/ict-prefect-girl.jpg" alt="Staff" style="border: 6px solid deepskyblue; border-radius: 50%;">
-</div>
-</div>
-<div class="col-lg-6 col-md-6">
-<div class="alumni-content">
-<h2>Shittu Nojat Boluwatife</h2>
-<div class="location">
-<p><i class="flaticon-briefcase"></i>ICT Prefect Girl</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-<div class="single-alumni-events-card">
-<div class="row align-items-center">
-<div class="col-lg-6 col-md-6">
-<div class="alumni-img">
-<img src="prefectsImg/ict-prefect-boy.jpg" alt="Staff" style="border: 6px solid deepskyblue; border-radius: 50%;">
-</div>
-</div>
-<div class="col-lg-6 col-md-6">
-<div class="alumni-content">
-<h2>Alabi Mustaqeem Oluwadamilare</h2>
-<div class="location">
-<p><i class="flaticon-briefcase"></i>ICT Prefect Boy</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="single-alumni-events-card">
-<div class="row align-items-center">
-<div class="col-lg-6 col-md-6">
-<div class="alumni-img">
-<img src="prefectsImg/ass-ict-prefect-boy.jpg" alt="Staff" style="border: 6px solid deepskyblue; border-radius: 50%;">
-</div>
-</div>
-<div class="col-lg-6 col-md-6">
-<div class="alumni-content">
-<h2>Ashaolu Temidayo Johnson</h2>
-<div class="location">
-<p><i class="flaticon-briefcase"></i>Asst. ICT Prefect</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-<div class="single-alumni-events-card">
-<div class="row align-items-center">
-<div class="col-lg-6 col-md-6">
-<div class="alumni-img">
-<img src="prefectsImg/muslim-chapel-prefect-boy.jpg" alt="Staff" style="border: 6px solid deepskyblue; border-radius: 50%;">
-</div>
-</div>
-<div class="col-lg-6 col-md-6">
-<div class="alumni-content">
-<h2>Ayoade Toheeb Opeyemi</h2>
-<div class="location">
-<p><i class="flaticon-briefcase"></i>Muslim Prefect</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-
 </div>
 </div>
  
+
+  <h1 class="text-center">2020/2021 SET</h1>
+<div class="row">
+ <div class="col-lg-6">
+<div class="alumni-left-content">
+
+<div class="single-alumni-events-card">
+<div class="row align-items-center">
+<div class="col-lg-6 col-md-6">
+<div class="alumni-img">
+<img src="prefectsImg/man.jpg" alt="Staff" style="border: 6px solid deepskyblue;border-radius: 50%;">
+</div>
+</div>
+<div class="col-lg-6 col-md-6">
+<div class="alumni-content">
+<h4> John Doe</h4>
+<div class="location">
+<p><i class="flaticon-briefcase"></i>Head Boy</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+</div>
+</div>
+<div class="col-lg-6">
+<div class="alumni-right-content">
+
+<div class="single-alumni-events-card">
+<div class="row align-items-center">
+<div class="col-lg-6 col-md-6">
+<div class="alumni-img">
+<img src="prefectsImg/female.png" alt="Staff" style="border: 6px solid deepskyblue;border-radius: 50%;">
+
+</div>
+</div>
+<div class="col-lg-6 col-md-6">
+<div class="alumni-content">
+<h2>Hannah Doe</h2>
+<div class="location">
+<p><i class="flaticon-briefcase"></i>Head Girl</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+</div>
+</div>
+</div>
 
 </div>
 </div>

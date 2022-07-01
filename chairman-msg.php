@@ -34,8 +34,8 @@
 <div class="row">
 <div class="col-lg-12 col-md-12 col-sm-12">
   <div class="events-image">
-<img src="assets/images/events/events-7.jpg" width="200" alt="Image" style="border-radius: 20%;">
-<h2>ALH. S.A. Lawal <span class="text-primary">(Chairman)</span></h2>
+<img src="staffImg/man.jpg" width="300" alt="Image" style="border-radius: 20%;border:3px solid darkblue;">
+<h2 class="mt-3">ALH. S.A. Lawal <span class="text-primary">(Chairman)</span></h2>
 </div>
 <div class="privacy-content pr-20">
 <h4>Warm greeting:</h4>
@@ -45,7 +45,7 @@
  <p>
    Success for all students is ensured at our school by delivery of an enriching, child centred, balanced and structured curriculum and a whole school focus on student welfare that focuses on thepositive recognition of student achievements. Teachers at <?php echo __SCHOOL_NAME__; ?> are highly qualified and experienced educators who are committed to support each student's learning experience throgh quality instruction and guidance 
  </p>
-<p> <span>Signed:_______ <br> <img src="assets/images/resultstamp.png" width="100" alt=""></span></p>
+<p> <span>Signed:_______ </span></p>
 
 </div>
 </div>

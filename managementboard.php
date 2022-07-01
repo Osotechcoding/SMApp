@@ -33,7 +33,7 @@
 
 <div class="alumni-area pt-100 pb-70">
 <div class="container">
-  <h1 class="text-center">School Management Board</h1>
+  <h1 class="text-center">MANAGEMENT BOARD</h1>
 <div class="row">
  <div class="col-lg-6">
 <div class="alumni-left-content">
@@ -42,57 +42,21 @@
 <div class="row align-items-center">
 <div class="col-lg-6 col-md-6">
 <div class="alumni-img">
-<img src="staffImg/staff1.jpg" alt="Staff" style="border: 10px solid deepskyblue;border-radius: 50%;">
-
+<img src="prefectsImg/man.jpg" alt="Staff" style="border: 6px solid deepskyblue;border-radius: 50%;">
 </div>
 </div>
 <div class="col-lg-6 col-md-6">
 <div class="alumni-content">
-<h2>Mr. Fintech Investment</h2>
+<h4>Mr. John Doe</h4>
 <div class="location">
-<p><i class="ri-map-pin-line"></i>Sanu Grand Hall</p>
+<p><i class="flaticon-briefcase"></i>P.T.A CHAIRMAN</p>
 </div>
 </div>
 </div>
 </div>
 </div>
 
-<div class="single-alumni-events-card">
-<div class="row align-items-center">
-<div class="col-lg-6 col-md-6">
-<div class="alumni-img">
-<img src="staffImg/staff2.jpg" alt="Staff" style="border: 10px solid deepskyblue;border-radius: 50%;">
 
-</div>
-</div>
-<div class="col-lg-6 col-md-6">
-<div class="alumni-content">
-<h2>Mr. Fintech Investment</h2>
-<div class="location">
-<p><i class="ri-map-pin-line"></i>Sanu Grand Hall</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="single-alumni-events-card">
-<div class="row align-items-center">
-<div class="col-lg-6 col-md-6">
-<div class="alumni-img">
-<img src="staffImg/staff3.jpg" alt="Staff" style="border: 10px solid deepskyblue;border-radius: 50%;">
-
-</div>
-</div>
-<div class="col-lg-6 col-md-6">
-<div class="alumni-content">
-<h2>Mr. Fintech Investment</h2>
-<div class="location">
-<p><i class="ri-map-pin-line"></i>Sanu Grand Hall</p>
-</div>
-</div>
-</div>
-</div>
-</div>
 
 </div>
 </div>
@@ -103,185 +67,26 @@
 <div class="row align-items-center">
 <div class="col-lg-6 col-md-6">
 <div class="alumni-img">
-<img src="staffImg/staff4.jpg" alt="Staff" style="border: 10px solid deepskyblue;border-radius: 50%;">
+<img src="prefectsImg/female.png" alt="Staff" style="border: 6px solid deepskyblue;border-radius: 50%;">
 
 </div>
 </div>
 <div class="col-lg-6 col-md-6">
 <div class="alumni-content">
-<h2>Mr. Fintech Investment</h2>
+<h2>Mrs. Hannah Doe</h2>
 <div class="location">
-<p><i class="ri-map-pin-line"></i>Sanu Grand Hall</p>
+<p><i class="flaticon-briefcase"></i>P.T.A SECRETARY</p>
 </div>
 </div>
 </div>
 </div>
 </div>
 
-<div class="single-alumni-events-card">
-<div class="row align-items-center">
-<div class="col-lg-6 col-md-6">
-<div class="alumni-img">
-<img src="staffImg/staff5.jpg" alt="Staff" style="border: 10px solid deepskyblue;border-radius: 50%;">
-
-</div>
-</div>
-<div class="col-lg-6 col-md-6">
-<div class="alumni-content">
-<h2>Mr. Fintech Investment</h2>
-<div class="location">
-<p><i class="ri-map-pin-line"></i>Sanu Grand Hall</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="single-alumni-events-card">
-<div class="row align-items-center">
-<div class="col-lg-6 col-md-6">
-<div class="alumni-img">
-<img src="staffImg/staff6.jpg" alt="Staff" style="border: 10px solid deepskyblue; border-radius: 50%;">
-
-</div>
-</div>
-<div class="col-lg-6 col-md-6">
-<div class="alumni-content">
-<h2>Mr. Fintech Investment</h2>
-<div class="location">
-<p><i class="ri-map-pin-line"></i>Sanu Grand Hall</p>
-</div>
-</div>
-</div>
-</div>
-</div>
 
 </div>
 </div>
 </div>
-  <h1 class="text-center">P.T.A Executives</h1>
-<div class="row">
- <div class="col-lg-6">
-<div class="alumni-left-content">
-
-<div class="single-alumni-events-card">
-<div class="row align-items-center">
-<div class="col-lg-6 col-md-6">
-<div class="alumni-img">
-<img src="staffImg/staff1.jpg" alt="Staff" style="border: 10px solid deepskyblue;border-radius: 50%;">
-
-</div>
-</div>
-<div class="col-lg-6 col-md-6">
-<div class="alumni-content">
-<h2>Mr. Fintech Investment</h2>
-<div class="location">
-<p><i class="ri-map-pin-line"></i>Sanu Grand Hall</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-<div class="single-alumni-events-card">
-<div class="row align-items-center">
-<div class="col-lg-6 col-md-6">
-<div class="alumni-img">
-<img src="staffImg/staff7.jpg" alt="Staff" style="border: 10px solid deepskyblue;border-radius: 50%;">
-
-</div>
-</div>
-<div class="col-lg-6 col-md-6">
-<div class="alumni-content">
-<h2>Mr. Fintech Investment</h2>
-<div class="location">
-<p><i class="ri-map-pin-line"></i>Sanu Grand Hall</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="single-alumni-events-card">
-<div class="row align-items-center">
-<div class="col-lg-6 col-md-6">
-<div class="alumni-img">
-<img src="staffImg/staff8.jpg" alt="Staff" style="border: 10px solid deepskyblue;border-radius: 50%;">
-
-</div>
-</div>
-<div class="col-lg-6 col-md-6">
-<div class="alumni-content">
-<h2>Mr. Fintech Investment</h2>
-<div class="location">
-<p><i class="ri-map-pin-line"></i>Sanu Grand Hall</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-</div>
-</div>
-<div class="col-lg-6">
-<div class="alumni-right-content">
-
-<div class="single-alumni-events-card">
-<div class="row align-items-center">
-<div class="col-lg-6 col-md-6">
-<div class="alumni-img">
-<img src="staffImg/staff9.jpg" alt="Staff" style="border: 10px solid deepskyblue;border-radius: 50%;">
-
-</div>
-</div>
-<div class="col-lg-6 col-md-6">
-<div class="alumni-content">
-<h2>Mr. Fintech Investment</h2>
-<div class="location">
-<p><i class="ri-map-pin-line"></i>Sanu Grand Hall</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-<div class="single-alumni-events-card">
-<div class="row align-items-center">
-<div class="col-lg-6 col-md-6">
-<div class="alumni-img">
-<img src="staffImg/staff10.jpg" alt="Staff" style="border: 10px solid deepskyblue;border-radius: 50%;">
-
-</div>
-</div>
-<div class="col-lg-6 col-md-6">
-<div class="alumni-content">
-<h2>Mr. Fintech Investment</h2>
-<div class="location">
-<p><i class="ri-map-pin-line"></i>Sanu Grand Hall</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="single-alumni-events-card">
-<div class="row align-items-center">
-<div class="col-lg-6 col-md-6">
-<div class="alumni-img">
-<img src="staffImg/staff11.jpg" alt="Staff" style="border: 10px solid deepskyblue; border-radius: 50%;">
-</div>
-</div>
-<div class="col-lg-6 col-md-6">
-<div class="alumni-content">
-<h2>Mr. Fintech Investment</h2>
-<div class="location">
-<p><i class="ri-map-pin-line"></i>Sanu Grand Hall</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-</div>
-</div>
-</div>
+ 
 
 </div>
 </div>
