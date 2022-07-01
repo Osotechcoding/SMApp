@@ -7,7 +7,7 @@ require_once "helpers/helper.php";
 <head>
     <!-- metaTag -->
     <?php include ("../template/MetaTag.php"); ?>
-    <title> Manage Holidays - VISAP</title>
+    <title><?php echo ucwords($SmappDetails->school_name) ?> :: Manage Holidays </title>
      <?php include ("../template/dataTableHeaderLink.php"); ?>
     <!-- include dataTableHeaderLink.php -->
 
@@ -21,8 +21,6 @@ require_once "helpers/helper.php";
     <?php include ("template/HeaderNav.php"); ?>
     <!-- headerNav.php -->
     <!-- END: Header-->
-
-
     <!-- BEGIN: Main Menu-->
   <!--  -->
   <?php include ("template/Sidebar.php"); ?>

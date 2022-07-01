@@ -7,7 +7,7 @@ require_once "helpers/helper.php";
   <!-- BEGIN: Head-->
 <head>
     <?php include "template/MetaTag.php";?>
-    <title> GSSOTA STAFF || <?php echo $lang['webtitle'] ?></title>
+    <title> <?php echo $SmappDetails->school_name; ?> || Staff</title>
    <!-- include template/HeaderLink.php -->
    <?php include "template/dataTableHeaderLink.php";?>
   <!-- END: Head-->
@@ -35,7 +35,7 @@ require_once "helpers/helper.php";
                 <ol class="breadcrumb p-0 mb-0 pl-1">
                   <li class="breadcrumb-item"><a href="./"><i class="bx bx-home-alt"></i></a>
                   </li>
-                  <li class="breadcrumb-item"><a href="#">Admin</a>
+                  <li class="breadcrumb-item"><a href="#"><?php echo strtoupper($_SESSION['STAFF_ROLE']) ?></a>
                   </li>
                   <li class="breadcrumb-item active">Staff List
                   </li>

@@ -9,7 +9,7 @@ require_once "helpers/helper.php";
 <head>
     <!-- metaTag -->
     <?php include ("../template/MetaTag.php"); ?>
-    <title>EVENT MANAGEMENT - VISAP</title>
+    <title><?php echo $SmappDetails->school_name; ?> :: EVENT MANAGEMENT</title>
      <?php include ("../template/dataTableHeaderLink.php"); ?>
     <!-- include dataTableHeaderLink.php -->
 

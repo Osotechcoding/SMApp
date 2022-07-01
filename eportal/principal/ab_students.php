@@ -10,7 +10,7 @@ require_once "helpers/helper.php";
 <head>
     <!-- metaTag -->
     <?php include ("../template/MetaTag.php"); ?>
-    <title><?php echo __SCHOOL_NAME__ ?> :: Students </title>
+    <title><?php echo $SmappDetails->school_name ?> :: Students </title>
      <?php include ("../template/dataTableHeaderLink.php"); ?>
   </head>
   <!-- END: Head-->
@@ -33,12 +33,12 @@ require_once "helpers/helper.php";
         <div class="content-header row">
           <div class="content-header-left col-12 mb-2 mt-1">
             <div class="breadcrumbs-top">
-              <h5 class="content-header-title float-left pr-1 mb-0">VISAP PORTAL</h5>
+              <h5 class="content-header-title float-left pr-1 mb-0"><?php echo __OSO_APP_NAME__; ?> PORTAL</h5>
               <div class="breadcrumb-wrapper d-none d-sm-block">
                 <ol class="breadcrumb p-0 mb-0 pl-1">
                   <li class="breadcrumb-item"><a href="./"><i class="bx bx-home-alt"></i></a>
                   </li>
-                  <li class="breadcrumb-item"><a href="#">Admin</a>
+                  <li class="breadcrumb-item"><a href="#"><?php echo strtoupper($_SESSION['STAFF_ROLE']);?></a>
                   </li>
                   <li class="breadcrumb-item active">Student Management
                   </li>

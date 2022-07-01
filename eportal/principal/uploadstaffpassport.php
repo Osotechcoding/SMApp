@@ -2,18 +2,18 @@
 require_once "helpers/helper.php";
  ?>
   <?php 
-if (isset($_GET['stdRegistrationId']) && $_GET['stdRegistrationId']!="" && isset($_GET['actionId']) && $_GET['actionId']!="") {
+if (isset($_GET['staffRegId']) && $_GET['staffRegId']!="" && isset($_GET['actionId']) && $_GET['actionId']!="") {
   
-  $studentId = $Configuration->Clean($_GET['actionId']);
-  $student_data = $Student->get_student_data_byId($studentId);
-  if ($student_data) {
+  $staffId = $Configuration->Clean($_GET['actionId']);
+  $staff_data = $Staff->get_staff_ById($staffId);
+  if ($staff_data) {
     // code...
   }else{
-     header("Location: mystudents");
+     header("Location: ./staffs");
   exit();
   }
 }else{
-  header("Location: mystudents");
+  header("Location: ./staffs");
   exit();
 }
 
@@ -24,7 +24,7 @@ if (isset($_GET['stdRegistrationId']) && $_GET['stdRegistrationId']!="" && isset
   <!-- BEGIN: Head-->
 <head>
     <?php include "../template/MetaTag.php";?>
-    <title><?php echo $SmappDetails->school_name ?> :: Upload Passport for <?php echo ucwords($student_data->full_name);?></title>
+    <title><?php echo $SmappDetails->school_name; ?> :: Upload Passport for <?php echo ucwords($staff_data->full_name);?></title>
    <?php include "../template/HeaderLink.php";?>
   <!-- END: Head-->
   <!-- BEGIN: Body-->
@@ -60,7 +60,11 @@ if (isset($_GET['stdRegistrationId']) && $_GET['stdRegistrationId']!="" && isset
         <div class="content-body">
 <div class="row">
              <div class="col-12">
-    <h3 class="bd-lead text-info text-bold"><img src="../result-asset/author.jpg" width="60" alt="photo"> Upload <?php echo ucwords($student_data->full_name);?>'s Passport</h3>
+    <h3 class="bd-lead text-info text-bold"><?php if ($staff_data->staffPassport==NULL || $staff_data->staffPassport==""): ?>
+    <img src="../author.jpg" width="100" alt="photo" style="border-radius: 10px;border: 3px solid deepskyblue;">
+      <?php else: ?>
+        <img src="../schoolImages/staff/<?php echo $staff_data->staffPassport;?>" width="100" alt="photo" style="border-radius: 10px;border: 3px solid deepskyblue;">
+    <?php endif ?> Upload <?php echo ucwords($staff_data->full_name);?>'s Passport</h3>
   </div>
     </div>
     <div class="col-md-8 col-12">
@@ -69,16 +73,16 @@ if (isset($_GET['stdRegistrationId']) && $_GET['stdRegistrationId']!="" && isset
           <div class="col-md-12 text-center"> <h5><?php //if (isset($response)): ?>
           <?php //echo $response; ?>
         <?php //endif ?></h5> </div>
-          <form class="form form-vertical" id="studentPassport_form" method="post" enctype="multipart/form-data">
+          <form class="form form-vertical" id="staffPassport_form" method="post" enctype="multipart/form-data">
             <div class="form-body">
               <div class="row">
                 <div class="col-12">
                   <div class="form-group">
-                    <input type="hidden" name="action" value="submit_student_passport">
-                    <input type="hidden" name="student_id" id="student_id" value="<?php echo ucwords($student_data->stdId);?>">
+                    <input type="hidden" name="action" value="submit_staff_passport">
+                    <input type="hidden" name="staff_id" id="staff_id" value="<?php echo ucwords($staff_data->staffId);?>">
                     <label for="first-name-icon">Student Fullname</label>
                     <div class="position-relative has-icon-left">
-                      <input type="text" class="form-control" value="<?php echo ucwords($student_data->full_name);?>" readonly>
+                      <input type="text" class="form-control" value="<?php echo ucwords($staff_data->full_name);?>" readonly>
                       <div class="form-control-position">
                         <i class="bx bx-user"></i>
                       </div>
@@ -87,9 +91,9 @@ if (isset($_GET['stdRegistrationId']) && $_GET['stdRegistrationId']!="" && isset
                 </div>
                 <div class="col-12">
                   <div class="form-group">
-                    <label for="email-id-icon">Present Class</label>
+                    <label for="email-id-icon">Class Teacher</label>
                     <div class="position-relative has-icon-left">
-                      <input type="text" class="form-control" value="<?php echo strtoupper($student_data->studentClass);?>" readonly>
+                      <input type="text" class="form-control" value="<?php echo strtoupper($staff_data->staffGrade);?>" readonly>
                       <div class="form-control-position">
                         <i class="bx bx-book-open"></i>
                       </div>
@@ -98,9 +102,9 @@ if (isset($_GET['stdRegistrationId']) && $_GET['stdRegistrationId']!="" && isset
                 </div>
                 <div class="col-12">
                   <div class="form-group">
-                    <label for="contact-info-icon">Admission No</label>
+                    <label for="contact-info-icon">Registration No</label>
                     <div class="position-relative has-icon-left">
-                      <input type="text" id="std_registration_no" class="form-control"value="<?php echo strtoupper($student_data->stdRegNo);?>" readonly>
+                      <input type="text" id="staff_registration_no" class="form-control"value="<?php echo strtoupper($staff_data->staffRegNo);?>" readonly>
                       <div class="form-control-position">
                         <i class="bx bx-mobile"></i>
                       </div>
@@ -128,7 +132,7 @@ if (isset($_GET['stdRegistrationId']) && $_GET['stdRegistrationId']!="" && isset
                 
                 <div class="col-12 d-flex justify-content-end">
                   <button type="submit" class="btn btn-dark mr-1 __loadingBtn__">Upload</button>
-                 <a href="./mystudents"> <button type="button" class="btn btn-danger">Back</button></a>
+                 <a href="./staffs"> <button type="button" class="btn btn-danger">Back</button></a>
                 </div>
               </div>
             </div>
@@ -155,7 +159,7 @@ if (isset($_GET['stdRegistrationId']) && $_GET['stdRegistrationId']!="" && isset
      <!-- BEGIN: Page JS-->
      <script>
        $(document).ready(function(){
-      $("#studentPassport_form").on("submit",function(event){
+      $("#staffPassport_form").on("submit",function(event){
   event.preventDefault();
   $.ajax({
     url:"../actions/update_actions",
@@ -173,7 +177,7 @@ if (isset($_GET['stdRegistrationId']) && $_GET['stdRegistrationId']!="" && isset
        // $("#video_form")[0].reset();
         $("#server-response").html(data);
         //alert(data);
-      },2500);
+      },500);
     }
 
   });

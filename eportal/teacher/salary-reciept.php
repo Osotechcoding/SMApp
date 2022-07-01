@@ -35,7 +35,7 @@ require_once "helpers/helper.php";
                 <ol class="breadcrumb p-0 mb-0 pl-1">
                   <li class="breadcrumb-item"><a href="./"><i class="bx bx-home-alt"></i></a>
                   </li>
-                  <li class="breadcrumb-item"><a href="#">Admin</a>
+                  <li class="breadcrumb-item"><a href="javascript:void(0);"><?php echo strtoupper($_SESSION['STAFF_ROLE']) ?></a>
                   </li>
                   <li class="breadcrumb-item active">
                   </li>
@@ -63,11 +63,11 @@ require_once "helpers/helper.php";
               <img src="result-asset/logo.png" width="80">
               <ul class="list-unstyled m-b-0">
                 <address>
-              <strong>GLORY SUPREME SCHOOL</strong><br>
-              1-5, Glory Supreme Avenue, Ijagba,<br>
-              Onigbin, Ota,Ogun State.<br>
-              Phone: +(234)8038546164<br>
-              Email: info@glorysupremeschool.com
+              <strong><?php echo strtoupper($SmappDetails->school_name) ?></strong><br>
+             <?php echo ucwords($SmappDetails->school_address) ?><br>
+              <?php echo $SmappDetails->country;?><br>
+              Phone: <?php echo $SmappDetails->school_phone; ?><br>
+              Email: <?php echo $SmappDetails->school_email; ?>
             </address>
               </ul>
               </div>

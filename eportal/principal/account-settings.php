@@ -7,7 +7,7 @@ require_once "helpers/helper.php";
   <!-- BEGIN: Head-->
 <head>
     <?php include "../template/MetaTag.php";?>
-    <title><?php echo ucwords($staff_data->full_name);?> || <?php echo $lang['webtitle']?></title>
+    <title><?php echo ucwords($SmappDetails->school_name);?> <?php echo ucwords($staff_data->full_name);?> </title>
    <!-- include template/HeaderLink.php -->
    <?php include "../template/HeaderLink.php";?>
   <!-- END: Head-->
@@ -67,13 +67,13 @@ require_once "helpers/helper.php";
                                 <span>Update Info</span>
                             </a>
                         </li>
-                         <li class="nav-item">
+                      <!--    <li class="nav-item">
                             <a class="nav-link d-flex align-items-center" id="account-pill-password" data-toggle="pill"
                                 href="#update-avatar-photo" aria-expanded="false">
                                 <i class="fa fa-camera"></i>
                                 <span>Profile Image</span>
                             </a>
-                        </li>
+                        </li> -->
                         <li class="nav-item">
                             <a class="nav-link d-flex align-items-center" id="account-pill-password" data-toggle="pill"
                                 href="#account-vertical-password" aria-expanded="false">
@@ -101,8 +101,11 @@ require_once "helpers/helper.php";
                                     aria-labelledby="account-pill-general" aria-expanded="true">
                                     <div class="media text-center">
                                         <a href="javascript: void(0);">
-                                            <img src="../schlogo.jpg"
-                                                class="rounded mr-75" alt="profile image" height="100" width="100" style="border: solid black 2px; border-radius: 20px;">
+        <?php if ($staff_data->staffPassport==NULL || $staff_data->staffPassport==""): ?>
+    <img src="../author.jpg" width="150" alt="photo" style="border-radius: 10px;border: 3px solid darkblue;">
+      <?php else: ?>
+        <img src="../schoolImages/staff/<?php echo $staff_data->staffPassport;?>" width="150" alt="photo" style="border-radius: 10px;border: 3px solid darkblue;">
+    <?php endif ?>
                                         </a>
                                         
                                     </div>
