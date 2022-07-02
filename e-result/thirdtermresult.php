@@ -155,9 +155,9 @@ tbody >tr:nth-child(odd) {
     <P>SESSION:&nbsp;&nbsp; <b><?php echo $rsession; ?></b>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; ADMISSION NO:&nbsp;&nbsp; <b><?php echo strtoupper($student_data->stdRegNo);?></b>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; D.O.B:&nbsp;&nbsp; <b><?php echo date("F jS, Y",strtotime($student_data->stdDob));?></b>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; AGE:&nbsp;&nbsp; <b><?php echo $Osotech->get_student_age($student_data->stdDob);?>yrs</b>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;</P>
     <!-- <P>CLUB / SOCIETY:&nbsp;&nbsp; <b>JET, CHOIR</b>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;</P> -->
     <?php if ($student_data->stdPassport==NULL || $student_data->stdPassport==""): ?>
-      <img src="../assets/images/passportSample.jpg" alt="passport" style="float: right; width: 100px;height: 125px; margin-top: -150px; border: 4px solid #625D5D; padding: 2px;">
+      <img src="../author.jpg" alt="passport" style="float: right; width: 100px;height: 125px; margin-top: -150px; border: 4px solid #625D5D; padding: 2px;">
       <?php else: ?>
-        <img src="../eportal/schoolImages/students/<?php echo $student_data->stdPassport;?>" alt="passport" style="float: right; width: 100px;height: 125px; margin-top: -150px; border: 4px solid #625D5D; padding: 2px;">
+        <img src="../schoolImages/students/<?php echo $student_data->stdPassport;?>" alt="passport" style="float: right; width: 100px;height: 125px; margin-top: -150px; border: 4px solid #625D5D; padding: 2px;">
     <?php endif ?>
     
 
@@ -208,18 +208,14 @@ $resultScore->execute(array($student_reg_number,$student_class,$term,$rsession))
   ?>
 <!--  -->
     <?php 
-    if ($showResult->studentGrade == 'JSS 1 A' || $showResult->studentGrade == 'JSS 2 A' || $showResult->studentGrade =='JSS 3 A') {
+   if ($showResult->studentGrade == 'JSS 1 A' || $showResult->studentGrade == 'JSS 1 B' || $showResult->studentGrade =='JSS 1 C' || $showResult->studentGrade == 'JSS 2 A' || $showResult->studentGrade == 'JSS 2 B' || $showResult->studentGrade == 'JSS 2 C' || $showResult->studentGrade == 'JSS 3 A' || $showResult->studentGrade == 'JSS 3 B' || $showResult->studentGrade == 'JSS 3 C') {
       $amInClass ='Junior';
-    }elseif ($showResult->studentGrade == 'SSS 1 A' ||$showResult->studentGrade == 'SSS 1 B' || $showResult->studentGrade == 'SSS 1 C' || $showResult->studentGrade == 'SSS 2 A' || $showResult->studentGrade == 'SSS 2 B' || $showResult->studentGrade == 'SSS 2 C' || $showResult->studentGrade =='SSS 3 A' || $showResult->studentGrade =='SSS 3 B' || $showResult->studentGrade =='SSS 3 C') {
+    }elseif ($showResult->studentGrade == 'SSS 1 A' || $showResult->studentGrade == 'SSS 1 B' || $showResult->studentGrade == 'SSS 1 C' || $showResult->studentGrade == 'SSS 2 A' || $showResult->studentGrade == 'SSS 2 B' || $showResult->studentGrade == 'SSS 2 C' || $showResult->studentGrade =='SSS 3 A' || $showResult->studentGrade =='SSS 3 B' || $showResult->studentGrade =='SSS 3 C') {
      $amInClass ='Senior';
     }else{
        $amInClass ='Pry';
     }
     //let get if the student did first term exam 
-    
-    //$_firstTermTotal
-    //$_secondTermTotal
-    //$myTotalMark
     if ($_firstTermTotal == 0 && $_secondTermTotal == 0 && $myTotalMark > 0) {
       // no exam for first term and second term... used the third term score only
       $grandScore = intval($myTotalMark);

@@ -77,7 +77,7 @@ if ($request_method!=="GET") {
             </div>
            
             <div class="col-sm-6 col-12 text-center text-sm-right order-1 order-sm-2 d-sm-flex justify-content-end mb-1 mb-sm-0">
-              <img src="../schlogo.jpg" alt="logo" height="50" width="50">
+              <img src="<?php echo $Configuration->get_schoolLogoImage();?>" alt="logo" height="50" width="50">
             </div>
           </div>
           <hr>
@@ -92,10 +92,10 @@ if ($request_method!=="GET") {
                 <span><?php  echo ucwords($SmappDetails->school_address) ?><br /> <?php  echo ucwords($SmappDetails->country) ?></span>
               </div>
               <div class="mb-1">
-                <span>info@julitschools.com</span>
+                <span><?php echo $SmappDetails->school_email; ?></span>
               </div>
               <div class="mb-1">
-                <span>(+234)8037-940-665</span>
+                <span><?php echo $SmappDetails->school_phone; ?></span>
               </div>
             </div>
             <div class="col-sm-6 col-12 mt-1">

@@ -114,16 +114,16 @@ if ($request_method!=="GET") {
             <div class="col-sm-6 col-12 mt-1">
               <h6 class="invoice-from">FROM</h6>
               <div class="mb-1">
-                <span><?php echo strtoupper(__SCHOOL_NAME__) ?></span>
+                <span><?php echo strtoupper($SmappDetails->school_name) ?></span>
               </div>
               <div class="mb-1">
-                <span><?php echo ucwords(__SCHOOL_LOCATION_ADDRESS__);?></span>
+                <span><?php echo ucwords($SmappDetails->school_address);?></span>
               </div>
               <div class="mb-1">
-                <span>info@julitschools.com</span>
+                <span><?php echo $SmappDetails->school_email;?></span>
               </div>
               <div class="mb-1">
-                <span>(+234)8037-940-665</span>
+                <span><?php echo $SmappDetails->school_phone; ?></span>
               </div>
             </div>
             <div class="col-sm-6 col-12 mt-1">

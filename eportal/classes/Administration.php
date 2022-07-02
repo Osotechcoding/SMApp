@@ -268,7 +268,7 @@ return $this->response;
 
 	public function update_subject($data){
 		$subject_id = $this->config->Clean($data['subject_id']);
-		//$subject_teacher = $this->config->Clean($data['subject_teacher']);
+		//$subject_teacher = implode(",",$data['subject_teacher']);
 		$subject_name = $this->config->Clean($data['subject_name']);
 		$code = $this->config->Clean($data['code']);
 		$status = $this->config->Clean($data['subject_status']);
@@ -277,7 +277,7 @@ return $this->response;
 			// code...
 		}else{
 			try {
-				$subject_teacher = implode(",", $data['subject_teacher']);
+				$subject_teacher = isset($data['subject_teacher']) ? implode(",", $data['subject_teacher']) : NULL ;
 					$this->dbh->beginTransaction();
 					//Update the selected Subject
 				$this->stmt = $this->dbh->prepare("UPDATE `school_subjects` SET subject_desc=?,status=?,subject_code=?,subject_teacher=? WHERE subject_id=? LIMIT 1");
@@ -2604,6 +2604,16 @@ public function upload_school_logoImage($data, $file){
    }
    return $this->response;
    unset($this->dbh);
+  }
+
+  public function get_school_session_info(){
+  	$this->stmt = $this->dbh->prepare("SELECT * FROM `visap_school_session_tbl` LIMIT 1");
+  	$this->stmt->execute();
+  	if ($this->stmt->rowCount()==1) {
+  		$this->response = $this->stmt->fetch();
+  		return $this->response;
+  		unset($this->dbh);
+  	}
   }
 
 }

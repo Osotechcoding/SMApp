@@ -39,7 +39,7 @@
           </li>
           <?php endif ?>
          <!-- RESULT COMMENT SECTION -->
-           <li class=" nav-item"><a href="student_results"><i class="fa fa-eye fa-1x"></i><span class="menu-title text-truncate" data-i18n="View Result">View Results</span></a>
+           <li class=" nav-item"><a href="view_uploaded_result"><i class="fa fa-eye fa-1x"></i><span class="menu-title text-truncate" data-i18n="View Result">View Results</span></a>
           </li>
             </ul>
           </li>
@@ -73,6 +73,11 @@
             </ul>
           </li>
           <li><a class="d-flex align-items-center" href="account-settings"><i class="fa fa-cogs"></i><span class="menu-item text-truncate" data-i18n="Virtual Lecture">Edit Profile</span></a>
+              </li>
+              <li>
+                <a class="d-flex align-items-center" onclick=" return confirm('<?php echo $lang["logout-sure?"];?>');" href="logout?action=logout"><i class="fa fa-power-off"></i>
+                <span class="menu-item text-truncate"> <?php echo $lang['Logout'] ?></span></a>
+               
               </li>
         </ul>
       </div>

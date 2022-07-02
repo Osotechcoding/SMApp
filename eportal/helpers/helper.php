@@ -20,4 +20,5 @@ $Alert = new Alert();
 //Session Details
 $session_data = $Administration->get_session_details();
 $activeSess =$Administration->get_active_session_details();
+$SmappDetails = $Configuration->getConfigData();
  ?>

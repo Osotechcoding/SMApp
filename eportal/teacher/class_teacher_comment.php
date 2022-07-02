@@ -127,8 +127,8 @@ if ($get_all_uploaded_results_students) {
              <!-- ############################# -->
                   <div class="card show-on-print">
                   <div class="card-body">
-                  <h2 class="text-info text-center">GLORY SUPREME SCHOOL</h2>
-                 <h5 class="text-center text-warning">1 -5,Glory Supreme Avanue,Ijagba, Onigbin, Ota,<br /> Ogun State, Nigeria</h5>
+                 <h2 class="text-info text-center"><?php echo strtoupper($SmappDetails->school_name) ?> </h2>
+                 <h5 class="text-center text-warning"><?php echo ucwords($SmappDetails->school_address) ?> </h5>
         <h4 class="text-center text-danger"><strong>STUDENTS RESULT COMMENT SHEET</strong></h4>
                         <!-- ############################# -->
             <br />

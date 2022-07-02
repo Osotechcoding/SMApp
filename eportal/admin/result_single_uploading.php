@@ -67,7 +67,7 @@ if (isset($_POST['result_upload_btn'])) {
         <div class="content-body">
 <div class="row">
              <div class="col-12">
-    <h3 class="bd-lead text-primary text-bold"><span class="fa fa-line-chart fa-2x"></span> Uploading <span class="text-muted">VISAP/2021/0072</span> 1st Term Result 2021/2022</h3>
+    <h3 class="bd-lead text-primary text-bold"><span class="fa fa-line-chart fa-2x"></span> Uploading <span class="text-muted">SMApp/2021/0072</span> 1st Term Result 2021/2022</h3>
   </div>
     </div>
     <!-- content goes here -->
@@ -87,7 +87,7 @@ if (isset($_POST['result_upload_btn'])) {
         <div class="justify-content-center text-center">
           <img src="result-asset/author.jpg" width="200">
           <div><h2><strong>Agberayi Samson Idowu</strong> </h2></div>
-          <h5><span class="text-danger">VISAP/2021/0072</span></h5>
+          <h5><span class="text-danger">Smapp/2021/0072</span></h5>
         </div>
         <h4 class="text-info text-center">Current Class: JSS1</h4>
                   <h5 class="text-center text-warning">1st Term Report Sheet</h5>

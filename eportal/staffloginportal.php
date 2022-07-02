@@ -1,8 +1,8 @@
 
 <?php 
  require_once "helpers/helper.php";
-require_once "languages/config.php";
-require_once "classes/Configuration.php";
+// require_once "languages/config.php";
+// require_once "classes/Configuration.php";
 require_once "classes/Session.php";
 @session_start();
 $tses_token = Session::set_xss_token();
@@ -13,7 +13,7 @@ $tses_token = Session::set_xss_token();
 <head>
 <?php include_once ("template/MetaTag.php");?>
 <link rel="icon" type="image/icon" href="./favicon.png">
-<title><?php echo __SCHOOL_NAME__; ?> :: Staff Login</title>
+<title><?php echo ucwords($SmappDetails->school_name); ?> :: Staff Login</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;1,400&amp;display=swap">
 
 <link rel="stylesheet" href="bapps/plugins/bootstrap/css/bootstrap.min.css">
@@ -34,12 +34,12 @@ background-repeat: no-repeat;">
 <div class="login-wrapper">
 <div class="container">
      <div class="col-md-12 text-center">
-        <h1 class="text-center" style="font-size:40px;color: darkgreen;font-weight:bold;text-shadow: 2px 2px #ff0000;"><span> <?php echo __SCHOOL_NAME__;?> </span></h1>
+        <h1 class="text-center" style="font-size:40px;color: darkgreen;font-weight:bold;text-shadow: 2px 2px #ff0000;"><span> <?php echo ucwords($SmappDetails->school_name);?> </span></h1>
     </div>
 <div class="loginbox">
 <div class="login-left">
 <img src="<?php echo $Configuration->get_schoolLogoImage();?>" width="350" class="img-fluid" alt="logo" style="border: 2px solid deepskyblue;border-radius:10px;background: #ffffff;">
-<h4 class="text-center text-warning mt-2"><?php echo __SCHOOL_NAME__; ?><h4>
+<h4 class="text-center text-warning mt-2"><?php echo ucwords($SmappDetails->school_name); ?><h4>
 <p class="text-center" style="font-size: 13px;"><a href="../" style="text-decoration: none;color: whitesmoke;"> Powered by: <span class="text-danger">Osotech Software Inc</span></a></p>
 </div>
 <div class="login-right">

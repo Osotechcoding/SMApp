@@ -137,7 +137,7 @@ tbody >tr:nth-child(odd) {
 }
 .signarea{
   width: 195px;
-  background-image: url(../assets/images/sign.png);
+  background-image: url(../assets/images/resultstamp.png);
   background-repeat: no-repeat;
   background-size:contain;
 }
@@ -185,18 +185,7 @@ $resultScore->execute(array($student_reg_number,$student_class,$term,$rsession))
     $myTotalMark = intval($showResult->overallMark);
     ?>
     <?php 
-    if ($showResult->studentGrade == 'JSS 1 A' || $showResult->studentGrade == 'JSS 2 A' || $showResult->studentGrade =='JSS 3 A') {
-      $amInClass ='Junior';
-    }elseif ($showResult->studentGrade == 'SSS 1 A' ||$showResult->studentGrade == 'SSS 1 B' || $showResult->studentGrade == 'SSS 1 C' || $showResult->studentGrade == 'SSS 2 A' || $showResult->studentGrade == 'SSS 2 B' || $showResult->studentGrade == 'SSS 2 C' || $showResult->studentGrade =='SSS 3 A' || $showResult->studentGrade =='SSS 3 B' || $showResult->studentGrade =='SSS 3 C') {
-     $amInClass ='Senior';
-    }else{
-       $amInClass ='Pry';
-    }
-  $stmt2 = $dbh->prepare("SELECT * FROM `visap_result_grading_tbl` WHERE grade_class='$amInClass' AND $myTotalMark>=score_from AND $myTotalMark<=score_to");
-  $stmt2->execute();
-  if ($stmt->rowCount()>0) {
-    while ($r = $stmt2->fetch()) {
-      $stmt4 = $dbh->prepare("SELECT * FROM `visap_termly_result_tbl` WHERE studentGrade='$student_class' AND term='1st Term' AND aca_session='$rsession' AND stdRegCode='$student_reg_number' AND subjectName='$showResult->subjectName'");
+       $stmt4 = $dbh->prepare("SELECT * FROM `visap_termly_result_tbl` WHERE studentGrade='$student_class' AND term='1st Term' AND aca_session='$rsession' AND stdRegCode='$student_reg_number' AND subjectName='$showResult->subjectName'");
   $stmt4->execute();
   if ($stmt4->rowCount()>0) {
   $firstTermTotal =$stmt4->fetch();
@@ -204,18 +193,42 @@ $resultScore->execute(array($student_reg_number,$student_class,$term,$rsession))
   }else{
     $_firstTermTotal =0;
   }
+     ?>
+    <?php 
+   if ($showResult->studentGrade == 'JSS 1 A' || $showResult->studentGrade == 'JSS 1 B' || $showResult->studentGrade =='JSS 1 C' || $showResult->studentGrade == 'JSS 2 A' || $showResult->studentGrade == 'JSS 2 B' || $showResult->studentGrade == 'JSS 2 C' || $showResult->studentGrade == 'JSS 3 A' || $showResult->studentGrade == 'JSS 3 B' || $showResult->studentGrade == 'JSS 3 C') {
+      $amInClass ='Junior';
+    }elseif ($showResult->studentGrade == 'SSS 1 A' || $showResult->studentGrade == 'SSS 1 B' || $showResult->studentGrade == 'SSS 1 C' || $showResult->studentGrade == 'SSS 2 A' || $showResult->studentGrade == 'SSS 2 B' || $showResult->studentGrade == 'SSS 2 C' || $showResult->studentGrade =='SSS 3 A' || $showResult->studentGrade =='SSS 3 B' || $showResult->studentGrade =='SSS 3 C') {
+     $amInClass ='Senior';
+    }else{
+       $amInClass ='Pry';
+    }
 
+    // 
+    if ($_firstTermTotal == 0 && $myTotalMark > 0) {
+      // no exam for first term , used the Second term score only
+      $grandScore = intval($myTotalMark);
+    }elseif ($_firstTermTotal >0 && $myTotalMark == 0) {
+      $grandScore = intval(round($_firstTermTotal));
+    }elseif ($_firstTermTotal >0  && $myTotalMark > 0) {
+       $grandScore = intval(round(($_firstTermTotal+$myTotalMark)/2));
+    }else{
+       $grandScore = 0;
+    }
+    // 
+  $stmt2 = $dbh->prepare("SELECT * FROM `visap_result_grading_tbl` WHERE grade_class='$amInClass' AND $myTotalMark>=score_from AND $myTotalMark<=score_to");
+  $stmt2->execute();
+  if ($stmt->rowCount()>0) {
+    while ($r = $stmt2->fetch()) {
       ?>
+    <tr>
     <td style="text-align: center;"> <?php echo ucwords(strtolower($showResult->subjectName));?></td> 
-                    <td style="background-color: rgba(243, 241, 105, 0.267);"><?php echo intval($_firstTermTotal);?></td>
-                    <td><?php echo intval($showResult->ca);?></td>
-                    <td> <?php echo $showResult->exam;?></td>
-                    <td><?php echo intval($showResult->ca+$showResult->exam);?></td>
-                    <td>
-                    <?php echo round(($_firstTermTotal+$showResult->ca+$showResult->exam)/2);?></td>
-                    <td> <?php echo $r->mark_grade;?></td>
-                   <!--  <td>2<sup>nd</sup></td> -->
-                    <td><?php echo $r->score_remark;?> </td>
+                    <td align="center" style="background-color: rgba(243, 241, 105, 0.267);"><?php echo intval($_firstTermTotal);?></td>
+                    <td align="center"><?php echo intval($showResult->ca);?></td>
+                    <td align="center"> <?php echo $showResult->exam;?></td>
+                    <td align="center"><?php echo intval($showResult->ca+$showResult->exam);?></td>
+                    <td align="center"><?php echo  $grandScore;?></td>
+                    <td align="center"> <?php echo $r->mark_grade;?></td>
+                    <td align="center"><?php echo $r->score_remark;?> </td>
                     
                   </tr>
       <?php
@@ -495,7 +508,7 @@ $resultScore->execute(array($student_reg_number,$student_class,$term,$rsession))
             <td></td>
           </tr>
         </table>
-        <br>
+       <!--  <br>
         <table style="table-layout: auto; width:100%;" id="ratingIndices">
           <thead>
               <tr>
@@ -513,7 +526,7 @@ $resultScore->execute(array($student_reg_number,$student_class,$term,$rsession))
             </tr>
            <tr>
         </table>
-        <br>
+        <br> -->
         <table style="table-layout: auto; width: 100%;" id="gradeAnalysis">
           <thead>
             <tr>
@@ -593,7 +606,7 @@ $resultScore->execute(array($student_reg_number,$student_class,$term,$rsession))
         <div class="signarea">
           <h4 style="font-size: 10px; text-align: center; background-color: rgba(192, 15, 15, 0.205); border-top: 1px solid red; margin-top: -0.7px; padding-top: 3px; padding-bottom: 3px; border-bottom: 1px solid red;">Next Term Begins: <?php echo date("l jS F, Y",strtotime($schl_session_data->new_term_begins)); ?>.</h4>
           <br>
-          <img src="../images/resultstamp.png" alt="" style="margin-left:40px; margin-top: -5px; margin-right:auto; width: 50%;">
+          <img src="../assets/images/signSample.png" alt="" style="margin-left:40px; margin-top: -5px; margin-right:auto; width: 50%;">
         </div>
       </div>
       <br>

@@ -559,7 +559,7 @@ require_once "helpers/helper.php";
                         <div class="controls">
                             <input type="hidden" name="action" value="uploadschLogo">
                         <label>Authentication Code</label>
-                 <input autocomplete="off" type="text" class="form-control"
+                 <input autocomplete="off" type="password" class="form-control"
                         placeholder="*********" name="m_auth">
                         </div>
         </div>

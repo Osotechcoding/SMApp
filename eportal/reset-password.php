@@ -11,7 +11,7 @@ $tses_token = Session::set_xss_token();
 
 <head>
 <?php include_once ("template/MetaTag.php");?>
-<title><?php echo __SCHOOL_NAME__; ?> :: Reset Password</title>
+<title><?php echo ucwords($SmappDetails->school_name); ?> :: Reset Password</title>
 
 <link rel="shortcut icon" href="schlogo.jpg">
 
@@ -38,7 +38,7 @@ background-repeat: no-repeat;">
 <div class="login-left">
 <img src="gsslogo.png" width="350" class="img-fluid" alt="logo">
 <h2 class="text-center text-warning">SCHOOL PORTAL</h2>
-<a href="https://glorysupremeschool.com" style="text-decoration: none;">School Website</a>
+<a href="https:../" style="text-decoration: none;">School Website</a>
 </div>
 <div class="login-right">
 <div class="login-right-wrap">

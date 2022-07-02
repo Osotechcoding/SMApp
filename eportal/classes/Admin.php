@@ -1,8 +1,8 @@
 <?php 
 @session_start();
 // include_once "../languages/config.php";
-include_once "Session.php";
-include_once "Database.php";
+require_once "Session.php";
+require_once "Database.php";
 require_once "Configuration.php";
 // @Session::init_ses();
 class Admin{

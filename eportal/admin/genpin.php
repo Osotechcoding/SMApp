@@ -41,7 +41,7 @@ if (!$Admin->isSuperAdmin($admin_data->adminId)) {
                 <ol class="breadcrumb p-0 mb-0 pl-1">
                   <li class="breadcrumb-item"><a href="./"><i class="bx bx-home-alt"></i></a>
                   </li>
-                  <li class="breadcrumb-item"><a href="#">Admin</a>
+                  <li class="breadcrumb-item"><a href="javascript:void(0);"><?php echo strtoupper($_SESSION['ADMIN_SES_TYPE']) ?></a>
                   </li>
                   <li class="breadcrumb-item active">Scratch Card Generator
                   </li>
@@ -59,7 +59,7 @@ if (!$Admin->isSuperAdmin($admin_data->adminId)) {
 </div>
  <?php include_once("template/pinsLinkBtns.php") ?>
 
-          <div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 col-offset-2 offset-2">
+          <div class="col-12">
       <div class="card">
       
        <h1 class="text-center mt-1" style="font-weight: bolder;"><i class="fa fa-credit-card-alt"></i> Scratch Card Generator</h1>
@@ -68,30 +68,25 @@ if (!$Admin->isSuperAdmin($admin_data->adminId)) {
             <div class="form-body">
               <div class="row">
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                  <div class="form-label-group position-relative has-icon-left">
-                    <input type="number" id="q" class="form-control" name="q"
+                    <label for="q">NO of Scratch Crads to Generate</label>
+                    <input type="number" autocomplete="off" id="q" class="form-control" name="q"
                       placeholder="e.g 200">
-                    <div class="form-control-position">
-                      <i class="bx bx-lock"></i>
-                    </div>
-                    <label for="q"></label>
                      <span class="text-danger">Maximum: 5 Pins</span>
-                  </div>
-
+                
                 </div>
                  <div class="col-md-12 col-12 mb-2">
-                   <label for="cardtype">Card Type</label>
-                  <select name="cardtype" id="cardtype" class="select2 form-control">
-                    <option value=""> Select Type </option>
-                    <option value="rp">Registration</option>
-                    <option value="rcp">Result Checker</option>
+                   <label for="cardtype">Choose Scratch Card Type</label>
+                  <select name="cardtype" id="cardtype" class=" custom-select form-control">
+                    <option value="" selected> Select Pin Type </option>
+                    <option value="rp">Admission Scratch Card</option>
+                    <option value="rcp">Result Scratch Card</option>
                    <!--  <option value="ep">Examination</option>
                     <option value="ewp">e-Wallet</option> -->
                   </select>
                 </div>
 
                 <div class="col-12 mb-2">
-                   <label for="p">Card Price</label>
+                   <label for="p">Enter Scratch Card Price</label>
                     <input type="number" id="p" class="form-control" name="p"
                       placeholder="&#8358; 5,000.00">
                 </div>

@@ -30,7 +30,7 @@
   <div class="faq-image pr-20">
 <img src="cardf.jpg" alt="Image" width="100%">
 </div>
-<div class="faq-image pr-20">
+<div class="faq-image pr-20 mt-3">
 <img src="cardb.jpg" alt="Image" width="100%">
 </div>
 </div>

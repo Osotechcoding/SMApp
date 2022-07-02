@@ -151,8 +151,8 @@ require_once "helpers/helper.php";
             <div class="card">
             <div class="card-body">
           <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <h2 class="text-info text-center">GLORY SUPREME SCHOOL</h2>
-                 <h5 class="text-center text-warning">1 -5,Glory Supreme Avanue,Ijagba, Onigbin, Ota,<br /> Ogun State, Nigeria</h5>
+            <h2 class="text-info text-center"><?php echo strtoupper($SmappDetails->school_name) ?> </h2>
+                 <h5 class="text-center text-warning"><?php echo ucwords($SmappDetails->school_address) ?> </h5>
         <h4 class="text-center text-danger"><strong>UPLOADED RESULT FOR</strong></h4>
                         <!-- ############################# -->
                         <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 text-center offset-1">

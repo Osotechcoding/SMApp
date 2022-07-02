@@ -80,7 +80,7 @@ if (isset($_GET['student-data']) && $_GET['student-data']!="") {
             <div class="form-body">
               <center>
                 <?php if ($student_data->stdPassport ==NULL || $student_data->stdPassport ==""): ?>
-    <img src="../result-asset/author.jpg" width="200" alt="photo" style="border-radius: 30px">
+    <img src="../author.jpg" width="200" alt="photo" style="border-radius: 30px;border:3px solid darkblue;">
       <?php else: ?>
 <img src="../schoolImages/students/<?php echo $student_data->stdPassport;?>" width="200" alt="photo" style="border-radius:10px; border: 2px solid grey;">
     <?php endif ?>

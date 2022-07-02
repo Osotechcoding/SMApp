@@ -29,12 +29,10 @@ require_once "helpers/helper.php";
 <img src="images/logo.jpg" width="200">
 <ul class="list-unstyled m-b-0">
   <address>
-                    <strong>Spaceway Limited. RC 632112</strong><br>
-                    Ogun State Industrial Estate,<br>
-                    KM 7, Abeokuta/Lagos Expressway,
-					Banjoko, Abeokuta, Ogun State.<br>
-                    Phone: +(234) 805-588-5699<br>
-                    Email: info@spaceway.ng
+                    <strong><?php echo strtoupper($SmappDetails->school_name) ?></strong><br>
+                 <?php echo$SmappDetails->school_address; ?><br>
+                    Phone: <?php echo $SmappDetails->school_phone; ?><br>
+                    Email: <?php echo $SmappDetails->school_email; ?>
                   </address>
 </ul>
 </div>

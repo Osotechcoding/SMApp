@@ -138,7 +138,7 @@ tbody >tr:nth-child(odd) {
 }
 .signarea{
   width: 195px;
-  background-image: url(../assets/images/sign.png);
+  background-image: url(../assets/images/resultstamp.png);
   background-repeat: no-repeat;
   background-size:contain;
 }
@@ -146,7 +146,7 @@ tbody >tr:nth-child(odd) {
 </head>
 <body>
   <section id="result">
-    <img src="../assets/images/resulttop.jpg" alt="" class="schname">
+    <img src="../assets/images/resulttop1.jpg" alt="" class="schname">
     <!-- <hr> -->
     <h2 style="text-align:center; text-decoration: underline;">STUDENT'S PERFORMANCE  REPORT</h2>
     <p>NAME: &nbsp; &nbsp;<b><?php echo strtoupper($student_data->full_name);?> &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </b> GENDER:&nbsp;&nbsp; <b><?php echo ucfirst($student_data->stdGender)?></b>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; CLASS: <b><?php echo strtoupper($student_data->studentClass);?>&nbsp;<sup>A</sup></b> &nbsp;&nbsp;&nbsp;&nbsp;Term: <b><?php echo $term ?> Report</b></p>
@@ -174,9 +174,7 @@ tbody >tr:nth-child(odd) {
                     <td style="transform: rotate(-90deg);">EXAM(60)</td>
                     <td style="transform: rotate(-90deg);">TOTAL(100) </td>
                     <td style="transform: rotate(-90deg);">GRADE</td>
-                    <td style="transform: rotate(-90deg);">POSITION</td>
                     <td>REMARKS </td>
-                    <td style="transform: rotate(-90deg);">CLASS-AVG.</td>
                   </tr>
                 </thead>
               <?php 
@@ -187,9 +185,9 @@ $resultScore->execute(array($student_reg_number,$student_class,$term,$rsession))
     $myTotalMark = intval($showResult->overallMark);
     ?>
     <?php 
-    if ($showResult->studentGrade == 'JSS 1 A' || $showResult->studentGrade == 'JSS 2 A' || $showResult->studentGrade =='JSS 3 A') {
+   if ($showResult->studentGrade == 'JSS 1 A' || $showResult->studentGrade == 'JSS 1 B' || $showResult->studentGrade =='JSS 1 C' || $showResult->studentGrade == 'JSS 2 A' || $showResult->studentGrade == 'JSS 2 B' || $showResult->studentGrade == 'JSS 2 C' || $showResult->studentGrade == 'JSS 3 A' || $showResult->studentGrade == 'JSS 3 B' || $showResult->studentGrade == 'JSS 3 C') {
       $amInClass ='Junior';
-    }elseif ($showResult->studentGrade == 'SSS 1 A' ||$showResult->studentGrade == 'SSS 1 B' || $showResult->studentGrade == 'SSS 1 C' || $showResult->studentGrade == 'SSS 2 A' || $showResult->studentGrade == 'SSS 2 B' || $showResult->studentGrade == 'SSS 2 C' || $showResult->studentGrade =='SSS 3 A' || $showResult->studentGrade =='SSS 3 B' || $showResult->studentGrade =='SSS 3 C') {
+    }elseif ($showResult->studentGrade == 'SSS 1 A' || $showResult->studentGrade == 'SSS 1 B' || $showResult->studentGrade == 'SSS 1 C' || $showResult->studentGrade == 'SSS 2 A' || $showResult->studentGrade == 'SSS 2 B' || $showResult->studentGrade == 'SSS 2 C' || $showResult->studentGrade =='SSS 3 A' || $showResult->studentGrade =='SSS 3 B' || $showResult->studentGrade =='SSS 3 C') {
      $amInClass ='Senior';
     }else{
        $amInClass ='Pry';
@@ -198,15 +196,12 @@ $resultScore->execute(array($student_reg_number,$student_class,$term,$rsession))
   $stmt2->execute();
   if ($stmt->rowCount()>0) {
     while ($r = $stmt2->fetch()) {?>
-    <td> <?php echo ucwords(strtolower($showResult->subjectName));?></td> 
-                    <td><?php echo intval($showResult->ca+$showResult->test1+$showResult->test2);?></td>
-                    <td> <?php echo $showResult->exam; ?></td>
-                    <td><?php echo intval($showResult->ca+$showResult->test1+$showResult->test2+$showResult->exam);?></td>
-                    <td> <?php echo $r->mark_grade;?></td>
-                    <td>2<sup>nd</sup></td>
-                    <td><?php echo $r->score_remark;?> </td>
-                    <td>
-                    <?php echo $showResult->mark_average;?></td>
+    <td align="center"> <?php echo strtoupper($showResult->subjectName);?></td> 
+                    <td align="center"><?php echo intval($showResult->ca+$showResult->test1+$showResult->test2);?></td>
+                    <td align="center"> <?php echo $showResult->exam; ?></td>
+                    <td align="center"><?php echo intval($showResult->ca+$showResult->test1+$showResult->test2+$showResult->exam);?></td>
+                    <td align="center"> <?php echo $r->mark_grade;?></td>
+                    <td align="center"><?php echo $r->score_remark;?> </td>
                   </tr>
       <?php
       // code...
@@ -229,11 +224,11 @@ $resultScore->execute(array($student_reg_number,$student_class,$term,$rsession))
                   </tr>
               </thead>
               <tr>
-                  <td>Marks Obtainable</td> 
-                  <td>Marks Obtained</td>
-                  <td>Percentage Score</td>
-                  <td>Grade</td>
-                  <td>Remarks</td>
+                  <td align="center">Marks Obtainable</td> 
+                  <td align="center">Marks Obtained</td>
+                  <td align="center">Percentage Score</td>
+                  <td align="center">Grade</td>
+                  <td align="center">Remarks</td>
                 </tr>
                 <?php 
                 $stmt42 = $dbh->prepare("SELECT sum(`overallMark`) as totalMark FROM `visap_termly_result_tbl` WHERE stdRegCode=? AND studentGrade=? AND term=? AND aca_session=?");
@@ -262,9 +257,9 @@ $resultScore->execute(array($student_reg_number,$student_class,$term,$rsession))
 
                  ?>
                 <tr>
-                  <td><?php echo $mx; ?></td> 
-                  <td><?php echo $markOb; ?></td>
-                  <td><?php echo ($percentage_mark);?> %</td>
+                  <td align="center"><?php echo $mx; ?></td> 
+                  <td align="center"><?php echo $markOb; ?></td>
+                  <td align="center"><?php echo ($percentage_mark);?> %</td>
                   <?php if ($percentage_mark >=75 && $percentage_mark <= 100) {
                    $performance_grade = 'A';
                    $performance_remark = 'Excellence';
@@ -285,8 +280,8 @@ $resultScore->execute(array($student_reg_number,$student_class,$term,$rsession))
                     $performance_remark = 'Poor';
                   }
                    ?>
-                  <td><?php echo $performance_grade;?> </td>
-                  <td><?php echo $performance_remark;?></td>
+                  <td align="center"><?php echo $performance_grade;?> </td>
+                  <td align="center"><?php echo $performance_remark;?></td>
                 </tr>
               </thead>
             </table>
@@ -486,7 +481,7 @@ $resultScore->execute(array($student_reg_number,$student_class,$term,$rsession))
             <td></td>
           </tr>
         </table>
-        <br>
+       <!--  <br>
         <table style="table-layout: auto; width:100%;" id="ratingIndices">
           <thead>
               <tr>
@@ -504,7 +499,7 @@ $resultScore->execute(array($student_reg_number,$student_class,$term,$rsession))
             </tr>
            <tr>
         </table>
-        <br>
+        <br> -->
         <table style="table-layout: auto; width: 100%;" id="gradeAnalysis">
           <thead>
             <tr>

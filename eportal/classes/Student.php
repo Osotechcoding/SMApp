@@ -811,7 +811,7 @@ public function upload_student_passport($data,$file){
     		if ($this->config->move_file_to_folder($passport_temp,$passport_destination)) {
     			$this->dbh->commit();
     $this->response = $this->alert->alert_toastr("success","Passport Uploaded Successfully",__OSO_APP_NAME__." Says")."<script>setTimeout(()=>{
-							window.location.href='./ab_students';
+							window.location.href='./';
 						},500);</script>";
     		}
     	}
@@ -1313,5 +1313,15 @@ if ($this->stmt->rowCount()>0) {
 
 		return $this->response;
 	}
+
+	public function get_student_details_byRegNo($stdRegNo){
+  	$this->stmt = $this->dbh->prepare("SELECT *, concat(`stdSurName`,' ',`stdFirstName`,' ',`stdMiddleName`) as full_name FROM $this->table_name WHERE stdRegNo=? LIMIT 1");
+  	$this->stmt->execute(array($stdRegNo));
+  	if ($this->stmt->rowCount()==1) {
+  		$this->response = $this->stmt->fetch();
+  		return $this->response;
+  		unset($this->dbh);
+  	}
+  }
 
 }

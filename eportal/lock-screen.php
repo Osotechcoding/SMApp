@@ -24,7 +24,7 @@ if (isset($_COOKIE['login_user']) && ! empty($_COOKIE['login_user']) && isset($_
 <html lang="en">
 <head>
 <?php include_once ("template/MetaTag.php");?>
-<title><?php echo __SCHOOL_NAME__; ?> :: Student Login</title>
+<title><?php echo ucwords($SmappDetails->school_name); ?> :: Student Login</title>
 <link rel="shortcut icon" href="schlogo.jpg">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;1,400&amp;display=swap">
 <link rel="stylesheet" href="bapps/plugins/bootstrap/css/bootstrap.min.css">
@@ -44,9 +44,9 @@ background-repeat: no-repeat;">
 <div class="container">
 <div class="loginbox">
 <div class="login-left">
-<img src="gsslogo.png" width="350" class="img-fluid" alt="logo">
+<img src="schlogo.png" width="350" class="img-fluid" alt="logo">
 <h2 class="text-center text-warning">SCHOOL PORTAL</h2>
-<a href="https://glorysupremeschool.com" style="text-decoration: none;">School Website</a>
+<a href="../" style="text-decoration: none;">School Website</a>
 </div>
 <div class="login-right">
 <div class="login-right-wrap">

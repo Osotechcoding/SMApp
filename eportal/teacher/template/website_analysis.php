@@ -36,7 +36,7 @@
      <div class="col-xl-8 col-md-8 col-sm-12">
       <div class="card">
         <div class="card-header d-flex justify-content-between align-items-center">
-          <h4 class="card-title"> <?php echo strtoupper(__SCHOOL_NAME__);?> Students </h4>
+          <h4 class="card-title"> <?php echo strtoupper($SmappDetails->school_name);?> Students </h4>
           <i class="bx bx-dots-vertical-rounded font-medium-3 cursor-pointer"></i>
         </div>
         <div class="card-body pb-1">

@@ -132,8 +132,8 @@ require_once "helpers/helper.php";
             <div class="card">
  <div class="card-body">
   <div class="mb-3">
-    <h2 class="text-info text-center"><?php echo strtoupper(__SCHOOL_NAME__) ?> </h2>
-                 <h5 class="text-center text-warning"><?php echo ucwords(__SCHOOL_LOCATION_ADDRESS__) ?> </h5>
+    <h2 class="text-info text-center"><?php echo strtoupper($SmappDetails->school_name) ?> </h2>
+                 <h5 class="text-center text-warning"><?php echo ucwords($SmappDetails->school_name) ?> </h5>
         <h4 class="text-center text-danger"><strong>STUDENTS BEHAVIORAL ANALYSIS SHEET</strong></h4>
         <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 text-center offset-1">
             <span class="btn btn-info btn-round text-center"><?php echo strtoupper($student_class) ?> </span>

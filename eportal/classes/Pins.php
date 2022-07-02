@@ -1,6 +1,6 @@
 <?php  
 require_once 'Database.php';
-include_once 'Configuration.php';
+require_once 'Configuration.php';
 include_once 'Alert.php';
  include_once 'Session.php';
  /*

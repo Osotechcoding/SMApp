@@ -47,7 +47,7 @@
 <div class="col-lg-4 col-md-6">
 <div class="single-campus-card">
 <div class="img">
-<a href="campus-life.html"><img src="assets/images/campus-life/campus-life-2.jpg" alt="Image"></a>
+<a href="campus-life.html"><img src="assets/images/campus-life/campus-life-1.jpg" alt="Image"></a>
 </div>
 <div class="campus-content">
 <span>Athletics & Fitness</span>
@@ -59,7 +59,7 @@ Tips From Sanu</h3></a>
 <div class="col-lg-4 col-md-6">
 <div class="single-campus-card">
 <div class="img">
-<a href="campus-life.html"><img src="assets/images/campus-life/campus-life-3.jpg" alt="Image"></a>
+<a href="campus-life.html"><img src="assets/images/campus-life/campus-life-1.jpg" alt="Image"></a>
 </div>
 <div class="campus-content">
 <span>Student Life</span>
@@ -70,7 +70,7 @@ Tips From Sanu</h3></a>
 <div class="col-lg-4 col-md-6">
 <div class="single-campus-card">
 <div class="img">
-<a href="campus-life.html"><img src="assets/images/campus-life/campus-life-4.jpg" alt="Image"></a>
+<a href="campus-life.html"><img src="assets/images/campus-life/campus-life-1.jpg" alt="Image"></a>
 </div>
 <div class="campus-content">
 <span>Dining On Campus</span>
@@ -81,7 +81,7 @@ Tips From Sanu</h3></a>
 <div class="col-lg-4 col-md-6">
 <div class="single-campus-card">
 <div class="img">
-<a href="campus-life.html"><img src="assets/images/campus-life/campus-life-5.jpg" alt="Image"></a>
+<a href="campus-life.html"><img src="assets/images/campus-life/campus-life-1.jpg" alt="Image"></a>
 </div>
 <div class="campus-content">
 <span>Health & Wellness</span>
@@ -93,7 +93,7 @@ Tips From Sanu</h3></a>
 <div class="col-lg-4 col-md-6">
 <div class="single-campus-card">
 <div class="img">
-<a href="campus-life.html"><img src="assets/images/campus-life/campus-life-6.jpg" alt="Image"></a>
+<a href="campus-life.html"><img src="assets/images/campus-life/campus-life-1.jpg" alt="Image"></a>
 </div>
 <div class="campus-content">
 <span>Safety and Security</span>

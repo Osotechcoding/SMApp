@@ -3,7 +3,7 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 //require_once 'initialize.php';
-include_once 'Osotech.php';
+//require_once 'Osotech.php';
 //Load Composer's autoloader
 require '../vendor/autoload.php';
 

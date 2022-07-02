@@ -60,7 +60,11 @@ if (isset($_GET['stdRegistrationId']) && $_GET['stdRegistrationId']!="" && isset
         <div class="content-body">
 <div class="row">
              <div class="col-12">
-    <h3 class="bd-lead text-info text-bold"><img src="../result-asset/author.jpg" width="60" alt="photo"> Upload <?php echo ucwords($student_data->full_name);?>'s Passport</h3>
+    <h3 class="bd-lead text-info text-bold"><?php if ($student_data->stdPassport==NULL || $student_data->stdPassport==""): ?>
+    <img src="../author.jpg" width="100" alt="photo" style="border-radius: 10px;border: 3px solid deepskyblue;">
+      <?php else: ?>
+        <img src="../schoolImages/students/<?php echo $student_data->stdPassport;?>" width="100" alt="photo" style="border-radius: 10px;border: 3px solid darkblue;">
+    <?php endif ?> Upload <?php echo ucwords($student_data->full_name);?>'s Passport</h3>
   </div>
     </div>
     <div class="col-md-8 col-12">

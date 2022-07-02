@@ -1,7 +1,7 @@
 <?php
 @session_start();
 @ob_start(); 
-include_once 'Database.php';
+require_once 'Database.php';
 //include_once 'ResizeImage.php';
 //include_once 'Osotech_mailing.php';
 class Osotech{

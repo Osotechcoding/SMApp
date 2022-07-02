@@ -122,7 +122,7 @@ require_once "helpers/helper.php";
        if (isset($_POST['show_broad_sheet_btn'])): ?>
         <?php if (empty($_POST['result_subject']) || empty($_POST['result_class']) || empty($_POST['result_term'])): ?>
           <?php  //get_exam_subjectsByClassName($grade_desc,$subject)
-          echo $Alert->alert_msg(" Please Select Subject,Class and Term to Continue!","danger");?>
+          echo $Alert->alert_msg(" Please Select Subject, Class and Term to Continue!","danger");?>
         <?php else: ?>
           <?php 
           $school_session = $_POST['school_session'];
@@ -142,8 +142,8 @@ require_once "helpers/helper.php";
               <div class="card">
             <div class="card-body">
         <hr class="text-bold-700">
-        <h2 class="text-info text-center"><?php echo strtoupper(__SCHOOL_NAME__) ?> </h2>
-                 <h5 class="text-center text-warning"><?php echo ucwords(__SCHOOL_LOCATION_ADDRESS__) ?> </h5>
+        <h2 class="text-info text-center"><?php echo strtoupper($SmappDetails->school_name) ?> </h2>
+                 <h5 class="text-center text-warning"><?php echo ucwords($SmappDetails->school_address) ?> </h5>
         <h4 class="text-center text-danger"><strong>STUDENTS EXAMINATION RESULT SHEET</strong></h4>
                  <!-- ############################# -->
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">

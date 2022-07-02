@@ -126,8 +126,8 @@ require_once "helpers/helper.php";
         $cnt =0;?>
         <div class="card">
           <div class="card-body">
-            <h2 class="text-info text-center"><?php echo strtoupper(__SCHOOL_NAME__) ?> </h2>
-                 <h5 class="text-center text-warning"><?php echo ucwords(__SCHOOL_LOCATION_ADDRESS__) ?> </h5>
+            <h2 class="text-info text-center"><?php echo strtoupper($SmappDetails->school_name) ?> </h2>
+                 <h5 class="text-center text-warning"><?php echo ucwords($SmappDetails->school_name) ?> </h5>
         <h4 class="text-center text-danger"><strong>STUDENTS ATTENDANCE SHEET</strong></h4>
               <h2 class="card-title text-danger text-center">Roll Call Details For (<b class="text-info"><?php echo strtoupper($student_class) ?></b>) On <?php echo date("l jS F, Y",strtotime($_POST['att_date'])) ?></h2>
 

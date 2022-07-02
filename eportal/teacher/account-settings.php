@@ -101,8 +101,11 @@ require_once "helpers/helper.php";
                                     aria-labelledby="account-pill-general" aria-expanded="true">
                                     <div class="media text-center">
                                         <a href="javascript: void(0);">
-                                            <img src="../schlogo.jpg"
-                                                class="rounded mr-75" alt="profile image" height="100" width="100" style="border: solid black 2px; border-radius: 20px;">
+                                            <?php if ($staff_data->staffPassport==NULL || $staff_data->staffPassport==""): ?>
+    <img src="../author.jpg" width="150" alt="photo" style="border-radius: 10px;border: 3px solid darkblue;">
+      <?php else: ?>
+        <img src="../schoolImages/staff/<?php echo $staff_data->staffPassport;?>" width="150" alt="photo" style="border-radius: 10px;border: 3px solid darkblue;">
+    <?php endif ?>
                                         </a>
                                         
                                     </div>
@@ -211,7 +214,11 @@ require_once "helpers/helper.php";
                                             <p class="text-muted ml-1 mt-50"><small class="text-danger"><em>Allowed JPG or PNG Only. Max size of 100kB</em></small></p>
                                         </div>
                                         <div class="myPreview" style="display: none;">
-                                          <img src="../schlogo.jpg" width="100" height="100" alt="profile-image" style="border: solid darkgreen 2px; border-radius: 20%;">
+                                         <?php if ($staff_data->staffPassport==NULL || $staff_data->staffPassport==""): ?>
+    <img src="../author.jpg" width="150" alt="photo" style="border-radius: 10px;border: 3px solid darkblue;">
+      <?php else: ?>
+        <img src="../schoolImages/staff/<?php echo $staff_data->staffPassport;?>" width="150" alt="photo" style="border-radius: 10px;border: 3px solid darkblue;">
+    <?php endif ?>
                                         </div>
                                         <h3 id="osotech-result"></h3>
                                         <div class="col-12 d-flex flex-sm-row flex-column justify-content-end">
