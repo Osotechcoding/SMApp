@@ -76,7 +76,7 @@
               </li>
               <li>
                 <a class="d-flex align-items-center" onclick=" return confirm('<?php echo $lang["logout-sure?"];?>');" href="logout?action=logout"><i class="fa fa-power-off"></i>
-                <span class="menu-item text-truncate"> <?php echo $lang['Logout'] ?></span></a>
+              <span class="menu-item text-truncate"> <?php echo $lang['Logout'] ?></span></a>
                
               </li>
         </ul>

@@ -411,6 +411,13 @@ if (isset($_POST['action']) && $_POST['action'] !="") {
 			echo $result;
 		}
 	}
+	//upload_upcomingEvent_
+	if ($_POST['action'] ==="upload_upcomingEvent_") {
+		$result = $Blog->upload_upcomingEvents($_POST,$_FILES);
+		if ($result) {
+			echo $result;
+		}
+	}
 
 }
 }

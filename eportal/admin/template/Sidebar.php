@@ -167,13 +167,13 @@
           </li> -->
           <li class=" nav-item"><a href="javaScript:void(0)"><i class="fa fa-calendar fa-1x" data-icon="retweet"></i><span class="menu-title text-truncate" data-i18n="blog & event">MANAGE EVENTS</span></a>
             <ul class="menu-content">
-               <!--<li><a class="d-flex align-items-center" href="add_event"><i class="bx bx-right-arrow-alt"></i><span class="menu-item text-truncate" data-i18n="Manage Event">Manage Event</span></a> </li>-->
-                <!--<li><a class="d-flex align-items-center" href="add_holidays"><i class="bx bx-right-arrow-alt"></i><span class="menu-item text-truncate" data-i18n="Manage Holiday">Manage Holiday</span></a> </li>-->
+               <li><a class="d-flex align-items-center" href="add_event"><i class="bx bx-right-arrow-alt"></i><span class="menu-item text-truncate" data-i18n="Manage Event">Manage Event</span></a> </li>
+                <li><a class="d-flex align-items-center" href="add_holidays"><i class="bx bx-right-arrow-alt"></i><span class="menu-item text-truncate" data-i18n="Manage Holiday">Manage Holiday</span></a> </li>
                  
                <li><a class="d-flex align-items-center" href="uploadblog"><i class="bx bx-right-arrow-alt"></i><span class="menu-item text-truncate" data-i18n="Manage Blog"> Manage Blog</span></a>
               </li>
-              <!-- <li><a class="d-flex align-items-center" href="javaScript:void(0)"><i class="bx bx-right-arrow-alt"></i><span class="menu-item text-truncate" data-i18n="Manage Gallery">Manage Gallery</span></a>
-              </li> -->
+               <li><a class="d-flex align-items-center" href="javaScript:void(0)"><i class="bx bx-right-arrow-alt"></i><span class="menu-item text-truncate" data-i18n="Manage Gallery">Manage Gallery</span></a>
+              </li>
 
                 <li><a class="d-flex align-items-center" href="visitor_book"><i class="bx bx-right-arrow-alt"></i><span class="menu-item text-truncate" data-i18n="Manage Visitor">Vistors' Book</span></a>
               </li>

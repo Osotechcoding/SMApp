@@ -149,7 +149,7 @@ require_once "helpers/helper.php";
       <div class="col-md-6">
         <div class="form-group">
           <label for="Auth">PROMOTION CODE</label>
-         <input type="text" autocomplete="off" class="form-control" name="Auth" placeholder="*********">
+         <input type="password" autocomplete="off" class="form-control" name="Auth" placeholder="*********">
         </div>
       </div>
       </div>

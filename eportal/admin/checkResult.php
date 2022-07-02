@@ -99,7 +99,7 @@ require_once "helpers/helper.php";
                 <div class="col-lg-12 col-md-12 col-sm-12">
                   <div class="form-group">
                     <label for="auth_pass"> Authentication Code</label>
-                    <input type="text" autocomplete="off" id="auth_pass" class="form-control" placeholder="*******"
+                    <input type="password" autocomplete="off" id="auth_pass" class="form-control" placeholder="*******"
                       name="auth_pass">
                     
                   </div>

@@ -217,29 +217,32 @@ require_once "helpers/helper.php";
                </select>
                     </div>
                </div>
-              
-                   <div class="col-12 mt-1">
-                    <label for="textarea-counter">Blog/News Content</label>
-                    <textarea data-length="63000" class="form-control char-textarea" id="textarea-counter" name="blogContent" placeholder="News content goes here..." style="height:auto;"></textarea>
-                      <small class="counter-value float-right mb-2"><span class="char-count">0</span> / 63000 </small>
+              <!--  -->
+              <div class="col-12 mt-1">
+                      <fieldset class="form-label-group mb-0">
+                          <textarea data-length=63000 class="form-control char-textarea" id="textarea-counter" rows="5" placeholder="News content goes here... (Max Character (63000))" name="blogContent"></textarea>
+                          <label for="textarea-counter">Blog/News Content (Max Character (63000))</label>
+                      </fieldset>
+                      <small class="counter-value float-right"><span class="char-count">0</span> / 63000 </small>
                   </div>
+              <!--  -->
+
+                 
                    <div class="col-md-12">
                      <div class="form-group">
                   <label for="lecture_mp4">News Image <span class="text-danger">(png,jpg or jpeg format Only)</span></label>
                 <input type="file" class="form-control form-control-lg" name="blogImage" onchange="previewFile(this);">
                     </div>
                     <div class="col-md-6 offset-md-3" id="uploaded_passport">
-  <img id="previewImg" width="400" src="../assets/loaders/placeholder.png" alt="Placeholder" style="border: 2px solid darkblue;border-radius:10px;">
+  <img id="previewImg" width="200" src="../assets/loaders/placeholder.png" alt="Placeholder" style="border: 2px solid darkblue;border-radius:10px;">
   <p>Image Name: <span id="imagename"></span></p> 
   <p>Image Size: <span id="ImageSize"></span></p> 
 </div>
                   </div>
-                 </div>
-                  </div>
-                </div>
-                <div class="col-md-6">
+                  
+                  <div class="col-md-6">
                   <div class="form-group">
-                  <label for="blogstatus">blogstatus</label>
+                  <label for="blogstatus"> status</label>
                <select name="blogstatus" id="blogstatus" class="form-control form-control-lg">
                   <option value="" selected>Choose...</option>
                 <option value="2">Publish Now</option>
@@ -247,6 +250,16 @@ require_once "helpers/helper.php";
                </select>
                     </div>
                </div>
+               <div class="col-md-6">
+                  <div class="form-group">
+                  <label for="auth_code"> Authentication Code</label>
+              <input type="password" autocomplete="off" class="form-control form-control-lg" name="auth_code" placeholder="*********">
+                    </div>
+               </div>
+                 </div>
+                  </div>
+                </div>
+                
                 <input type="hidden" name="postedBy" value="<?php echo $_SESSION['ADMIN_TOKEN_ID'];?>">
                 <input type="hidden" name="action" value="upload_blog_news">
                 <input type="hidden" name="bypass" value="<?php echo md5("oiza1");?>">
