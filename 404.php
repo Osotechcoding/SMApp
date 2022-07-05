@@ -18,7 +18,7 @@
 <div class="modal-content">
 <button type="button" class="close" data-bs-dismiss="modal"><i class="ri-close-line"></i></button>
 <div class="modal-body">
-<a href="index-2.html">
+<a href="./">
 <img src="assets/images/logo.png" class="main-logo" alt="logo">
 <img src="assets/images/white-logo.png" class="white-logo" alt="logo">
 </a>
@@ -33,22 +33,22 @@
 <h3>Contact Information</h3>
 <ul class="info-list">
 <li><i class="ri-phone-fill"></i> <a href="tel:9901234567">+990-123-4567</a></li>
-<li><i class="ri-mail-line"></i><a href="javascript:void(0);"><span class="">info@julitschools.com</span></a></li>
+<li><i class="ri-mail-line"></i><a href="javascript:void(0);"><span class="">info@smapp.com</span></a></li>
 <li><i class="ri-map-pin-line"></i> 413 North Las Vegas, NV 89032</li>
 </ul>
 </div>
 <ul class="sidebar-social-list">
 <li>
-<a href="https://www.facebook.com/julitschools" target="_blank"><i class="flaticon-facebook"></i></a>
+<a href="https://www.facebook.com/smapp" target="_blank"><i class="flaticon-facebook"></i></a>
 </li>
  <li>
-<a href="https://www.twitter.com/julitschools" target="_blank"><i class="flaticon-twitter"></i></a>
+<a href="https://www.twitter.com/smapp" target="_blank"><i class="flaticon-twitter"></i></a>
 </li>
 <li>
-<a href="https://linkedin.com/julitschools" target="_blank"><i class="flaticon-linkedin"></i></a>
+<a href="https://linkedin.com/smapp" target="_blank"><i class="flaticon-linkedin"></i></a>
 </li>
 <li>
-<a href="https://instagram.com/julitschools" target="_blank"><i class="flaticon-instagram"></i></a>
+<a href="https://instagram.com/smapp" target="_blank"><i class="flaticon-instagram"></i></a>
 </li>
 </ul>
 <div class="contact-form">

@@ -20,7 +20,7 @@ public function osotech_connect(){
 			
 		} catch (PDOException $e) {
 			$this->error = $e->getMessage();
-			echo $this->error;
+			die($this->error);
 		}
 		return $this->dbh;
 }
