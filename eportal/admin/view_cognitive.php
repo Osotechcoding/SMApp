@@ -128,7 +128,7 @@ $all_affective_domains = $Administration->get_all_affective_domain($std_class,$_
 if ($all_affective_domains) {?>
 <div class="card">
    <h2 class="text-info text-center"><?php echo strtoupper($SmappDetails->school_name) ?> </h2>
-                 <h5 class="text-center text-warning"><?php echo ucwords($SmappDetails->school_name) ?> </h5>
+                 <h5 class="text-center text-warning"><?php echo ucwords($SmappDetails->school_address) ?> </h5>
         <h4 class="text-center text-danger"><strong>STUDENTS AFFECTIVE DOMAIN ANALYSIS SHEET</strong></h4>
                       <!-- ############################# -->
             <br />
