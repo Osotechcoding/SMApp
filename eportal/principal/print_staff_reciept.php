@@ -5,7 +5,7 @@ require_once "helpers/helper.php";
 <html lang="en">
 <head>
    <?php include ("../template/MetaTag.php"); ?>
-  <title></title>
+  <title><?php echo $SmappDetails->school_name ?> </title>
  <?php include "../template/HeaderLink.php";?>
 <body>
 <div class="wrapper">

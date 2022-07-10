@@ -7,7 +7,7 @@ require_once "helpers/helper.php";
 <head>
     <!-- metaTag -->
     <?php include ("../template/MetaTag.php"); ?>
-    <title>DataTables - Frest - Bootstrap HTML admin template</title>
+    <title><?php echo $SmappDetails->school_name ?> :: Staff Salary History</title>
      <?php include ("../template/dataTableHeaderLink.php"); ?>
   </head>
   <!-- END: Head-->

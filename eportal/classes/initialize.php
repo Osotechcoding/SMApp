@@ -8,6 +8,7 @@ if (!defined("__OSOTECH__DEV_COMPANY__")) {
 	/*define("__OSO_USER__",'smapp_admin');
 	define("__OSO_PASS__",'@smapp123');
 	define("__OSO_DBNAME__",'smapp_portal');*/
+	define("__OSO_SCHOOL_CODE__","C12004");
 	define("__OSO_DB_DRIVER__",'mysql');
 	define("__OSO_CHARSET__",'utf8mb4');
 	define("__OSO_SERIAL__NUMBER_","XTAS-KM87-EWA6-09CQ-5J0V");

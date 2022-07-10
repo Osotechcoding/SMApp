@@ -295,22 +295,22 @@ public function get_all_students_by_status(string $status){
 
 	/*ADMISSION REGISTRATION STEP ONE ENDS*/
 
-public function generate_admission_number(){
+public function generate_admission_number(string $admitted_year){
 	 $this->response ="";
-	 $prefix="SMA";
+	 $prefix=__OSO_SCHOOL_CODE__;//school Code 
 	$this->stmt = $this->dbh->prepare("SELECT stdRegNo FROM $this->table_name ORDER BY stdRegNo DESC LIMIT 1");
 	$this->stmt->execute();
 	if ($this->stmt->rowCount() > 0) {
     if ($row = $this->stmt->fetch()) {
       $value2 = $row->stdRegNo;
-      $value2 = substr($value2, 5,11);//separating numeric part
+      $value2 = substr($value2, 10,14);//separating numeric part
       $value2 =$value2 + 1;//incrementing numeric value
-      $value2 = $prefix.date('y').sprintf('%06s',$value2);//concatenating incremented value
+      $value2 = $admitted_year.$prefix.sprintf('%04s',$value2);//concatenating incremented value
       $this->response = $value2;
     }
 	}else{
-	// "GSSOTA/00001"
-    $value2 =$prefix.date('y')."000001";
+	// "2021C120040001"
+    $value2 =$admitted_year.$prefix."0001";
     $this->response =$value2;
 	}
 	return $this->response;

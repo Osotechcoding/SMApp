@@ -6,7 +6,7 @@ require_once "helpers/helper.php";
   <!-- BEGIN: Head-->
 <head>
     <?php include "../template/MetaTag.php";?>
-    <title><?php echo __SCHOOL_NAME__ ?> :: Student Result Uploading</title>
+    <title><?php echo $SmappDetails->school_name ?> :: Student Result Uploading</title>
    <!-- include template/HeaderLink.php -->
    <?php include "../template/HeaderLink.php";?>
   <!-- END: Head-->
@@ -15,12 +15,9 @@ require_once "helpers/helper.php";
     <!-- BEGIN: Header-->
     <?php include "template/HeaderNav.php"; ?>
     <!-- include headernav.php -->
-    <!-- END: Header-->
     <!-- BEGIN: Main Menu-->
     <?php include "template/Sidebar.php";?>
     <!-- include Sidebar.php -->
-    <!-- END: Main Menu-->
-    <!-- BEGIN: Content-->
     <!-- BEGIN: Content-->
     <div class="app-content content">
       <div class="content-overlay"></div>

@@ -10,7 +10,7 @@ $_Pins_ = new Pins();
 <head>
     <!-- metaTag -->
     <?php include ("../template/MetaTag.php"); ?>
-    <title>VISAP - Admission Pins</title>
+    <title><?php echo $SmappDetails->school_name ?>::  Admission Pins</title>
      <?php include ("../template/dataTableHeaderLink.php"); ?>
     <!-- include dataTableHeaderLink.php -->
   </head>

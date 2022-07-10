@@ -33,7 +33,7 @@ if ($request_method ==="GET") {
 <head>
     <!-- metaTag -->
     <?php include ("../template/MetaTag.php"); ?>
-    <title><?php echo strtoupper($fetch_details->full_name);?> - <?php echo __OSO_APP_NAME__ ?></title>
+    <title><?php echo $SmappDetails->school_name ?> <?php echo strtoupper($fetch_details->full_name);?></title>
      <?php include ("../template/dataTableHeaderLink.php"); ?>
     <!-- include dataTableHeaderLink.php -->
   </head>

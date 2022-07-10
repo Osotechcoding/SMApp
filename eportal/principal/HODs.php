@@ -7,7 +7,7 @@ require_once "helpers/helper.php";
 <head>
     <!-- metaTag -->
     <?php include ("../template/MetaTag.php"); ?>
-    <title><?php echo __SCHOOL_NAME__ ?> ::  School Administratives</title>
+    <title><?php echo $SmappDetails->school_name ?> ::  School Administratives</title>
      <?php include ("../template/dataTableHeaderLink.php"); ?>
   </head>
   <!-- END: Head-->
@@ -269,7 +269,7 @@ require_once "helpers/helper.php";
           setTimeout(()=>{
             $("#server-response").html(data);
              $(".__loadingBtn__").html('<span class="fa fa-paper-plane"></span> Submit').attr("disabled",false);
-          },1000);
+          },500);
          })
       
       });
@@ -282,7 +282,7 @@ require_once "helpers/helper.php";
           setTimeout(()=>{
             $("#server-response").html(data);
              $(".__loadingBtn2__").html('<span class="fa fa-paper-plane"></span>Assign Now').attr("disabled",false);
-          },1000);
+          },500);
          })
       
       });
@@ -307,7 +307,7 @@ require_once "helpers/helper.php";
           setTimeout(()=>{
             $("#server-response").html(data);
              $(".__loadingBtn5__").html('<span class="fa fa-paper-plane"></span>Save Change').attr("disabled",false);
-          },1000);
+          },500);
          })
       
       });

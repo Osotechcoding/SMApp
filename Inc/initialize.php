@@ -8,6 +8,7 @@ if (!defined("__AUTHOR_NAME__")) {
 	/*define("__OSO_USER__",'smapp_admin');
 	define("__OSO_PASS__",'@smapp123');
 	define("__OSO_DBNAME__",'smapp_portal');*/
+	define("__OSO_SCHOOL_CODE__","C12004");
 	define("__SCHOOL_NAME__", strtoupper("School Management Application"));
 	define("__SCHOOL_ABBREV", strtoupper("SMAPP"));
 	define("__OSO_APP_NAME__", strtoupper("smapp"));

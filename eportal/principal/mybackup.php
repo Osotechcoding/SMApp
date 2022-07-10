@@ -21,7 +21,7 @@ require_once "helpers/helper.php";
   <!-- BEGIN: Head-->
 <head>
     <?php include "../template/MetaTag.php";?>
-    <title><?php echo $lang['Dashboard'] ?> || <?php echo $lang['webtitle'] ?></title>
+    <title><?php echo $SmappDetails->school_name ?> :: Backup & Restore</title>
    <?php include "../template/HeaderLink.php";?>
   <!-- END: Head-->
   <!-- BEGIN: Body-->
